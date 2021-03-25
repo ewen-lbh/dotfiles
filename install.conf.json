@@ -1,0 +1,41 @@
+[
+  {
+    "clean": [
+      "~"
+    ]
+  },
+  {
+    "link": {
+      "~/.config/fish/functions/": ".config/fish/functions/",
+      "~/.config/fish/config.fish": ".config/fish/config.fish",
+      "~/.config/i3/config": ".config/i3/config",
+      "~/.config/picom.conf": ".config/picom.conf",
+      "~/.config/polybar/config.ini": ".config/polybar/config.ini",
+      "~/.config/polybar/run_polybar.sh": ".config/polybar/run_polybar.sh",
+      "~/.config/kitty/kitty.conf": ".config/kitty/kitty.conf",
+      "~/.config/gh/config.yml": ".config/gh/config.yml",
+      "~/.config/rofi/config": ".config/rofi/config",
+      "~/.config/rofi/theme.rasi": ".config/rofi/theme.rasi",
+      "~/.config/rofi/edit_dotfiles": ".config/rofi/edit_dotfiles",
+      "~/.config/wal/colorschemes/dark/one-half.json": ".config/wal/colorschemes/dark/one-half.json",
+      "~/.config/wal/colorschemes/light/one-half.json": ".config/wal/colorschemes/light/one-half.json",
+      "~/.config/wallpaper.png": ".config/wallpaper.png",
+      "~/.config/starship.toml": ".config/starship.toml",
+      "~/.local/share/programmesdekhôlles/math": ".local/share/programmesdekhôlles/math",
+      "~/.local/share/programmesdekhôlles/physique": ".local/share/programmesdekhôlles/physique",
+      "~/.local/share/select-wallpaper/select-wallpaper": ".local/share/select-wallpaper/select-wallpaper",
+      "~/.local/share/applications/khôlle-math.desktop": ".local/share/applications/khôlle-math.desktop",
+      "~/.local/share/applications/khôlle-physique.desktop": ".local/share/applications/khôlle-physique.desktop",
+      "~/.local/share/applications/select-wallpaper.desktop": ".local/share/applications/select-wallpaper.desktop",
+      "~/.gitconfig": ".gitconfig",
+      "~/wallpapers/": "wallpapers/"
+    }
+  },
+  {
+    "defaults": {
+      "link": {
+        "create": true
+      }
+    }
+  }
+]

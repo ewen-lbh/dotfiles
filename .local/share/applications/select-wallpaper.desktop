@@ -1,0 +1,6 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Sélectionner un fond d'écran
+Path=/home/ewen/.local/share/select-wallpaper/
+Exec=/home/ewen/.local/share/select-wallpaper/select-wallpaper

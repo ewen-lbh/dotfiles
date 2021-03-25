@@ -1,0 +1,22 @@
+#!/usr/bin/sh
+
+program=$(echo -e "nvim\nfish\nrofi\npolybar\ni3\ndunst" | rofi -dmenu -p "edit dotfile for")
+
+case $program
+	nvim)
+		dotfile="$HOME/.config/nvim/init.vim"
+	fish)
+		dotfile="$HOME/.config/fish/config.fish"
+	rofi)
+		dotfile="$HOME/.config/rofi/theme.rasi"
+	polybar)
+		dotfile="$HOME/.config/polybar/config.ini"
+	i3)
+		dotfile="$HOME/.config/i3/config"
+	dunst)
+		dotfile="$HOME/.config/dunst/dunstrc"
+	*)
+		return 1
+esac
+
+$EDITOR "$dotfile"

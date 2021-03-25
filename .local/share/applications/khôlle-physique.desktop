@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Kholle physique
+Comment=Ouvre le prochain programme de khôlle de physique
+Path=/home/ewen/.local/share/programmesdekhôlles/
+Exec=/home/ewen/.local/share/programmesdekhôlles/physique
+
