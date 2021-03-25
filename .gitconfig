@@ -1,0 +1,11 @@
+[core]
+	editor = nvim
+	quotepath = off
+[user]
+	email = hey@ewen.works
+	name = Ewen Le Bihan
+[init]
+	defaultBranch = main
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
