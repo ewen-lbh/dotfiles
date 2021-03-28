@@ -206,7 +206,7 @@ bindsym $mod+e mode "default"
 exec_always --no-startup-id picom --config ~/.config/picom.conf -b --experimental-backends
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id sh ~/.config/polybar/run_polybar.sh
-exec_always --no-startup-id feh --bg-fill ~/.config/wallpaper.png
+exec_always --no-startup-id feh --bg-fill --no-xinerama ~/.config/wallpaper.png
 
 # Enable natural scrolling for the trackpad
 exec xinput set-prop "ELAN1400:00 04F3:30AD Touchpad" "libinput Natural Scrolling Enabled" 1
