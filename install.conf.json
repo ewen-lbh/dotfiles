@@ -28,7 +28,10 @@
       "~/.local/share/applications/khôlle-physique.desktop": ".local/share/applications/khôlle-physique.desktop",
       "~/.local/share/applications/select-wallpaper.desktop": ".local/share/applications/select-wallpaper.desktop",
       "~/.gitconfig": ".gitconfig",
-      "~/.config/spotify-tui/config.yml": ".config/spotify-tui/config.yml" 
+      "~/.config/spotify-tui/config.yml": ".config/spotify-tui/config.yml",
+      "~/.config/qutebrowser/config.py": ".config/qutebrowser/config.py",
+      "~/.config/qutebrowser/quickmarks": ".config/qutebrowser/quickmarks",
+      "~/.config/qutebrowser/bookmarks/urls": ".config/qutebrowser/bookmarks/urls"
     }
   },
   {
