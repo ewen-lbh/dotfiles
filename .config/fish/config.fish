@@ -1,11 +1,13 @@
-# ?
-cat ~/.cache/wal/sequences
 # Add things to the PATH
 set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux /home/ewen/.gem/ruby/2.7.0
+
 # Set bat(1)'s theme
 set -gx BAT_THEME OneHalfLight
+
 # Set default browser
 set -gx BROWSER qutebrowser
+xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/http{s,}
+
 set -gx EDITOR /usr/bin/nvim
 # 
 # Set tab width
