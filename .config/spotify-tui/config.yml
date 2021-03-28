@@ -2,3 +2,4 @@ theme:
         playbar_text: "0, 0, 0"
         text: "0, 0, 0"
         header: "0, 0, 0"
+        inactive: "150,150,150"
