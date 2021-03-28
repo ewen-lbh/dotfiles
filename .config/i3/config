@@ -43,7 +43,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 # start a browser
-bindsym $mod+b exec brave
+bindsym $mod+b exec qutebrowser
 # start the IDE
 bindsym $mod+c exec code-insiders
 

@@ -5,7 +5,7 @@ set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux
 # Set bat(1)'s theme
 set -gx BAT_THEME OneHalfLight
 # Set default browser
-set -gx BROWSER /usr/bin/brave
+set -gx BROWSER qutebrowser
 set -gx EDITOR /usr/bin/nvim
 # 
 # Set tab width
