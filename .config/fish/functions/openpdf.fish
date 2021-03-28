@@ -5,7 +5,6 @@ function openpdf
 		set file (mktemp /tmp/XXXXXXXXX.pdf)
 		wget "$argv[1]" -O $file --quiet
 	end
-	zathura "$file" & 
-	# Relies on the fact that no other zathura processes will be opened in the meantime...
-	disown (pidof zathura | cut -d' ' -f1 )
+	# no disown madness as zathura windows get swallowed
+	zathura "$file"
 end
