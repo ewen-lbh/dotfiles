@@ -1,0 +1,138 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export BAT_THEME:OneHalfLight
+SETUVAR --export BROWSER:brave
+SETUVAR --export EDITOR:nvim
+SETUVAR --export LESS_TERMCAP_md:\x1b\x5b01\x3b31m
+SETUVAR --export LESS_TERMCAP_me:\x1b\x5b0m
+SETUVAR --export LESS_TERMCAP_se:\x1b\x5b0m
+SETUVAR --export LESS_TERMCAP_so:\x1b\x5b01\x3b44\x3b33m
+SETUVAR --export LESS_TERMCAP_ue:\x1b\x5b0m
+SETUVAR --export LESS_TERMCAP_us:\x1b\x5b01\x3b32m
+SETUVAR --export LS_COLORS:di\x3d0\x3aln\x3d36\x3aso\x3d34\x3api\x3d33\x3aex\x3d1\x3b0\x3abd\x3d34\x3b46\x3acd\x3d0\x3b43\x3asu\x3d30\x3b41\x3asg\x3d30\x3b46\x3atw\x3d30\x3b42\x3aow\x3d30\x3b43
+SETUVAR --path PATH:/home/ewen/\x2epoetry/bin\x1e/home/ewen/\x2econfig/nvm/13\x2e5\x2e0/bin\x1e/home/ewen/\x2elocal/bin\x1e/usr/local/bin\x1e/usr/bin\x1e/bin\x1e/usr/local/sbin\x1e/usr/lib/jvm/default/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl\x1e/var/lib/snapd/snap/bin\x1e/home/ewen/\x2eyarn/bin
+SETUVAR WAL_THEME_VARIANT:light
+SETUVAR ZO_CMD:zo
+SETUVAR Z_CMD:z
+SETUVAR Z_DATA:/home/ewen/\x2elocal/share/z/data
+SETUVAR Z_DATA_DIR:/home/ewen/\x2elocal/share/z
+SETUVAR Z_EXCLUDE:\x5e/home/ewen\x24
+SETUVAR __fish_initialized:3100
+SETUVAR _fish_abbr__3A_q:exit
+SETUVAR _fish_abbr__3A_x:exit
+SETUVAR _fish_abbr__C3_A0_cf:idea\x20rocketbook\x20\u00e0revoir\x20champs\x2dforces
+SETUVAR _fish_abbr__C3_A0_revoir:idea\x20rocketbook\x20\u00e0revoir
+SETUVAR _fish_abbr__C3_A9_:/home/ewen
+SETUVAR _fish_abbr_cleanlatexdir:rm\x20\x2a\x2e\x7baux\x2cfdb_latexmk\x2clog\x2cout\x2csynctex\x2egz\x2cfls\x2ctoc\x7d
+SETUVAR _fish_abbr_codestable:code
+SETUVAR _fish_abbr_dark:wal\x20\x2d\x2dtheme\x20one\x2dhalf\x20\x26\x26\x20set\x20\x2dU\x20WAL_THEME_VARIANT\x20dark
+SETUVAR _fish_abbr_e:nvim
+SETUVAR _fish_abbr_executable:chmod\x20\x2bx
+SETUVAR _fish_abbr_gc:git\x20commit\x20\x2dm
+SETUVAR _fish_abbr_grep:rg
+SETUVAR _fish_abbr_icat:kitty\x20\x2bkitten\x20icat
+SETUVAR _fish_abbr_ideadot:idea\x20dotfiles\x20\x2di
+SETUVAR _fish_abbr_ideaidx:idea\x20schoolsyst/indentex\x20\x2di
+SETUVAR _fish_abbr_ideap:idea\x20portfolio\x20\x2diT\x22
+SETUVAR _fish_abbr_idxheaders:rg\x20\x2dN\x20\x27\x5e\x5b\x7e\x3d\x2d\x5d\x7b3\x2c4\x7d\x5cs\x27
+SETUVAR _fish_abbr_indentexnew:rg\x20\x2dA\x204\x20\x27\x28NEW\x7cTODO\x29\x21\x27\x20\x7e/\x2a\x2a\x2eindentex
+SETUVAR _fish_abbr_kh_C3_B4_lles_2D_next_2D_dates:cat\x20\x2ecache/kh\u00f4lles\x2dschedules/\x2a\x2etsv\x20\x7c\x20sort\x20\x7c\x20head\x20\x2dn2
+SETUVAR _fish_abbr_la:lsd\x20\x2dA
+SETUVAR _fish_abbr_lg:lazygit
+SETUVAR _fish_abbr_light:wal\x20\x2d\x2dtheme\x20one\x2dhalf\x20\x2dl\x20\x26\x26\x20set\x20\x2dU\x20WAL_THEME_VARIANT\x20light
+SETUVAR _fish_abbr_ll:lsd\x20\x2dlA
+SETUVAR _fish_abbr_lls:ll
+SETUVAR _fish_abbr_ls:lsd
+SETUVAR _fish_abbr_lss:ls
+SETUVAR _fish_abbr_make_2D_local_2D_py_2D_env_2D_symlink:ln\x20\x2ds\x20\x28poetry\x20env\x20info\x20\x2d\x2dpath\x29/bin\x20\x2einterpreter
+SETUVAR _fish_abbr_myip:dig\x20\x2bshort\x20myip\x2eopendns\x2ecom\x20\x40resolver1\x2eopendns\x2ecom
+SETUVAR _fish_abbr_orca:/home/ewen/apps/Orca\x2dc/build/orca
+SETUVAR _fish_abbr_p:python
+SETUVAR _fish_abbr_pdfa4:pdftocairo\x20\x2dpdf\x20\x2dpaper\x20A4\x20\x2dexpand
+SETUVAR _fish_abbr_pdfmerge:podofomerge
+SETUVAR _fish_abbr_plattan2:bluetoothctl\x20connect\x205C\x3aEB\x3a68\x3a4A\x3a3E\x3aCA
+SETUVAR _fish_abbr_rm:rm\x20\x2dI
+SETUVAR _fish_abbr_savealias:echo\x20alias\x20\x3d\x20
+SETUVAR _fish_abbr_scim:sc\x2dim
+SETUVAR _fish_abbr_sls:ls
+SETUVAR _fish_abbr_ssudo:sudo
+SETUVAR _fish_abbr_sudo:doas
+SETUVAR _fish_abbr_synctime:sudo\x20ntpd\x20\x2dqg
+SETUVAR _fish_abbr_timesync:sudo\x20ntpd\x20\x2dqg
+SETUVAR _fish_abbr_tlmgr:tllocalmgr
+SETUVAR _fish_abbr_tree:lsd\x20\x2d\x2dtree
+SETUVAR _fish_abbr_ts:sudo\x20ntpd\x20\x2dqg
+SETUVAR _fish_abbr_unstage:git\x20reset
+SETUVAR _fish_abbr_use_2D_pacman_2D_stable_2D_repo:doas\x20pacman\x2dmirrors\x20\x2daB\x20stable\x20\x26\x26\x20doas\x20pacman\x20\x2dSyuu
+SETUVAR _fish_abbr_use_2D_pacman_2D_unstable_2D_repo:doas\x20pacman\x2dmirrors\x20\x2daB\x20unstable\x20\x26\x26\x20doas\x20pacman\x20\x2dSyuu
+SETUVAR _fish_abbr_wa:tungsten
+SETUVAR _fish_abbr_whats:tuxi\x20what\x20is
+SETUVAR _fish_abbr_whereami:http\x20get\x20ip\x2dapi\x2ecom/json/\x28dig\x20\x2bshort\x20myip\x2eopendns\x2ecom\x20\x40resolver1\x2eopendns\x2ecom\x29\x20\x2d\x2dbody\x20\x7c\x20jq
+SETUVAR _fish_abbr_xclip:xclip\x20\x2dselection\x20clipboard
+SETUVAR _fish_abbr_yay:paru
+SETUVAR fish_color_autosuggestion:555\x1ebrblack
+SETUVAR fish_color_cancel:\x2dr
+SETUVAR fish_color_command:005fd7
+SETUVAR fish_color_comment:990000
+SETUVAR fish_color_cwd:green
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:009900
+SETUVAR fish_color_error:ff0000
+SETUVAR fish_color_escape:00a6b2
+SETUVAR fish_color_history_current:\x2d\x2dbold
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:yellow
+SETUVAR fish_color_match:\x2d\x2dbackground\x3dbrblue
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:00a6b2
+SETUVAR fish_color_param:00afff
+SETUVAR fish_color_quote:999900
+SETUVAR fish_color_redirection:00afff
+SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_status:red
+SETUVAR fish_color_user:brgreen
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_greeting:Bienvenue\x20dans\x20fish\x2c\x20le\x20shell\x20amical\x20et\x20interactif\x0aType\x20\x60help\x60\x20for\x20instructions\x20on\x20how\x20to\x20use\x20fish
+SETUVAR fish_key_bindings:fish_vi_key_bindings
+SETUVAR fish_pager_color_completion:\x1d
+SETUVAR fish_pager_color_description:B3A06D\x1eyellow
+SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_user_paths:/home/ewen/\x2econfig/nvm/14\x2e8\x2e0/bin\x1e/home/ewen/\x2epoetry/bin\x1e/home/ewen/\x2efzf/bin\x1e/home/ewen/\x2egem/ruby/2\x2e7\x2e0/bin\x1e/user/ewen/go/bin\x1e/home/ewen/go/bin/\x1e/home/ewen/\x2enimble/bin/\x1e/home/ewen/\x2edotfiles/dotbot/bin/
+SETUVAR pure_begin_prompt_with_current_directory:true
+SETUVAR pure_color_command_duration:pure_color_warning
+SETUVAR pure_color_current_directory:pure_color_primary
+SETUVAR pure_color_danger:red
+SETUVAR pure_color_dark:black
+SETUVAR pure_color_git_branch:pure_color_mute
+SETUVAR pure_color_git_dirty:pure_color_mute
+SETUVAR pure_color_git_unpulled_commits:pure_color_info
+SETUVAR pure_color_git_unpushed_commits:pure_color_info
+SETUVAR pure_color_info:cyan
+SETUVAR pure_color_jobs:pure_color_normal
+SETUVAR pure_color_light:white
+SETUVAR pure_color_mute:brblack
+SETUVAR pure_color_normal:normal
+SETUVAR pure_color_primary:blue
+SETUVAR pure_color_prompt_on_error:pure_color_danger
+SETUVAR pure_color_prompt_on_success:pure_color_success
+SETUVAR pure_color_ssh_hostname:pure_color_mute
+SETUVAR pure_color_ssh_separator:pure_color_mute
+SETUVAR pure_color_ssh_user_normal:pure_color_mute
+SETUVAR pure_color_ssh_user_root:pure_color_light
+SETUVAR pure_color_success:magenta
+SETUVAR pure_color_time:pure_color_mute
+SETUVAR pure_color_virtualenv:pure_color_mute
+SETUVAR pure_color_warning:yellow
+SETUVAR pure_enable_git:true
+SETUVAR pure_reverse_prompt_symbol_in_vimode:true
+SETUVAR pure_separate_prompt_on_error:false
+SETUVAR pure_show_jobs:false
+SETUVAR pure_symbol_git_dirty:\x2a
+SETUVAR pure_symbol_git_unpulled_commits:\u21e3
+SETUVAR pure_symbol_git_unpushed_commits:\u21e1
+SETUVAR pure_symbol_prompt:\u276f
+SETUVAR pure_symbol_reverse_prompt:\u276e
+SETUVAR pure_symbol_title_bar_separator:\u2014
+SETUVAR pure_threshold_command_duration:5

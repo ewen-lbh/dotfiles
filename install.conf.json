@@ -30,6 +30,7 @@
       "~/.gitconfig": ".gitconfig",
       "~/.config/spotify-tui/config.yml": ".config/spotify-tui/config.yml",
       "~/.config/qutebrowser/config.py": ".config/qutebrowser/config.py",
+      "~/.config/fish/fish_variables": ".config/fish/fish_variables"
     }
   },
   {
