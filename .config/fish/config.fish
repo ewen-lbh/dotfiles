@@ -31,7 +31,8 @@ starship init fish | source
 alias idea='ideaseed --user-project=incubator --user-keyword=project --default-project=\'%(repository)s\' --default-column=todo --create-missing'
 # alias gcal='gcalcli agenda --details description --details end --details location'
 # lsd configuration
-alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --blocks permission,name,size,date --no-symlink'
+# alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --blocks permission,name,size,date --no-symlink'
+alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M"'
 
 # opam configuration
 source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
