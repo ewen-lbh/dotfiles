@@ -1,0 +1,4 @@
+# See https://cron.help/, really helpful site.
+# format:
+# <mins> <hours> <day of month> <month> <day of week> <command>
+0 22 * * * rclone sync --progress --filter-from /mnt/datacore/documents/rclone-projects-filter-file.txt --max-size=2G ~/projects/ penrose:projects
