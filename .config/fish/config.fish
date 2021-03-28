@@ -39,3 +39,8 @@ source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 # tabtab source for packages
 # uninstall by removing these lines
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
+
+# devour some programs (window swallowing, see https://youtu.be/mBNLzHcUtTo)
+for program in zathura qutebrowser mpv sxiv vlc
+	alias $program "devour $program"
+end
