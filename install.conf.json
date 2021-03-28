@@ -27,7 +27,8 @@
       "~/.local/share/applications/khôlle-math.desktop": ".local/share/applications/khôlle-math.desktop",
       "~/.local/share/applications/khôlle-physique.desktop": ".local/share/applications/khôlle-physique.desktop",
       "~/.local/share/applications/select-wallpaper.desktop": ".local/share/applications/select-wallpaper.desktop",
-      "~/.gitconfig": ".gitconfig"
+      "~/.gitconfig": ".gitconfig",
+      "~/.config/spotify-tui/config.yml": ".config/spotify-tui/config.yml" 
     }
   },
   {
