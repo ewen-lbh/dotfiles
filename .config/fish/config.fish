@@ -1,3 +1,6 @@
+# if removed, autosetting of wal theme does not work (wal -r is deprecated)
+cat ~/.cache/wal/sequences &
+
 # Add things to the PATH
 set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux /home/ewen/.gem/ruby/2.7.0
 
