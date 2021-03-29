@@ -30,7 +30,9 @@
       "~/.gitconfig": ".gitconfig",
       "~/.config/spotify-tui/config.yml": ".config/spotify-tui/config.yml",
       "~/.config/qutebrowser/config.py": ".config/qutebrowser/config.py",
-      "~/.config/fish/fish_variables": ".config/fish/fish_variables"
+      "~/.config/fish/fish_variables": ".config/fish/fish_variables",
+      "~/.local/share/programmesdekhôlles/math-qc": ".local/share/programmesdekhôlles/math-qc",
+      "~/.local/share/applications/khôlle-math-qc.desktop": ".local/share/applications/khôlle-math-qc.desktop"
     }
   },
   {
