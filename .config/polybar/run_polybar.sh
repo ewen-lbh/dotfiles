@@ -7,7 +7,7 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Determine network interface 
-adaptater=`ip link | grep 'state UP' | cut -d':' -f2 | cut -d' ' -f2`
+adaptater=`ip link | grep 'mode DORMANT' | cut -d':' -f2 | cut -d' ' -f2`
 
 # Launch Polybar, using default config location ~/.config/polybar/config
 for monitor in $(xrandr --query | grep ' connected' | cut -d' ' -f1); do
