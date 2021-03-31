@@ -140,3 +140,7 @@ c.colors.tabs.bar.bg = '#ffffff'
 # selective inversion of everything": Combines the two variants   above.
 # Type: Bool
 c.colors.webpage.darkmode.enabled = False
+
+# Bindings for normal mode
+config.bind(',M', 'hint links spawn mpv {hint-url}')
+config.bind(',m', 'spawn mpv {url}')
