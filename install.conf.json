@@ -32,7 +32,12 @@
       "~/.config/qutebrowser/config.py": ".config/qutebrowser/config.py",
       "~/.config/fish/fish_variables": ".config/fish/fish_variables",
       "~/.local/share/programmesdekhôlles/math-qc": ".local/share/programmesdekhôlles/math-qc",
-      "~/.local/share/applications/khôlle-math-qc.desktop": ".local/share/applications/khôlle-math-qc.desktop"
+      "~/.local/share/applications/khôlle-math-qc.desktop": ".local/share/applications/khôlle-math-qc.desktop",
+      "~/.config/Code - Insiders/User/settings.json": ".config/Code - Insiders/User/settings.json",
+      "~/.config/Code - Insiders/User/snippets/go.json": ".config/Code - Insiders/User/snippets/go.json",
+      "~/.config/Code - Insiders/User/snippets/jade.json": ".config/Code - Insiders/User/snippets/jade.json",
+      "~/.config/Code - Insiders/User/snippets/markdown.json": ".config/Code - Insiders/User/snippets/markdown.json",
+      "~/.config/Code - Insiders/User/snippets/ocaml.json": ".config/Code - Insiders/User/snippets/ocaml.json"
     }
   },
   {
