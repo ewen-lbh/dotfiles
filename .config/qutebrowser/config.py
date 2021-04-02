@@ -145,7 +145,7 @@ config.set('content.notifications', True, 'https://calendar.google.com')
 # still be downloaded by clicking the download button in the pdf.js
 # viewer.
 # Type: Bool
-c.content.pdfjs = True
+c.content.pdfjs = False
 
 # Allow websites to register protocol handlers via
 # `navigator.registerProtocolHandler`.
