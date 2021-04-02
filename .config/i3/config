@@ -65,10 +65,10 @@ bindsym $mod+d exec "rofi -show drun -matching fuzzy -modi window,drun,ssh,file-
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-# bindsym $mod+j focus left
-# bindsym $mod+k focus down
-# bindsym $mod+l focus up
-# bindsym $mod+semicolon focus right
+# bindsym $mod+h focus left
+# bindsym $mod+j focus down
+# bindsym $mod+k focus up
+# bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -248,7 +248,7 @@ bindsym $mod+Ctrl+Down exec spt pb --shuffle
 # bindsym $mod+Ctrl+Next exec Todo: Next & Prior keys: seek in track
 
 # Launch rofi browser
-bindsym $mod+k exec rofi -show file-browser -matching fuzzy
+bindsym $mod+g exec rofi -show file-browser -matching fuzzy
 
 # Launch rofi bitwarden
 bindsym $mod+p exec bwmenu
