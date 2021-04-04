@@ -567,8 +567,8 @@ include "%L"
 <Multi_key> <asterisk> <s>		: "σ"	U03C3		# GREEK SMALL LETTER SIGMA
 <Multi_key> <asterisk> <t>		: "τ"	U03C4		# GREEK SMALL LETTER TAU
 <Multi_key> <asterisk> <u>		: "θ"	U03B8		# GREEK SMALL LETTER THETA
-<Multi_key> <asterisk> <v>		: "ω"	U03C9		# GREEK SMALL LETTER OMEGA
-<Multi_key> <asterisk> <w>		: "ς"	U03C2		# GREEK SMALL LETTER FINAL SIGMA
+<Multi_key> <asterisk> <w>		: "ω"	U03C9		# GREEK SMALL LETTER OMEGA
+<Multi_key> <asterisk> <v>		: "ς"	U03C2		# GREEK SMALL LETTER FINAL SIGMA
 <Multi_key> <asterisk> <x>		: "χ"	U03C7		# GREEK SMALL LETTER CHI
 <Multi_key> <asterisk> <y>		: "υ"	U03C5		# GREEK SMALL LETTER UPSILON
 <Multi_key> <asterisk> <z>		: "ζ"	U03B6		# GREEK SMALL LETTER ZETA
@@ -595,7 +595,7 @@ include "%L"
 <Multi_key> <asterisk> <S>		: "Σ"	U03A3		# GREEK CAPITAL LETTER SIGMA
 <Multi_key> <asterisk> <T>		: "Τ"	U03A4		# GREEK CAPITAL LETTER TAU
 <Multi_key> <asterisk> <U>		: "Θ"	U0398		# GREEK CAPITAL LETTER THETA
-<Multi_key> <asterisk> <V>		: "Ω"	U03A9		# GREEK CAPITAL LETTER OMEGA
+<Multi_key> <asterisk> <W>		: "Ω"	U03A9		# GREEK CAPITAL LETTER OMEGA
 # Emacs maps W to "Σ", but I think that’s stupid
 # I think that's from the Greek keyboard.
 <Multi_key> <asterisk> <X>		: "Χ"	U03A7		# GREEK CAPITAL LETTER CHI
