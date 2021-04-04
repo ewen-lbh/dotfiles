@@ -38,7 +38,8 @@
       "~/.config/Code - Insiders/User/snippets/jade.json": ".config/Code - Insiders/User/snippets/jade.json",
       "~/.config/Code - Insiders/User/snippets/markdown.json": ".config/Code - Insiders/User/snippets/markdown.json",
       "~/.config/Code - Insiders/User/snippets/ocaml.json": ".config/Code - Insiders/User/snippets/ocaml.json",
-      "~/.XCompose": ".XCompose"
+      "~/.XCompose": ".XCompose",
+      "~/.config/nvim/init.vim": ".config/nvim/init.vim"
     }
   },
   {
