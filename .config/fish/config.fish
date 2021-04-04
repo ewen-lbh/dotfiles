@@ -45,3 +45,6 @@ source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 for program in zathura mpv sxiv vlc
 	alias $program "devour $program"
 end
+
+# fix utf-8 for lynx
+alias lynx "lynx --display_charset=utf-8"
