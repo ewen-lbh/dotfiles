@@ -126,6 +126,9 @@ bindsym --release Print exec scrot -e 'mv $f ~/screenshots'
 
 # workspace_auto_back_and_forth true
 
+# Define names for monitors
+set $primary HDMI-A-0
+set $secondary DVI-D-0
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1  1
@@ -163,6 +166,16 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# assign workspaces to monitors
+workspace $ws9 output $secondary
+workspace $ws10 output $secondary
+workspace $ws7 output $secondary
+workspace $ws3 output $primary
+workspace $ws1 output $primary
+
+# move current workspace to other monitor
+bindsym $mod+alt+right move workspace to output right
+bindsym $mod+alt+left move workspace to output left
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -219,11 +232,11 @@ assign [class="code - insiders"] $ws3
 assign [class="spotify-tui"] $ws9
 
 # Make windows floating
-for_window [class="copyq"] floating enable
 
 # Autostart some daemons
 exec --no-startup-id spotifyd
 exec --no-startup-id clipmenud
+exec --no-startup-id ckb-next --background
 
 # Adjust brightness
 bindsym XF86MonBrightnessUp exec xbacklight +5
@@ -247,7 +260,7 @@ bindsym $mod+Ctrl+Up exec spt pb --like
 bindsym $mod+Ctrl+Down exec spt pb --shuffle
 # bindsym $mod+Ctrl+Next exec Todo: Next & Prior keys: seek in track
 
-# Launch rofi browser
+# Launch rofi file browser
 bindsym $mod+g exec rofi -show file-browser -matching fuzzy
 
 # Launch rofi bitwarden
