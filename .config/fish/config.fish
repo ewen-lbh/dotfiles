@@ -5,7 +5,7 @@ cat ~/.cache/wal/sequences &
 set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux /home/ewen/.gem/ruby/2.7.0
 
 # Set bat(1)'s theme
-set -gx BAT_THEME OneHalfLight
+alias bat="bat --theme (test (cat $HOME/.config/current_color_scheme) = light && echo OneHalfLight || echo OneHalfDark)"
 
 # Set default browser
 set -gx BROWSER qutebrowser

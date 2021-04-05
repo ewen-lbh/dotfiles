@@ -105,7 +105,7 @@ call plug#end()
 
 " Color (synced with wal)
 colorscheme onehalflight
-let current_wal_variant = system('echo $WAL_THEME_VARIANT')
+let current_wal_variant = system('cat $HOME/.config/current_color_scheme')
 
 if current_wal_variant =~# 'dark'
 	colorscheme onehalfdark
