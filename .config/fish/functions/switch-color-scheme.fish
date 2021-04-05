@@ -7,5 +7,5 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	echo $variant > $HOME/.config/current_color_scheme
 	# update config files that can't update on their own
 	wal --theme one-half (test $variant = light && echo -- -l)
-	cat $HOME/.config/lazygit/config.yml | jq '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
+	cat $HOME/.config/lazygit/config.yml | yq '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
 end
