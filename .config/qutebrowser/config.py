@@ -155,6 +155,9 @@ c.content.pdfjs = False
 #   - false
 #   - ask
 config.set('content.register_protocol_handler', True, 'https://calendar.google.com?cid=%25s')
+# Characters used for hint strings.
+# Type: UniqueCharString
+c.hints.chars = 'qsdfghjklm'
 
 # Background color of the tab bar.
 # Type: QssColor
