@@ -253,12 +253,12 @@ bindsym XF86TouchpadToggle exec /home/ewen/.config/i3/toggle_touchpad.fish
 bindsym $mod+Shift+l exec i3-layout-manager
 
 # Media keybinds
-bindsym $mod+ctrl+Right exec playerctl next || spt pb --next
-bindsym $mod+ctrl+Left exec playerctl previous || spt pb --previous
-bindsym $mod+ctrl+space exec test `playerctl --player=spotifyd status` = "Playing" && playerctl pause || playerctl play
-bindsym XF86AudioNext exec playerctl next || spt pb --next
-bindsym XF86AudioPrev exec playerctl previous || spt pb --previous
-bindsym XF86AudioPlay exec test `playerctl --player=spotifyd status` = "Playing" && playerctl pause || playerctl play
+bindsym $mod+ctrl+Right exec playerctl --player=spotifyd next || spt pb --next
+bindsym $mod+ctrl+Left exec playerctl --player=spotifyd previous || spt pb --previous
+bindsym $mod+ctrl+space exec test `playerctl --player=spotifyd status` = "Playing" && playerctl --player=spotifyd pause || playerctl --player=spotifyd play
+bindsym XF86AudioNext exec playerctl --player=spotifyd next || spt pb --next
+bindsym XF86AudioPrev exec playerctl --player=spotifyd previous || spt pb --previous
+bindsym XF86AudioPlay exec test `playerctl --player=spotifyd status` = "Playing" && playerctl --player=spotifyd pause || playerctl --player=spotifyd play
 
 bindsym $mod+ctrl+Up exec spt pb --like
 bindsym $mod+ctrl+Down exec spt pb --shuffle
