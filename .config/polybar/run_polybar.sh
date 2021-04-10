@@ -17,3 +17,8 @@ for monitor in $(xrandr --query | grep ' connected' | cut -d' ' -f1); do
 done
 
 echo "Polybar launched."
+
+# Somehow picom crashes
+killall -q picom
+
+nohup picom --experimental-backends & 
