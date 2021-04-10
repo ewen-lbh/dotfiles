@@ -42,7 +42,7 @@ source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
 
 # devour some programs (window swallowing, see https://youtu.be/mBNLzHcUtTo)
-for program in zathura mpv sxiv vlc
+for program in zathura mpv sxiv vlc qimgv
 	alias $program "devour $program"
 end
 
