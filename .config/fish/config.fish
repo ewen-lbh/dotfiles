@@ -2,7 +2,7 @@
 cat ~/.cache/wal/sequences &
 
 # Add things to the PATH
-set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux /home/ewen/.gem/ruby/2.7.0
+# set -gx PATH $PATH /home/ewen/.yarn/bin /usr/local/texlive/2020/bin/x86_64-linux /home/ewen/.gem/ruby/2.7.0
 
 # Set bat(1)'s theme
 alias bat="bat --theme (test (cat $HOME/.config/current_color_scheme) = light && echo OneHalfLight || echo OneHalfDark)"
