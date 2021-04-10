@@ -110,7 +110,7 @@ bindsym $mod+Shift+space floating toggle
 
 # lock
 bindsym $mod+l exec betterlockscreen --lock
-exec --no-startup-id betterlockscreen --lock
+exec --no-startup-id test `hostname` = "voyager" && betterlockscreen --lock 
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -240,7 +240,7 @@ assign [class="spotify-tui"] $ws9
 # Autostart some daemons
 exec --no-startup-id spotifyd
 exec --no-startup-id clipmenud
-exec --no-startup-id ckb-next --background
+exec --no-startup-id test `hostname` = "stealth" && ckb-next --background
 
 # Adjust brightness
 bindsym XF86MonBrightnessUp exec xbacklight +5
