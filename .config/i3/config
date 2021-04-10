@@ -9,6 +9,7 @@
 # i3 config file (v4)
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
 
 set $mod Mod4
 
@@ -49,9 +50,9 @@ bindsym $mod+b exec qutebrowser
 bindsym $mod+c exec code-insiders
 
 # smart_gaps on
-gaps inner 50
-gaps top -50
-gaps bottom -50
+gaps inner 35
+gaps top -35
+gaps bottom -35
 
 for_window [class="^.*"] border pixel 0
 
@@ -88,6 +89,7 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -130,6 +132,7 @@ bindsym --release Print exec scrot -e 'mv $f ~/screenshots'
 # Define names for monitors
 set $primary HDMI-A-0
 set $secondary DVI-D-0
+
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 set $ws1  1
@@ -180,6 +183,7 @@ workspace $ws1 output $primary
 # move current workspace to other monitor
 bindsym $mod+alt+right move workspace to output right
 bindsym $mod+alt+left move workspace to output left
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -272,3 +276,5 @@ bindsym $mod+p exec bwmenu
 
 # Launch rofi clipboard manager
 bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
+
+
