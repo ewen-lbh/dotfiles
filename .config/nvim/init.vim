@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 " - For Neovim: stdpath('data') . '/plugged'
 " - Avoid using standard Vim directory names like 'plugin'
-let mapleader="§"
+let mapleader=" " 
 
 call plug#begin('~/.vim/plugged')
 
@@ -99,6 +99,9 @@ Plug 'thinca/vim-textobj-between'
 Plug 'dag/vim-fish'
 
 Plug 'mboughaba/i3config.vim'
+
+Plug 'unblevable/quick-scope'
+	let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " Initialize plugin system
 call plug#end()
