@@ -267,6 +267,7 @@ bindsym XF86AudioPlay exec test `playerctl --player=spotifyd status` = "Playing"
 bindsym $mod+ctrl+Up exec spt pb --like
 bindsym $mod+ctrl+Down exec spt pb --shuffle
 bindsym $mod+ctrl+Prior exec rofi-spotify -a
+bindsym $mod+ctrl+Insert exec rofi-spotify -st
 # bindsym $mod+ctrl+Next exec Todo: Next & Prior keys: seek in track
 
 # Launch rofi file browser
