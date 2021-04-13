@@ -8,4 +8,6 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	# update config files that can't update on their own
 	wal --theme one-half (test $variant = light && echo -- -l)
 	cat $HOME/.config/lazygit/config.yml | yq '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
+    # update wallpaper
+    cp $HOME/.config/wallpaper-$variant.png $HOME/.config/wallpaper.png
 end
