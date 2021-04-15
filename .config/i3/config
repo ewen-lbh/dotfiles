@@ -242,8 +242,8 @@ assign [class="spotify-tui"] $ws9
 # Make windows floating
 
 # Autostart some daemons
-exec --no-startup-id spotifyd
-exec --no-startup-id clipmenud
+exec_always --no-startup-id spotifyd
+exec_always --no-startup-id clipmenud
 exec --no-startup-id test `hostname` = "stealth" && ckb-next --background
 
 # Adjust brightness
@@ -280,3 +280,10 @@ bindsym $mod+p exec bwmenu
 bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
 
+# Startup applications
+exec --no-startup-id i3-msg 'workspace 2; exec kitty qutebrowser'
+exec --no-startup-id i3-msg 'workspace 7; exec kitty -d $HOME/.dotfiles; exec kitty -d $HOME/.dotfiles fish -c lazygit'
+exec --no-startup-id i3-msg 'workspace 8; layout tabbed; exec qutebrowser mail.ewen.works mail.google.com'
+exec --no-startup-id i3-msg 'workspace 9; exec spotifyd; exec qutebrowser open.spotify.com'
+exec --no-startup-id i3-msg 'workspace 10; layout tabbed; exec kitty fish -c tiny; exec kitty fish -c gomuks; exec discord'
+exec --no-startup-id i3-msg 'workspace 1'
