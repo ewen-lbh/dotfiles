@@ -26,7 +26,7 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
     # set --local owner (gh api user | jq .login --raw-output)
     set --local owner ewen-lbh
     set --local repo "$name"
-    set --local desc "$_flag_d"
+    set --local description "$_flag_d"
     set --local license (test (count "$_flag_l") -gt 0 && echo "$_flag_l" || echo "GPL-3.0")
     set --local tags $_flag_t
     set --local tags_json (echo -s "[\"" (echo $_flag_t | string replace --all ' ' '", "') "\"]")
@@ -45,7 +45,7 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
         echo "    name: \"$name\","
         echo "    repository: $owner/$repo,"
         echo "    path: $HOME/projects/$repo,"
-        echo "    description: \"$desc\","
+        echo "    description: \"$description\","
         echo "    license: \"$license\","
         echo "    tags: $tags_json," 
         echo "    private:" (test (count $_flag_p) -gt 0 && echo "true" || echo "false") ","
@@ -82,14 +82,19 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
                 ".package.readme = \"README.md\" " \
                 ".package.repository = \"https://github.com/$owner/$repo\"" \
                 ".package.keywords = $tags_json" 
+            # remove silly hello world
+            echo -e "fn main() {\n    \n}\n" > src/main.rs
 
         case go
             go mod init ./$repo
+            cd $repo
+            gitignore go
 
         case javascript
             mkdir ./$repo
             cd $repo
             pnpm init --yes
+            gitignore javascript
             _mutate_json package.json \
                 ".name = \"$name\"" \
                 ".description = \"$description\"" \
@@ -110,6 +115,32 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
         licensor $license (git config user.name) > LICENSE
     end
 
+    # create editorconfig
+    echo "
+    # https://editorconfig.org
+
+    [*]
+    end_of_line = lf
+    insert_final_newline = true
+    charset = utf-8
+    indent_style = tab
+
+    [**.py]
+    indent_style = space
+    indent_size = 4
+
+    [**.rs]
+    indent_style = space
+    indent_size = 4
+    " | string trim > .editorconfig
+
     # publish to gh!
-    gh repo create $owner/$repo --description "$desc" (test "$_flag_p" && echo "--private" || echo "--public")
+    git init # git init is idempotent, so it's fine if some language already inits (and does potentially other stuff involving git)
+    gh repo create $owner/$repo --description "$description" (test "$_flag_p" && echo "--private" || echo "--public")
+    # in case some language's creation process already commits an initial commit
+    if not git log 2>/dev/null
+        git add .
+        git commit -m "🎉 Initial commit"
+    end
+    git push -u origin main
 end
