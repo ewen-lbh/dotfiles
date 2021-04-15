@@ -10,4 +10,6 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	cat $HOME/.config/lazygit/config.yml | yq '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
     # update wallpaper
     cp $HOME/.config/wallpaper-$variant.png $HOME/.config/wallpaper.png
+    # reload wallpaper & polybar
+    i3-msg restart
 end
