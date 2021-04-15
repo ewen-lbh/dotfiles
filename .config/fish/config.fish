@@ -27,8 +27,6 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 # starship prompt
 starship init fish | source
-# alias for ideaseed
-alias idea='ideaseed --user-project=incubator --user-keyword=project --default-project=\'%(repository)s\' --default-column=todo --create-missing'
 # alias gcal='gcalcli agenda --details description --details end --details location'
 # lsd configuration
 # alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --blocks permission,name,size,date --no-symlink'
@@ -48,3 +46,5 @@ end
 
 # fix utf-8 for lynx
 alias lynx "lynx --display_charset=utf-8"
+# ideaseed alias
+alias idea='ideaseed --auth-cache=\'/home/ewen/.cache/ideaseed/auth.json\' --check-for-updates --self-assign --default-project=\'{repository}\' --default-column=todo'
