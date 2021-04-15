@@ -23,10 +23,13 @@ fi
 font1="unifont:fontformat=truetype:antialias=false:size=$fz;0"
 font0="Fira Code Nerd Font;1"
 
+# Determine color depending on color scheme
+color=$(grep light $HOME/.config/current_color_scheme 1>/dev/null && echo \#000 || echo \#FFF)
+
 # Launch Polybar, using default config location ~/.config/polybar/config
 for monitor in $(xrandr --query | grep ' connected' | cut -d' ' -f1); do
-    FONT_1=$font1 FONT_0=$font0 BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini top &
-    FONT_1=$font1 FONT_0=$font0 BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini bottom &
+    COLOR_PRIM=$color COLOR_SEC=$color FONT_1=$font1 FONT_0=$font0 BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini top &
+    COLOR_PRIM=$color COLOR_SEC=$color FONT_1=$font1 FONT_0=$font0 BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini bottom &
 done
 
 echo "Polybar launched."
