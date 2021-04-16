@@ -155,9 +155,14 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
 
     (work in progress)
     " | string trim > README.md
+
     # publish to gh!
     git init # git init is idempotent, so it's fine if some language already inits (and does potentially other stuff involving git)
     gh repo create $owner/$repo --description "$description" (test "$_flag_p" && echo "--private" || echo "--public")
+    # add topics to repo (temp file needed: see https://github.com/cli/cli/issues/1484)
+    echo -s '{"names": ' (echo "$tags_json" | string lower) '}' > tempreq.json \
+       && gh api --preview mercy repos/:owner/:repo/topics -X PUT --input tempreq.json \
+       && rm tempreq.json
     # in case some language's creation process already commits an initial commit
     if not git log 2>/dev/null
         git add .
