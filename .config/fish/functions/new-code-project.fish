@@ -1,9 +1,9 @@
 function _mutate_toml
-    tomlq (string join '|' $argv[2..]) -t < $argv[1] | sponge $argv[1]
+    tomlq --in-place (string join '|' $argv[2..]) -t $argv[1]
 end
 
 function _mutate_json
-    jq (string join '|' $argv[2..]) < $argv[1] | sponge $argv[1]
+    jq --in-place (string join '|' $argv[2..]) $argv[1] 
 end
 
 
