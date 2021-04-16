@@ -133,6 +133,28 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
     indent_size = 4
     " | string trim > .editorconfig
 
+    # create README
+    echo "----------
+
+    ***WARNING: This is a very early work-in-progress, nothing works yet.***
+
+    This project uses [README-driven development](https://tom.preston-werner.com/2010/08/23/readme-driven-development.html)
+    (i.e.: I'm still figuring out how exactly that program will work)
+
+    ----------
+
+    # $name
+
+    > $description
+
+    ## Installation
+
+    (work in progress)
+
+    ## Usage
+
+    (work in progress)
+    " | string trim > README.md
     # publish to gh!
     git init # git init is idempotent, so it's fine if some language already inits (and does potentially other stuff involving git)
     gh repo create $owner/$repo --description "$description" (test "$_flag_p" && echo "--private" || echo "--public")
