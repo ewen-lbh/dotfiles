@@ -116,8 +116,7 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
     end
 
     # create editorconfig
-    echo "
-    # https://editorconfig.org
+    echo "# https://editorconfig.org
 
     [*]
     end_of_line = lf
