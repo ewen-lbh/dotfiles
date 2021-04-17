@@ -1,9 +1,9 @@
 function _mutate_toml
-    tomlq --in-place (string join '|' $argv[2..]) -t $argv[1]
+    tomlq -t (string join '|' $argv[2..]) $argv[1] < $argv[1] | sponge $argv[1]
 end
 
 function _mutate_json
-    jq --in-place (string join '|' $argv[2..]) $argv[1] 
+    jq -i (string join '|' $argv[2..]) $argv[1] 
 end
 
 
@@ -15,6 +15,7 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
         'p/private'\
         'l/license='\
         'v/verbose'\
+        'library'\
         'dry-run'\
     -- $argv; or return
 
@@ -72,7 +73,7 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
             gitignore python
 
         case rust
-            cargo new --name $name ./$repo 
+            cargo new --name $name ./$repo (test (count $_flag_library) -gt 0 && echo --lib)
             cd $repo
             _mutate_toml Cargo.toml \
                 ".package.description = \"$description\"" \
@@ -84,14 +85,14 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
             # remove silly hello world
             echo -e "fn main() {\n    \n}\n" > src/main.rs
             # add Makefile
-            echo -e "default:\n\tcargo build --release\n\ninstall:\n\tsudo cp -i target/release/$name /usr/bin/\n\tsudo chmod +x /usr/bin/$name"
+            echo -e "default:\n\tcargo build --release\n\ninstall:\n\tsudo cp -i target/release/$name /usr/bin/\n\tsudo chmod +x /usr/bin/$name" > Makefile
 
         case go
             go mod init ./$repo
             cd $repo
             gitignore go
             # add Makefile
-            echo -e "default:\n\tgo build\n\ninstall:\n\tsudo cp -i $name /usr/bin/\n\tsudo chmod +x /usr/bin/$name"
+            echo -e "default:\n\tgo build\n\ninstall:\n\tsudo cp -i $name /usr/bin/\n\tsudo chmod +x /usr/bin/$name" > Makefile
 
         case javascript
             mkdir ./$repo
