@@ -70,7 +70,6 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
 
             poetry add --dev --allow-prereleases black pylint isort rich 
             gitignore python
-            git init
 
         case rust
             cargo new --name $name ./$repo 
@@ -84,11 +83,15 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
                 ".package.keywords = $tags_json" 
             # remove silly hello world
             echo -e "fn main() {\n    \n}\n" > src/main.rs
+            # add Makefile
+            echo -e "default:\n\tcargo build --release\n\ninstall:\n\tsudo cp -i target/release/$name /usr/bin/\n\tsudo chmod +x /usr/bin/$name"
 
         case go
             go mod init ./$repo
             cd $repo
             gitignore go
+            # add Makefile
+            echo -e "default:\n\tgo build\n\ninstall:\n\tsudo cp -i $name /usr/bin/\n\tsudo chmod +x /usr/bin/$name"
 
         case javascript
             mkdir ./$repo
@@ -155,6 +158,28 @@ function new-code-project --description "new-code-project NAME TECH [[OWNER/]REP
 
     (work in progress)
     " | string trim > README.md
+
+    # portfoliodb
+    mkdir .portfoliodb
+    set --local today (date --iso-8601)
+    echo "---
+    created: $today
+    made with: [$tech]
+    wip: yes
+    ----
+
+    # $name
+
+    :: fr
+
+    [Code source](https://github.com/$owner/$repo)
+
+    :: en
+
+    [Source code](https://github.com/$owner/$repo)
+    " > .portfoliodb/description.md
+
+
 
     # publish to gh!
     git init # git init is idempotent, so it's fine if some language already inits (and does potentially other stuff involving git)
