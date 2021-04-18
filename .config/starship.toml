@@ -2,3 +2,8 @@ add_newline = false
 
 [directory]
 use_logical_path = false
+
+[git_status]
+# default format, but without $stashed
+format = '([\[$conflicted$deleted$renamed$modified$staged$untracked$ahead_behind\]]($style) )'
+deleted = "×"
