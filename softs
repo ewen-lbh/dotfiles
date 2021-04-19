@@ -1,0 +1,84 @@
+paru
+(run: paru -R yay)
+# start (run: install_pulse)
+manjaro-pulse
+pa-applet
+pavucontrol
+# end
+community/fish
+(run: chsh -s $(which fish))
+(restart shell)
+vlc
+mpv
+community/qutebrowser
+aur/qt5-webengine-widevine
+extra/lynx
+(run: xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/http{s,})
+(run: set -Ux BROWSER (which qutebrowser))
+(run: sed -i s!(which palemoon)!(which qutebrowser)! ~/.profile)
+aur/bitwarden-cli
+community/discord
+community/kitty
+community/fzf
+(see: winapps)
+aur/python310
+community/rustup
+community/python-poetry
+aur/kb-next
+community/spotifyd
+aur/spotify-tui
+community/polybar
+# community/picom
+aur/picom-rounded-corners
+community/neovim
+community/python-pynvim
+aur/visual-studio-code-insiders-bin
+extra/feh
+community/lsd
+community/ripgrep
+community/moreutils 
+community/bat
+community/lazygit
+community/playerctl
+community/rofi
+aur/betterlockscreen
+community/starship
+community/github-cli
+community/python-pywal
+aur/nerd-fonts-fira-code
+aur/fish-z-git
+community/jq
+community/yq
+community/dunst
+community/thefuck
+aur/cani?
+# mount datacore
+# symlink $HOME folders (projects/, etc)
+# install fonts
+extra/noto-fonts-emoji
+(run: cd ~/resources/fonts && ./collect && cd ~)
+(run: cp ~/resources/fonts/.all/*.ttf /usr/share/fonts/TTF/)
+(run: cp ~/resources/fonts/.all/*.otf /usr/share/fonts/OTF/)
+(run: fc-cache)
+aur/bitwarden-rofi
+community/viu
+community/lutris
+aur/wikitrad
+aur/ideaseed
+community/rclone
+community/pdfarranger
+community/zathura
+community/zathura-pdf-mupdf
+(run: xdg-mime default org.pwmt.zathura.desktop application/pdf)
+aur/devour
+extra/thunar
+community/podofo
+extra/xclip
+(run: abbr xclip 'xlcip -selection clipboard')
+aur/ttf-unifont
+extra/bdf-unifont
+extra/unzip
+extra/xorg-xev
+aur/rofi-spotify-git
+aur/tllocalmgr-git
+community/python-pynvim
