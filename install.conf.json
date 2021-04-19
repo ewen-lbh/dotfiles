@@ -39,7 +39,8 @@
       "~/.config/Code - Insiders/User/snippets/markdown.json": ".config/Code - Insiders/User/snippets/markdown.json",
       "~/.config/Code - Insiders/User/snippets/ocaml.json": ".config/Code - Insiders/User/snippets/ocaml.json",
       "~/.XCompose": ".XCompose",
-      "~/.config/nvim/init.vim": ".config/nvim/init.vim"
+      "~/.config/nvim/init.vim": ".config/nvim/init.vim",
+      "~/.config/fontconfig/fonts.conf": ".config/fontconfig/fonts.conf"
     }
   },
   {
