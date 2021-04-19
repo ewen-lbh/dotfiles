@@ -13,7 +13,7 @@ echo "Using interface $interface"
 # Determine font size & bar height from hostname
 # TODO: from screen size instead (figure out the ratios)
 if test `hostname` = "stealth"; then
-    fz=11
+    fz=14
     height=35
 else
     fz=13
@@ -21,7 +21,8 @@ else
 fi
 
 font1="unifont:fontformat=truetype:antialias=false:size=$fz;0"
-font0="Fira Code Nerd Font;1"
+# font0="Fira Code Nerd Font;1"
+font0="Scientifica:size=$fz;0"
 
 # Determine color depending on color scheme
 color=$(grep light $HOME/.config/current_color_scheme 1>/dev/null && echo \#000 || echo \#FFF)
