@@ -23,6 +23,7 @@ community/fzf
 (see: winapps)
 aur/python310
 community/rustup
+(run: rustup update stable && rustup self upgrade-data)
 community/python-poetry
 aur/kb-next
 community/spotifyd
@@ -82,3 +83,5 @@ extra/xorg-xev
 aur/rofi-spotify-git
 aur/tllocalmgr-git
 community/python-pynvim
+community/pdfjs
+aur/vimv-git
