@@ -194,6 +194,19 @@ c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
 #   - smart: Apply dark mode filter to frames based on background color.
 c.colors.webpage.darkmode.policy.page = 'always'
 
+# Default font families to use. Whenever "default_family" is used in a
+# font setting, it's replaced with the fonts listed here. If set to an
+# empty value, a system-specific monospace default is used.
+# Type: List of Font, or Font
+c.fonts.default_family = 'scientifica'
+
+# Default font size to use. Whenever "default_size" is used in a font
+# setting, it's replaced with the size listed here. Valid values are
+# either a float value with a "pt" suffix, or an integer value with a
+# "px" suffix.
+# Type: String
+c.fonts.default_size = '11.5pt'
+
 # Bindings for normal mode
 config.bind(',M', 'hint links spawn mpv {hint-url}')
 config.bind(',m', 'spawn mpv {url}')
