@@ -124,7 +124,7 @@ set scrolloff=99
 set number
 set relativenumber
 " UltiSnips doesn't support py3.8 (yet)
-let g:python3_host_prog = '/usr/bin/python3.6'
+let g:python3_host_prog = '/usr/bin/python'
 " Disable softwrap
 set nowrap
 
