@@ -124,7 +124,7 @@ bindsym $mod+a focus parent
 #bindsym ?? focus child
 
 # take screenhots
-bindsym --release Shift+Print exec scrot --select --freeze -e 'mv $f ~/screenshots'
+bindsym --release Shift+Print exec scrot --select --freeze -e 'mv $f /tmp/screenshot.png' && cp /tmp/screenshot.png ~/screenshots/$(date --iso-8601=seconds).png && xclip -selection clipboard -target image/png -i /tmp/screenshot.png
 bindsym --release Print exec scrot -e 'mv $f ~/screenshots'
 
 # workspace_auto_back_and_forth true
@@ -257,17 +257,19 @@ bindsym XF86TouchpadToggle exec /home/ewen/.config/i3/toggle_touchpad.fish
 bindsym $mod+Shift+l exec i3-layout-manager
 
 # Media keybinds
-bindsym $mod+ctrl+Right exec playerctl --player=spotifyd next || spt pb --next
-bindsym $mod+ctrl+Left exec playerctl --player=spotifyd previous || spt pb --previous
-bindsym $mod+ctrl+space exec test `playerctl --player=spotifyd status` = "Playing" && playerctl --player=spotifyd pause || playerctl --player=spotifyd play
-bindsym XF86AudioNext exec playerctl --player=spotifyd next || spt pb --next
-bindsym XF86AudioPrev exec playerctl --player=spotifyd previous || spt pb --previous
-bindsym XF86AudioPlay exec test `playerctl --player=spotifyd status` = "Playing" && playerctl --player=spotifyd pause || playerctl --player=spotifyd play
+bindsym $mod+ctrl+Right exec playerctl  next || spt pb --next
+bindsym $mod+ctrl+Left exec playerctl  previous || spt pb --previous
+bindsym $mod+ctrl+space exec test `playerctl  status` = "Playing" && playerctl  pause || playerctl  play
+bindsym XF86AudioNext exec playerctl  next || spt pb --next
+bindsym XF86AudioPrev exec playerctl  previous || spt pb --previous
+bindsym XF86AudioPlay exec test `playerctl  status` = "Playing" && playerctl  pause || playerctl  play
 
 bindsym $mod+ctrl+Up exec spt pb --like
 bindsym $mod+ctrl+Down exec spt pb --shuffle
 bindsym $mod+ctrl+Insert exec rofi-spotify -a
 bindsym $mod+ctrl+Prior exec rofi-spotify -st
+# scroll lock cuz repeat "locks scrolling between songs"
+bindsym $mod+ctrl+Scroll_Lock exec spt pb --repeat
 # bindsym $mod+ctrl+Next exec Todo: Next & Prior keys: seek in track
 
 # Launch rofi file browser
