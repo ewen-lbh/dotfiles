@@ -109,7 +109,8 @@ bindsym $mod+Shift+space floating toggle
 # TODO: $mod+space : switch keyboard layout
 
 # lock
-bindsym $mod+Caps_Lock exec betterlockscreen --lock
+# also press caps_lock w/ xdotool so that the caps lock state does not change
+bindsym $mod+Caps_Lock exec xdotool key Caps_Lock && betterlockscreen --lock 
 exec --no-startup-id test `hostname` = "voyager" && betterlockscreen --lock 
 
 # change focus between tiling / floating windows
@@ -179,8 +180,8 @@ workspace $ws3 output $primary
 workspace $ws1 output $primary
 
 # move current workspace to other monitor
-bindsym $mod+alt+right move workspace to output right
-bindsym $mod+alt+left move workspace to output left
+bindsym $mod+ctrl+l move workspace to output right
+bindsym $mod+ctrl+h move workspace to output left
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
