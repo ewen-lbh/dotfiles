@@ -39,7 +39,9 @@ community/lsd
 community/ripgrep
 community/moreutils 
 community/bat
-community/lazygit
+# using AUR instead of community because this one is kept up to date
+# sooner
+aur/lazygit-bin
 community/playerctl
 community/rofi
 aur/betterlockscreen
