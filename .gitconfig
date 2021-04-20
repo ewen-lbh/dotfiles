@@ -1,6 +1,7 @@
 [core]
 	editor = nvim
 	quotepath = off
+	pager = delta
 [user]
 	email = hey@ewen.works
 	name = Ewen Le Bihan
@@ -9,3 +10,8 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	line-numbers = true
+
