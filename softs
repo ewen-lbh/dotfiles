@@ -95,3 +95,6 @@ community/lutris
 # turn off screensaver
 (if: desktop (run: xset s off))
 
+community/fd
+community/sxiv
+(run: xdg-mime default sxiv.desktop image/{png,jp{e,}g,tiff,webp})
