@@ -94,10 +94,21 @@ community/lutris
 (run: xdg-open lutris:overwatch-standard)
 (!user interaction needed!)
 # end
+# install Titanfall 2
+(run: sudo pacman --needed -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-libxml2 lib32-alsa-plugins lib32-sdl2 lib32-freetype2 lib32-dbus lib32-libgcrypt libgcrypt)
+(!if needed: (run: echo "for_window [instance=\"origin.exe\"] floating enable" >> ~/.config/i3/config)!)
+# end
 # turn off screensaver
 (if: desktop (run: xset s off))
-
+# end
 community/fd
+aur/qimgv
 community/sxiv
 (run: xdg-mime default sxiv.desktop image/{png,jp{e,}g,tiff,webp})
+multilib/steam-manjaro
+community/python-slugify
+community/go
+(run: go get -u github.com/gulyasm/jsonui)
+(run: sudo mv ~/go/bin/jsonui /usr/bin)
 aur/git-delta-bin
+aur/multimc5
