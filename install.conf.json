@@ -41,7 +41,11 @@
       "~/.XCompose": ".XCompose",
       "~/.config/nvim/init.vim": ".config/nvim/init.vim",
       "~/.config/fontconfig/fonts.conf": ".config/fontconfig/fonts.conf",
-      "~/.xinitrc": ".xinitrc"
+      "~/.xinitrc": ".xinitrc",
+      "~/.config/thefuck/settings.py": ".config/thefuck/settings.py",
+      "~/.config/thefuck/rules/git-master-main.py": ".config/thefuck/rules/git-master-main.py",
+      "~/.config/thefuck/rules/lsd-single-file.py": ".config/thefuck/rules/lsd-single-file.py",
+      "~/.config/paru/paru.conf": ".config/paru/paru.conf"
     }
   },
   {
