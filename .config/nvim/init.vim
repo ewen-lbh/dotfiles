@@ -107,16 +107,27 @@ Plug 'unblevable/quick-scope'
 call plug#end()
 
 " Color (synced with wal)
+syntax on
+set t_Co=256
+set cursorline
 colorscheme onehalflight
-let current_wal_variant = system('cat $HOME/.config/current_color_scheme')
+set background=light
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
+let current_wal_variant = system('cat $HOME/.config/current_color_scheme')
 if current_wal_variant =~# 'dark'
 	colorscheme onehalfdark
+	set background=dark
 endif
 " colorscheme palenight
 " set background=dark
 "colorscheme wal
-set background=light
+" fix different background color
+highlight Normal ctermbg=black
 
 " Typewriter mode
 set scrolloff=99
