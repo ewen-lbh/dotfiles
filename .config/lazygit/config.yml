@@ -1,0 +1,4 @@
+gui:
+  theme:
+    lightTheme: false
+  showFileTree: true
