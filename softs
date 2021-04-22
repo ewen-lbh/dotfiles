@@ -112,3 +112,67 @@ community/go
 (run: sudo mv ~/go/bin/jsonui /usr/bin)
 aur/git-delta-bin
 aur/multimc5
+# start winapps
+community/virt-manager
+?/qemu
+?/libvirt
+?/polkit
+?/freerdp
+?/virt-viewer
+?/dnsmasq
+?/vde2
+?/bridge-utils
+?/openbsd-netcat
+?/ebtables
+?/iptables
+(run: git clone https://github.com/Fmstrat/winapps.git ~/apps/winapps)
+(run: cd winapps)
+(write: ("
+RDP_USER="ewen"
+RDP_PASS="($ PASS $)"
+#RDP_DOMAIN="MYDOMAIN"
+#RDP_IP="192.168.123.111"
+#RDP_SCALE=100
+#RDP_FLAGS=""
+MULTIMON="true"
+#DEBUG="true"
+") ~/.config/winapps/winapps.conf)
+(run: ("
+sudo sed -i "s/#user = "root"/user = "$(id -un)"/g" /etc/libvirt/qemu.conf
+sudo sed -i "s/#group = "root"/group = "$(id -gn)"/g" /etc/libvirt/qemu.conf
+sudo usermod -a -G kvm $(id -un)
+sudo usermod -a -G libvirt $(id -un)
+sudo systemctl restart libvirtd
+sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
+
+sleep 5
+
+sudo virsh net-autostart default
+sudo virsh net-start default
+"))
+(! reboot !)
+(! Do VM installation !)
+(# - Open virt-manager                                                                                    #)
+(# - Add connection                                                                                       #)
+(# - Ensure URI is qemu:///system                                                                         #)
+(# - Check auto-connect                                                                                   #)
+(# - Click on QEMU/KVM section header                                                                     #)
+(# - Click '+'                                                                                            #)
+(# - Name it RDPWindows                                                                                   #)
+(# > Follow instructions in https://github.com/Fmstrat/winapps/blob/main/docs/KVM.md#run-kvm-in-user-mode #)
+(run: ~/apps/winapps/bin/winapps check)
+(! say Y !)
+(! until explorer.exe appears: Ctrl-C then re-run !)
+(run: ./installer.sh)
+# end
+
+# photoshop install
+(! pull from git repo !)
+(! run install script !)
+(! run install script -> winecfg -> desktop emul with size ????×???? !)
+# end
+
+# fl studio install
+(! enable virtual desktop emul. with size: ????×???? !)
+(! run installer normally in standard wineprefix (using win7?) !)
+# end
