@@ -47,8 +47,7 @@
       "~/.config/thefuck/rules/lsd-single-file.py": ".config/thefuck/rules/lsd-single-file.py",
       "~/.config/paru/paru.conf": ".config/paru/paru.conf",
       "~/.config/lazygit/config.yml": ".config/lazygit/config.yml",
-      "~/.config/fish/functions/dotbot-add.fish": ".config/fish/functions/dotbot-add.fish",
-      "~/.config/polybar/spotify-metadata-receiver.py": ".config/polybar/spotify-metadata-receiver.py"
+      "~/.config/fish/functions/dotbot-add.fish": ".config/fish/functions/dotbot-add.fish"
     }
   },
   {
