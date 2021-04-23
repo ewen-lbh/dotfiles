@@ -6,13 +6,14 @@ from rich import print
 from pathlib import Path
 
 
-_, hostname, port, format_string = sys.argv
+_, hostname, port, format_string, output_filepath = sys.argv
 
 def resolve_parsed_qs(parsed_qs):
     """
     Returns a dict that is identical to parse_qs from urllib.parse, except that:
 
     - 'true' and 'false' become resp. True and False
+    - 'undefined' becomes None
     - lists of one element are converted to their only element
     """
     def value(v):
@@ -22,6 +23,8 @@ def resolve_parsed_qs(parsed_qs):
             return True
         if v == "false":
             return False
+        if v == "undefined":
+            return None
         return v
     return { k: value(v) for k, v in parsed_qs.items() } 
 
@@ -29,12 +32,10 @@ def resolve_parsed_qs(parsed_qs):
 # essentially, {thing:stuff?} becomes a shorthand for {thing if stuff else ""}
 def i(text, value):
     return text if value else ""
-def ii(text, value):
-    return text if not value else ""
 
 # TODO: a better syntax, make this work:
 # $ python spotfify-metadata-receiver.py localhost 8888 '{♥ :heart?}{↦ :!repeat?}{artist}: {title}'
-# instead of using '{i("♥ ", heart)}{ii("↦ ", repeat)}{artist}: {title}'
+# instead of using '{i("♥ ", heart)}{i("↦ ", not repeat)}{artist}: {title}'
 
 class SpotifyReceiver(BaseHTTPRequestHandler):
     def log_request(self, code='-', size='-'):
@@ -42,10 +43,11 @@ class SpotifyReceiver(BaseHTTPRequestHandler):
     def do_GET(self):
         _, qs = self.path.split('?')
         data = resolve_parsed_qs(parse_qs(qs, keep_blank_values=True))
-        os.system('clear')
-        evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f{format_string!r})(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
-        (Path.home() / ".config" / "polybar" / "spotify-metadata-receiver-output.txt").write_text(evaluated_format_string, encoding="utf8")
-        print(Path.home() / ".config" / "polybar" / "spotify-metadata-receiver-output.txt")
+        if data.get('title') is None and data.get('artist') is None:
+            evaluated_format_string = ""
+        else:
+            evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f'{format_string}')(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
+        Path(output_filepath).expanduser().write_text(evaluated_format_string, encoding="utf8")
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
