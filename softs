@@ -1,91 +1,174 @@
-paru
+# KEY
+# ---
+# #... <=> comment
+# AREA/PKG <=> install package AREA/PKG
+# ?/PKG <=> run: sudo pacman -S PKG
+# (!...!) <=> do thing (not automated)
+# (#...#) <=> do thing (used for nesting instruction lists around (!...!)s)
+# (run: ...) <=> run command
+# (" ... ") <=> literal string (can be multline)
+# (write: CONTENT FILE) <=> (run: echo CONTENT > FILE)
+# (if: CONDITION THEN) <=> if CONDITION, then THEN 
+# ($...$) <=> replace with value of ... (PASS: the password in the given context). can be used inside of ("...")s
+
+# vim: filetype=sh
+
+?/paru
 (run: paru -R yay)
-# start (run: install_pulse)
-manjaro-pulse
-pa-applet
-pavucontrol
-# end
+
+(run: install_pulse)
+
 community/fish
 (run: chsh -s $(which fish))
 (restart shell)
-vlc
-mpv
+
+?/vlc
+
+?/mpv
+(! add trim plugin !)
+(! add crop plugin !)
+(! remove keybind conflicts !)
+
 community/qutebrowser
+community/pdfjs
 aur/qt5-webengine-widevine
-extra/lynx
 (run: xdg-mime default org.qutebrowser.qutebrowser.desktop x-scheme-handler/http{s,})
 (run: set -Ux BROWSER (which qutebrowser))
 (run: sed -i s!(which palemoon)!(which qutebrowser)! ~/.profile)
+
+extra/lynx
+
+community/rofi
+
 aur/bitwarden-cli
+aur/bitwarden-rofi
+
 community/discord
+
 community/kitty
+
 community/fzf
-(see: winapps)
+
 aur/python310
+
 community/rustup
 (run: rustup update stable && rustup self upgrade-data)
+
 community/python-poetry
-aur/kb-next
-community/spotifyd
+
+aur/ckb-next
+
 aur/spotify-tui
+
 community/polybar
+
 # community/picom
 aur/picom-rounded-corners
+
 community/neovim
 community/python-pynvim
+
 aur/visual-studio-code-insiders-bin
+
 extra/feh
+
 community/lsd
+community/fd
 community/ripgrep
 community/moreutils 
 community/bat
+
 # using AUR instead of community because this one is kept up to date
 # sooner
 aur/lazygit-bin
+
 community/playerctl
-community/rofi
+
 aur/betterlockscreen
+
 community/starship
+
 community/github-cli
+
 community/python-pywal
+
 aur/nerd-fonts-fira-code
+
 aur/fish-z-git
+
 community/jq
 community/yq
+
 community/dunst
+
 community/thefuck
-aur/cani?
+
+aur/cani
+
 # mount datacore
 # symlink $HOME folders (projects/, etc)
-# install fonts
+
 extra/noto-fonts-emoji
+aur/ttf-unifont
+extra/bdf-unifont
 (run: cd ~/resources/fonts && ./collect && cd ~)
 (run: cp ~/resources/fonts/.all/*.ttf /usr/share/fonts/TTF/)
 (run: cp ~/resources/fonts/.all/*.otf /usr/share/fonts/OTF/)
 (run: fc-cache)
-aur/bitwarden-rofi
+
 community/viu
+
 aur/wikitrad
+
 aur/ideaseed
+
 community/rclone
+
 community/pdfarranger
+community/podofo
+
 community/zathura
 community/zathura-pdf-mupdf
 (run: xdg-mime default org.pwmt.zathura.desktop application/pdf)
+
 aur/devour
+
+aur/qimgv
+community/sxiv
+(run: xdg-mime default sxiv.desktop image/{png,jp{e,}g,tiff,webp})
+
+community/python-slugify
+
+community/go
+(run: go get -u github.com/gulyasm/jsonui)
+(run: sudo mv ~/go/bin/jsonui /usr/bin)
+
+aur/git-delta-bin
+(! update git config to use delta as diff viewer !)
+
 extra/thunar
-community/podofo
+?/thunar-volman
+?/ffmpegthumbnailer
+?/tumbler
+
 extra/xclip
 (run: abbr xclip 'xclip -selection clipboard')
-aur/ttf-unifont
-extra/bdf-unifont
+
 extra/unzip
+extra/p7zip
+
 extra/xorg-xev
+
 aur/rofi-spotify-git
+
 aur/tllocalmgr-git
-community/python-pynvim
-community/pdfjs
+(run: tllocalmgr install cancel)
+
 aur/vimv-git
+
+# games
+multilib/steam-manjaro
+aur/multimc5
 # install overwatch
 community/lutris
 (run: sudo pacman --needed -S lib32-mesa vulkan-radeon lib32-vulkan-radeon vulkan-icd-loader lib32-vulkan-icd-loader)
@@ -94,24 +177,18 @@ community/lutris
 (run: xdg-open lutris:overwatch-standard)
 (!user interaction needed!)
 # end
-# install Titanfall 2
-(run: sudo pacman --needed -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-libxml2 lib32-alsa-plugins lib32-sdl2 lib32-freetype2 lib32-dbus lib32-libgcrypt libgcrypt)
-(!if needed: (run: echo "for_window [instance=\"origin.exe\"] floating enable" >> ~/.config/i3/config)!)
+
+## install Titanfall 2
+#(run: sudo pacman --needed -S lib32-gnutls lib32-libldap lib32-libgpg-error lib32-libxml2 lib32-alsa-plugins lib32-sdl2 lib32-freetype2 lib32-dbus lib32-libgcrypt libgcrypt)
+#(!if needed: (run: echo "for_window [instance=\"origin.exe\"] floating enable" >> ~/.config/i3/config)!)
+## end
 # end
+
 # turn off screensaver
 (if: desktop (run: xset s off))
 # end
-community/fd
-aur/qimgv
-community/sxiv
-(run: xdg-mime default sxiv.desktop image/{png,jp{e,}g,tiff,webp})
-multilib/steam-manjaro
-community/python-slugify
-community/go
-(run: go get -u github.com/gulyasm/jsonui)
-(run: sudo mv ~/go/bin/jsonui /usr/bin)
-aur/git-delta-bin
-aur/multimc5
+
+
 # start winapps
 community/virt-manager
 ?/qemu
@@ -144,9 +221,7 @@ sudo usermod -a -G kvm $(id -un)
 sudo usermod -a -G libvirt $(id -un)
 sudo systemctl restart libvirtd
 sudo ln -s /etc/apparmor.d/usr.sbin.libvirtd /etc/apparmor.d/disable/
-
 sleep 5
-
 sudo virsh net-autostart default
 sudo virsh net-start default
 "))
@@ -176,3 +251,6 @@ sudo virsh net-start default
 (! enable virtual desktop emul. with size: ????×???? !)
 (! run installer normally in standard wineprefix (using win7?) !)
 # end
+
+?/libreoffice-fresh
+
