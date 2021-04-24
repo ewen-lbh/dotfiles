@@ -48,7 +48,8 @@
       "~/.config/paru/paru.conf": ".config/paru/paru.conf",
       "~/.config/lazygit/config.yml": ".config/lazygit/config.yml",
       "~/.config/fish/functions/dotbot-add.fish": ".config/fish/functions/dotbot-add.fish",
-      "~/.config/i3expo/config": ".config/i3expo/config"
+      "~/.config/i3expo/config": ".config/i3expo/config",
+      "~/.config/qimgv/qimgv.conf": ".config/qimgv/qimgv.conf"
     }
   },
   {
