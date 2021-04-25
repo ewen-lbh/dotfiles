@@ -49,7 +49,8 @@
       "~/.config/lazygit/config.yml": ".config/lazygit/config.yml",
       "~/.config/fish/functions/dotbot-add.fish": ".config/fish/functions/dotbot-add.fish",
       "~/.config/i3expo/config": ".config/i3expo/config",
-      "~/.config/qimgv/qimgv.conf": ".config/qimgv/qimgv.conf"
+      "~/.config/qimgv/qimgv.conf": ".config/qimgv/qimgv.conf",
+      "~/.config/i3/open_i3expo": ".config/i3/open_i3expo"
     }
   },
   {

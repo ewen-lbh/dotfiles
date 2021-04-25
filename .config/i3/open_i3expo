@@ -1,0 +1,3 @@
+#!/bin/bash
+
+kill -s SIGUSR1 $(pgrep -af "i3expo" | head -1 | cut -d' ' -f1)
