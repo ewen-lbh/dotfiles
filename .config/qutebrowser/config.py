@@ -239,6 +239,10 @@ c.fonts.default_family = 'scientifica'
 # Type: String
 c.fonts.default_size = '11.5pt'
 
+# Font used for the hints.
+# Type: Font
+c.fonts.hints = 'default_size default_family'
+
 # Bindings for normal mode
 config.bind(',M', 'hint links spawn mpv {hint-url}')
 config.bind(',m', 'spawn mpv {url}')
