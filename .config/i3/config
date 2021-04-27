@@ -287,3 +287,6 @@ for_window [instance="origin.exe"] floating enable
 # i3expo-ng (Overview of all workspaces)
 exec_always "i3expod.py -f -w ~/.config/wallpaper.png"
 bindsym $mod+Tab exec --no-startup-id ~/.config/i3/open_i3expo
+
+# setup compose key
+exec --no-startup-id setxkbmap -option compose:rwin
