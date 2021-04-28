@@ -241,7 +241,6 @@ assign [class="spotify-tui"] $ws9
 # Make windows floating
 
 # Autostart some daemons
-exec_always --no-startup-id spotifyd
 exec_always --no-startup-id clipmenud
 exec --no-startup-id test `hostname` = "stealth" && ckb-next --background
 
