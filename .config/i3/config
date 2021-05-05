@@ -45,7 +45,7 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec kitty
 # start a browser
-bindsym $mod+b exec qutebrowser
+bindsym $mod+b exec --no-startup-id qutebrowser
 
 # smart_gaps on
 gaps inner 35
@@ -229,9 +229,9 @@ exec_always --no-startup-id sh ~/.config/polybar/run_polybar.sh
 exec_always --no-startup-id feh --bg-fill --no-xinerama ~/.config/wallpaper.png
 
 # Enable natural scrolling for the trackpad
-exec xinput set-prop "ELAN1400:00 04F3:30AD Touchpad" "libinput Natural Scrolling Enabled" 1
+exec --no-startup-id xinput set-prop "ELAN1400:00 04F3:30AD Touchpad" "libinput Natural Scrolling Enabled" 1
 # Bind compose key to rctrl
-exec setxkbmap -option compose:rctrl
+exec --no-startup-id setxkbmap -option compose:rctrl
 
 # Assign windows to workspaces
 assign [class="discord"] $ws10
@@ -285,7 +285,7 @@ for_window [instance="origin.exe"] floating enable
 # exec --no-startup-id i3-msg 'workspace 2; exec kitty qutebrowser; workspace 7; exec kitty -d $HOME/.dotfiles; exec kitty -d $HOME/.dotfiles fish -c lazygit; workspace 8; layout tabbed; exec qutebrowser mail.ewen.works mail.google.com; workspace 9; exec spotifyd; exec qutebrowser open.spotify.com; workspace 10; layout tabbed; exec kitty fish -c tiny; exec kitty fish -c gomuks; exec discord; workspace 1; exec qutebrowser https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Aewen-lbh+archived%3Afalse+-repo%3Aewen-lbh%2Fgh-api-playground'
 
 # i3expo-ng (Overview of all workspaces)
-exec_always "i3expod.py -f -w ~/.config/wallpaper.png"
+exec_always --no-startup-id "i3expod.py -f -w ~/.config/wallpaper.png"
 bindsym $mod+Tab exec --no-startup-id ~/.config/i3/open_i3expo
 
 # setup compose key
