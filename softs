@@ -254,3 +254,4 @@ sudo virsh net-start default
 
 ?/libreoffice-fresh
 
+community/pandoc
