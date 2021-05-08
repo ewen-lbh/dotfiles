@@ -68,7 +68,6 @@ end
 
 # fix utf-8 for lynx
 alias lynx "lynx --display_charset=utf-8"
-# ideaseed alias
-alias idea='ideaseed --auth-cache=\'/home/ewen/.cache/ideaseed/auth.json\' --check-for-updates --self-assign --default-project=\'{repository}\' --default-column=todo --create-missing'
 
 thefuck --alias | source
+alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-for-updates --self-assign --create-missing --local-copy=/home/ewen/ideas --default-project=\'{repository}\' --default-column=todo --default-user-column=incubator --default-user-project=willmake'
