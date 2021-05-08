@@ -40,8 +40,30 @@ source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
 
 # devour some programs (window swallowing, see https://youtu.be/mBNLzHcUtTo)
-for program in zathura mpv sxiv vlc qimgv
+for program in zathura sxiv vlc qimgv
 	alias $program "devour $program"
+end
+
+# devour mpv smartly
+function mpv --wraps mpv --description "mpv that devours only for video files"
+	set mpv_program (which mpv)
+	set has_non_video_files false
+	set has_files false
+	for arg in $argv
+		if test -f "$arg"
+			set has_files true
+			echo has_files
+			if xdg-mime query filetype "$arg" | grep --invert-match video/
+				set has_non_video_files true
+				break
+			end
+		end
+	end
+	if $has_non_video_files or not $has_files
+		$mpv_program $argv
+	else
+		devour $mpv_program $argv
+	end
 end
 
 # fix utf-8 for lynx
