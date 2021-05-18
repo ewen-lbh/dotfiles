@@ -15,6 +15,6 @@ function bw-register --description "bw-register URL LOGIN [NAME [PASS]]"
 	| base64  \
 	| bw create item --session $sessionkey \
 	| jq '.login.password' --raw-output \
-	| xclip -selection clipboard \
+	| xclip -selection clipboard 
 end
 
