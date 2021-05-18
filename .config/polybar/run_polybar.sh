@@ -16,8 +16,8 @@ if test `hostname` = "stealth"; then
     fz=14
     height=35
 else
-    fz=13
-    height=50
+    fz=14
+    height=35
 fi
 
 font1="unifont:fontformat=truetype:antialias=false:size=$fz;0"
