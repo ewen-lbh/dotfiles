@@ -45,7 +45,10 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Markdown
 Plug 'godlygeek/tabular'
+
+" Language support
 Plug 'plasticboy/vim-markdown'
+Plug 'digitaltoad/vim-pug'
 
 " Multi cursors
 Plug 'terryma/vim-multiple-cursors'
@@ -102,6 +105,8 @@ Plug 'mboughaba/i3config.vim'
 
 Plug 'unblevable/quick-scope'
 	let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+Plug 'editorconfig/editorconfig-vim'
 
 " Initialize plugin system
 call plug#end()
