@@ -67,6 +67,7 @@ aur/picom-rounded-corners
 
 community/neovim
 community/python-pynvim
+?/neovide
 
 aur/visual-studio-code-insiders-bin
 
@@ -255,4 +256,3 @@ sudo virsh net-start default
 ?/libreoffice-fresh
 
 community/pandoc
-?/neovide
