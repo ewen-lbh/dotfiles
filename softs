@@ -256,3 +256,10 @@ sudo virsh net-start default
 ?/libreoffice-fresh
 
 community/pandoc
+
+community/nvm
+# pnpm install
+(run: nvm use latest)
+(run: npm i -g pnpm)
+# end
+
