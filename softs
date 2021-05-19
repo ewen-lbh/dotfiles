@@ -263,3 +263,6 @@ community/nvm
 (run: npm i -g pnpm)
 # end
 
+?/ranger
+community/odt2txt
+
