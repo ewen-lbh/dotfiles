@@ -266,4 +266,7 @@ community/nvm
 ?/ranger
 community/odt2txt
 
+community/trash-cli
+aur/rmtrash
+
 aur/tungsten
