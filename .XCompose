@@ -1418,3 +1418,6 @@ include "%L"
 <Multi_key> <parenleft> <1> <2> <colon> <3> <0> <parenright>     : "🕧" U1F567 # CLOCK FACE TWELVE-THIRTY
 # Real bitcoin symbol now.
 <Multi_key> <B> <bar> : "₿" U20BF  # BITCOIN SIGN
+
+# My own
+<Multi_key> <exclam> <greater> : "↦" U+21A6 # RIGHTWARDS ARROW FROM BAR
