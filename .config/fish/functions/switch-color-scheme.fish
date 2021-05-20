@@ -4,10 +4,18 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 		echo "Unrecognized color scheme variant '$variant'"
 		return 1
 	end
+	set -l varianttitlecase 
+	if test $variant = light
+		set varianttitlecase Light
+	else
+		set varianttitlecase Dark
+	end
 	echo $variant > $HOME/.config/current_color_scheme
 	# update config files that can't update on their own
 	wal --theme one-half (test $variant = light && echo -- -l)
 	cat $HOME/.config/lazygit/config.yml | yq -Y '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
+	set vscodesettings "$HOME/.config/Code - Insiders/User/settings.json"
+	jq (echo -s '."workbench.colorTheme" = ."workbench.preferred' $varianttitlecase 'ColorTheme"') < $vscodesettings | sponge $vscodesettings
     # update wallpaper
     cp $HOME/.config/wallpaper-$variant.png $HOME/.config/wallpaper.png
     # reload wallpaper & polybar
