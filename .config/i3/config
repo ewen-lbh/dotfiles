@@ -237,8 +237,6 @@ exec --no-startup-id setxkbmap -option compose:rctrl
 
 # Assign windows to workspaces
 assign [class="discord"] $ws10
-assign [class="code - insiders"] $ws3
-assign [class="spotify-tui"] $ws9
 
 # Make windows floating
 
