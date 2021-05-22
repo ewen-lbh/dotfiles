@@ -52,8 +52,7 @@ function mpv --wraps mpv --description "mpv that devours only for video files"
 	for arg in $argv
 		if test -f "$arg"
 			set has_files true
-			echo has_files
-			if xdg-mime query filetype "$arg" | grep --invert-match video/
+			if xdg-mime query filetype "$arg" | grep --quiet --invert-match video/ 
 				set has_non_video_files true
 				break
 			end
