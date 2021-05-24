@@ -108,6 +108,8 @@ Plug 'unblevable/quick-scope'
 
 Plug 'editorconfig/editorconfig-vim'
 
+Plug 'iloginow/vim-stylus'
+
 " Initialize plugin system
 call plug#end()
 
