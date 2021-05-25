@@ -55,7 +55,7 @@
       "~/.config/ranger/rc.conf": ".config/ranger/rc.conf",
       "~/.config/ranger/scope.sh": ".config/ranger/scope.sh",
       "~/.config/ranger/commands.py": ".config/ranger/commands.py",
-      "~/.config/ranger/plugins/devicons_linemode.py": ".config/ranger/plugins/devicons_linemode.py",
+      "~/.config/ranger/plugins/devicons_linemode.py": ".config/ranger/plugins/devicons_linemode.py"
     }
   },
   {
