@@ -276,6 +276,10 @@ bindsym $mod+p exec bwmenu
 # Launch rofi clipboard manager
 bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
+
+# Launch rofi actions menu
+bindsym $mod+x exec $HOME/.config/rofi/rofi-logout 
+
 # Origin game launcher
 # see https://github.com/lutris/docs/blob/master/Origin.md#blank-window-with-i3-wm
 for_window [instance="origin.exe"] floating enable

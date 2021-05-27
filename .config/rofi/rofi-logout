@@ -1,0 +1,29 @@
+#!/usr/bin/env fish
+set action (echo "back up...
+sync rocketbook
+shutdown
+reboot
+back up all & shutdown
+sync clock" | rofi -dmenu)
+
+switch $action
+	case "back up..."
+		set dir (echo "music
+ideas
+projects
+resources" | rofi -dmenu)
+		$HOME/$dir/backup
+	case "sync rocketbook"
+		$HOME/rb/routine
+	case "shutdown"
+		shutdown now
+	case "reboot"
+		reboot
+	case "back up all & shutdown"
+		for dir in music ideas projects
+			$HOME/$dir/backup
+		end && shutdown 
+	case "sync clock"
+		sudo ntpd -qg
+end
+
