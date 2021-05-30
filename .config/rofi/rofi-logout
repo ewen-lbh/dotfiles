@@ -4,7 +4,7 @@ sync rocketbook
 shutdown
 reboot
 back up all & shutdown
-sync clock" | rofi -dmenu)
+sync clock" | rofi -dmenu -p power)
 
 switch $action
 	case "back up..."
@@ -12,17 +12,15 @@ switch $action
 ideas
 projects
 resources" | rofi -dmenu)
-		$HOME/$dir/backup
+		kitty $HOME/$dir/backup
 	case "sync rocketbook"
-		$HOME/rb/routine
+		kitty $HOME/rb/routine
 	case "shutdown"
 		shutdown now
 	case "reboot"
 		reboot
 	case "back up all & shutdown"
-		for dir in music ideas projects
-			$HOME/$dir/backup
-		end && shutdown 
+		kitty fish -c 'for dir in music ideas projects; $HOME/$dir/backup; end && shutdown'
 	case "sync clock"
 		sudo ntpd -qg
 end
