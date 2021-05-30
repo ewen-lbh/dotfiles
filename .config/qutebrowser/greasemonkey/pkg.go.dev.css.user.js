@@ -10,7 +10,7 @@
 
 style = document.createElement('style')
 style.innerText = `
-h4[data-kind] {
+h4[data-kind] > span:first-child {
     font-family: Cartograph CF;
     letter-spacing: -0.03em;
 }
