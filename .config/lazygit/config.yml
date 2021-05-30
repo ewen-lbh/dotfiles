@@ -2,3 +2,8 @@ gui:
   theme:
     lightTheme: false
   showFileTree: true
+customCommands:
+  - key: g
+    context: files
+    command: gitmoji -c
+    subprocess: true
