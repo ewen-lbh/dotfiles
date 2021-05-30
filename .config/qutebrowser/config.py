@@ -11,7 +11,7 @@
 #   qute://help/settings.html
 
 # Change the argument to True to still load settings configured via autoconfig.yml
-config.load_autoconfig(False)
+config.load_autoconfig(True)
 
 # How to open links in an existing instance if a new one is launched.
 # This happens when e.g. opening a link from a terminal. See
@@ -246,3 +246,4 @@ c.fonts.hints = 'default_size default_family'
 # Bindings for normal mode
 config.bind(',M', 'hint links spawn mpv {hint-url}')
 config.bind(',m', 'spawn mpv {url}')
+config.bind('pkg', 'open pkg.go.dev/{url:host}{url:path}')
