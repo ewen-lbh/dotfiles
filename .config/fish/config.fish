@@ -68,5 +68,9 @@ end
 # fix utf-8 for lynx
 alias lynx "lynx --display_charset=utf-8"
 
+# add very useful columns to lsblk
+alias lsblk "lsblk -o NAME,MODEL,MAJ:MIN,RM,SIZE,RO,TYPE,MOUNTPOINT,UUID"
+
+
 thefuck --alias | source
 alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-for-updates --self-assign --create-missing --local-copy=/home/ewen/ideas --default-project=\'{repository}\' --default-column=todo --default-user-column=willmake --default-user-project=incubator'
