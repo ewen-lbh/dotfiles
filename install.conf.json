@@ -56,7 +56,8 @@
       "~/.config/ranger/scope.sh": ".config/ranger/scope.sh",
       "~/.config/ranger/commands.py": ".config/ranger/commands.py",
       "~/.config/ranger/plugins/devicons_linemode.py": ".config/ranger/plugins/devicons_linemode.py",
-      "~/.config/rofi/rofi-logout": ".config/rofi/rofi-logout"
+      "~/.config/rofi/rofi-logout": ".config/rofi/rofi-logout",
+      "~/.config/htop/htoprc": ".config/htop/htoprc"
     }
   },
   {
