@@ -82,14 +82,14 @@ community/bat
 # using AUR instead of community because this one is kept up to date
 # sooner
 aur/lazygit-bin
+community/github-cli
+aur/gitflow-avh
 
 community/playerctl
 
 aur/betterlockscreen
 
 community/starship
-
-community/github-cli
 
 community/python-pywal
 
