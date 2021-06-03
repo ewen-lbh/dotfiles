@@ -268,7 +268,7 @@ bindsym $mod+ctrl+Scroll_Lock exec spt pb --repeat
 # bindsym $mod+ctrl+Next exec Todo: Next & Prior keys: seek in track
 
 # Launch rofi file browser
-bindsym $mod+g exec rofi -show file-browser -matching fuzzy
+bindsym $mod+z exec rofi -show file-browser -matching fuzzy
 
 # Launch rofi bitwarden
 bindsym $mod+p exec bwmenu
