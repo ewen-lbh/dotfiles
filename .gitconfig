@@ -8,10 +8,10 @@
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
-	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [interactive]
 	diffFilter = delta --color-only
 [delta]
 	line-numbers = true
+	syntax-theme = OneHalfLight
 

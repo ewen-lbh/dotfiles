@@ -63,3 +63,15 @@ abbr -a -U -- wttr 'curl wttr.in'
 abbr -a -U -- xclip 'xclip -selection clipboard'
 abbr -a -U -- yay paru
 abbr -a -U -- ytdl youtube-dl
+abbr -a -U -- changelog chachacha
+abbr -a -U -- code code-insiders
+abbr -a -U -- dakr 'switch-color-scheme dark'
+abbr -a -U -- gp 'git push'
+abbr -a -U -- lla 'ls -la'
+abbr -a -U -- lynx 'lynx https://duckduckgo.com/?q='
+abbr -a -U -- lzn lazynpm
+abbr -a -U -- pianoteq \~/apps/pianoteq/Pianoteq\\\ 7\ \&\ disown
+abbr -a -U -- sw switch-color-theme
+abbr -a -U -- tipecompterendu i3-msg\ \'workspace\ 1\;\ exec\ kitty\ fish\ -c\ \\\'nvim\ \~/tipe/comptes-rendus/2021-04.tex\\\'\;\ workspace\ 2\;\ exec\ zathura\ \~/tipe/comptes-rendus/2021-04.pdf\;\ exec\ zathura\ \~/tipe/comptes-rendus/2021-04-consignes.pdf\'\;\ exit
+abbr -a -U -- treee tree
+abbr -a -U -- unique 'awk \'!seen[$0]++\''
