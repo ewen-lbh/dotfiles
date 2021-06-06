@@ -1,5 +1,8 @@
 function switch-color-scheme --description "switch-color-scheme VARIANT, where VARIANT is 'light' or 'dark'"
 	set -l variant $argv[1]
+	if test "$variant" = auto
+		set variant (test (date +%H) -ge 0 -a (date +%H) -le 21; and echo light; or echo dark)
+	end
 	if test "$variant" != light -a "$variant" != dark
 		echo "Unrecognized color scheme variant '$variant'"
 		return 1
