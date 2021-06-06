@@ -1,5 +1,8 @@
 add_newline = false
 
+[package]
+disabled = true
+
 [directory]
 use_logical_path = false
 
