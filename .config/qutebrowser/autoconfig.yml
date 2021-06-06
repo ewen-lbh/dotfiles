@@ -13,6 +13,7 @@ settings:
         ',m': spawn mpv {url}
         ;c: hint links right-click
         gr: greasemonkey-reload
+        gkp: open https://{url:path}
         pkg: open pkg.go.dev/{url:host}{url:path}
   content.notifications.enabled:
     https://www.reddit.com: false
