@@ -44,6 +44,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty
+# the cooler ~~daniel~~ terminal
+bindsym $mod+Shift+Return exec cool-retro-term
 # start a browser
 bindsym $mod+b exec --no-startup-id qutebrowser
 
