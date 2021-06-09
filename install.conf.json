@@ -57,7 +57,7 @@
       "~/.config/ranger/commands.py": ".config/ranger/commands.py",
       "~/.config/ranger/plugins/devicons_linemode.py": ".config/ranger/plugins/devicons_linemode.py",
       "~/.config/rofi/rofi-logout": ".config/rofi/rofi-logout",
-      "~/projects/pull_all.fish": "projects/pull_all.fish",
+      "~/projects/sync_all.fish": "projects/sync_all.fish",
       "~/.config/htop/htoprc": ".config/htop/htoprc",
       "~/.config/qutebrowser/autoconfig.yml": ".config/qutebrowser/autoconfig.yml",
       "~/.config/cool-retro-term/themes/futuristic-v2.json": ".config/cool-retro-term/themes/futuristic-v2.json",
