@@ -14,6 +14,7 @@ function _git_is_behind
 end
 
 set -l separator "-----------------------------------------------------------------------------"
+set -l initialwd (pwd)
 
 for d in (status dirname)/*
 	if test -d $d
@@ -30,6 +31,6 @@ for d in (status dirname)/*
 				echo $separator
 			end
 		end
-		cd ..
+		cd "$initialwd"
 	end
 end
