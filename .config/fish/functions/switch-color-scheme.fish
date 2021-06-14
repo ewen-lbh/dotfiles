@@ -18,7 +18,7 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	wal --theme one-half (test $variant = light && echo -- -l)
 	cat $HOME/.config/lazygit/config.yml | yq -Y '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
 	git config --global delta.syntax-theme (test $variant = light && echo OneHalfLight || echo OneHalfDark)
-	set vscodesettings "$HOME/.config/Code - Insiders/User/settings.json"
+	set vscodesettings "$HOME/.config/Code/User/settings.json"
 	jq (echo -s '."workbench.colorTheme" = ."workbench.preferred' $varianttitlecase 'ColorTheme"') < $vscodesettings | sponge $vscodesettings
     # update wallpaper
     cp $HOME/.config/wallpaper-$variant.png $HOME/.config/wallpaper.png
