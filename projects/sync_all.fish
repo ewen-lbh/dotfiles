@@ -17,6 +17,7 @@ for d in *
 	if test -d $d
 		cd $d
 		if test -d .git 
+      git fetch
 			if _git_is_behind
 							echo "$d: pulling"
 							git pull
