@@ -1420,4 +1420,4 @@ include "%L"
 <Multi_key> <B> <bar> : "₿" U20BF  # BITCOIN SIGN
 
 # My own
-<Multi_key> <exclam> <greater> : "↦" U+21A6 # RIGHTWARDS ARROW FROM BAR
+<Multi_key> <exclam> <greater> : "↦" U21A6 # RIGHTWARDS ARROW FROM BAR
