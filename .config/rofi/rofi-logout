@@ -1,12 +1,16 @@
 #!/usr/bin/env fish
-set action (echo "back up...
+set action (echo "pomodoro
+back up...
 sync rocketbook
 shutdown
 reboot
 back up all & shutdown
-sync clock" | rofi -dmenu -p power)
+sync clock
+upgrade" | rofi -dmenu -p power)
 
 switch $action
+	case "pomodoro"
+		$HOME/pomodoro
 	case "back up..."
 		set dir (echo "music
 ideas
@@ -22,6 +26,8 @@ resources" | rofi -dmenu)
 	case "back up all & shutdown"
 		kitty fish -c 'for dir in music ideas projects; $HOME/$dir/backup; end; shutdown'
 	case "sync clock"
-		sudo ntpd -qg
+		kitty fish -c 'sudo ntpd -qg'
+	case "upgrade"
+		kitty fish -c paru
 end
 
