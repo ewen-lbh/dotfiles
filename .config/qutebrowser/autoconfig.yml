@@ -12,8 +12,9 @@ settings:
         ',M': hint links spawn mpv {hint-url}
         ',m': spawn mpv {url}
         ;c: hint links right-click
-        gr: greasemonkey-reload
         gkp: open https://{url:path}
+        gr: greasemonkey-reload
+        gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
         pkg: open pkg.go.dev/{url:host}{url:path}
   content.notifications.enabled:
     https://www.reddit.com: false
