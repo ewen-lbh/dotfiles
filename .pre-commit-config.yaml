@@ -1,0 +1,9 @@
+repos:
+- repo: local
+  hooks:
+  - id: check-for-secrets
+    name: Check for secrets
+    description: Checks for secrets, to avoid comitting them to a public repo.
+    entry: ./check-for-secrets.fish
+    language: system
+    always_run: yes 
