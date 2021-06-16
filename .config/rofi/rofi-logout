@@ -2,6 +2,7 @@
 set action (echo "pomodoro
 back up...
 sync rocketbook
+logout
 shutdown
 reboot
 back up all & shutdown
@@ -19,6 +20,8 @@ resources" | rofi -dmenu)
 		kitty $HOME/$dir/backup
 	case "sync rocketbook"
 		kitty $HOME/rb/routine
+	case "logout"
+		i3-msg exit
 	case "shutdown"
 		shutdown now
 	case "reboot"
