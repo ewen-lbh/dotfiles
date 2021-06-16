@@ -48,6 +48,8 @@ bindsym $mod+Return exec kitty
 bindsym $mod+Shift+Return exec cool-retro-term
 # start a browser
 bindsym $mod+b exec --no-startup-id qutebrowser
+# start an alternative browser
+bindsym $mod+Shift+b exec --no-startup-id firefox
 
 # smart_gaps on
 gaps inner 35
