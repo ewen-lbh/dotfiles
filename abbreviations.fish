@@ -57,3 +57,6 @@ abbr -a -U -- +x 'chmod +x'
 abbr -a -U -- xclip 'xclip -selection clipboard'
 abbr -a -U -- :x exit
 abbr -a -U -- ytdl youtube-dl
+abbr -a -U -- clearbitwarden 'keyctl purge user bw_session'
+abbr -a -U -- d devour
+abbr -a -U -- ts 'sudo ntpd -qg'
