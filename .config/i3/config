@@ -281,8 +281,8 @@ bindsym $mod+p exec bwmenu
 bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
 
-# Launch rofi actions menu
-bindsym $mod+x exec $HOME/.config/rofi/rofi-logout 
+# Launch rofi power menu ("power" is used loosesly here, I tend to shove unrelated, misc. stuff here)
+bindsym $mod+x exec $HOME/.config/rofi/powermenu 
 
 # Origin game launcher
 # see https://github.com/lutris/docs/blob/master/Origin.md#blank-window-with-i3-wm
