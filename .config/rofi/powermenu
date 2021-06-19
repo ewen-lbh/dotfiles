@@ -1,5 +1,6 @@
 #!/usr/bin/env fish
-set action (echo "pomodoro
+set action (echo "pomodoro (infinite)
+pomodoro (finite)
 back up...
 sync rocketbook
 lock
@@ -11,8 +12,10 @@ sync clock
 upgrade" | rofi -dmenu -p power)
 
 switch $action
-	case "pomodoro"
+	case "pomodoro (infinite)"
 		$HOME/pomodoro
+	case "pomodoro (finite)"
+		$HOME/pomodoro --sessions-of=4 --total-cycles=(rofi -dmenu -p "number of cycles")
 	case "back up..."
 		set dir (echo "music
 ideas
