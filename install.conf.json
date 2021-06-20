@@ -56,7 +56,7 @@
       "~/.config/ranger/scope.sh": ".config/ranger/scope.sh",
       "~/.config/ranger/commands.py": ".config/ranger/commands.py",
       "~/.config/ranger/plugins/devicons_linemode.py": ".config/ranger/plugins/devicons_linemode.py",
-      "~/.config/rofi/rofi-logout": ".config/rofi/rofi-logout",
+      "~/.config/rofi/powermenu": ".config/rofi/powermenu",
       "~/projects/sync_all.fish": "projects/sync_all.fish",
       "~/.config/htop/htoprc": ".config/htop/htoprc",
       "~/.config/qutebrowser/autoconfig.yml": ".config/qutebrowser/autoconfig.yml",
