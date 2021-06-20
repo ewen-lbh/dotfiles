@@ -10,4 +10,5 @@ customCommands:
   - key: g
     context: files
     command: gitmoji -c
+    description: commit with gitmoji
     subprocess: true
