@@ -110,6 +110,11 @@ Plug 'editorconfig/editorconfig-vim'
 
 Plug 'iloginow/vim-stylus'
 
+Plug 'pangloss/vim-javascript'
+
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+let g:svelte_preprocessors = ["typescript"]
+
 " Initialize plugin system
 call plug#end()
 
