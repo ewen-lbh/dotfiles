@@ -141,8 +141,6 @@ set scrolloff=99
 " Line numbers
 set number
 set relativenumber
-" UltiSnips doesn't support py3.8 (yet)
-let g:python3_host_prog = '/usr/bin/python3.6'
 " Disable softwrap
 set nowrap
 
