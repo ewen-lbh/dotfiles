@@ -20,7 +20,8 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-" Make sure you use single quotes
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 " WakaTime time tracking
 Plug 'wakatime/vim-wakatime'
