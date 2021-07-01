@@ -20,5 +20,23 @@
 			"\t$0",
 			"}"
 		]
+	},
+	"Panic on error": {
+		"prefix": "panicerr",
+		"body": [
+			"if err != nil {",
+			"\tpanic(err)",
+			"}",
+			"$0"
+		]
+	},
+	"Return error if occured": {
+		"prefix": "reterr",
+		"body": [
+			"if err != nil {",
+			"\treturn err",
+			"}",
+			"$0"
+		]
 	}
 }
