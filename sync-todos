@@ -1,0 +1,14 @@
+#!/usr/bin/env fish
+
+mv ~/todo ~/todo.bak
+rclone --progress sync penrose:todo ~/
+if cmp ~/todo ~/todo.bak
+	echo no changes.
+	rm ~/todo.bak
+else
+	echo "------------ upstream ↑ / local ↓ ------------" >> ~/todo
+	cat ~/todo.bak >> ~/todo
+	rm ~/todo.bak
+	$EDITOR ~/todo
+	rclone --progress sync ~/todo penrose:
+end
