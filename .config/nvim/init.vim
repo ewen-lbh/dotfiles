@@ -20,7 +20,8 @@ let g:vimtex_compiler_latexmk = {
     \   '-interaction=nonstopmode',
     \ ],
     \}
-" Make sure you use single quotes
+set conceallevel=1
+let g:tex_conceal='abdmg'
 
 " WakaTime time tracking
 Plug 'wakatime/vim-wakatime'
@@ -146,8 +147,6 @@ set scrolloff=99
 " Line numbers
 set number
 set relativenumber
-" UltiSnips doesn't support py3.8 (yet)
-let g:python3_host_prog = '/usr/bin/python3.6'
 " Disable softwrap
 set nowrap
 

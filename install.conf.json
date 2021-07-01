@@ -62,7 +62,8 @@
       "~/.config/qutebrowser/autoconfig.yml": ".config/qutebrowser/autoconfig.yml",
       "~/.config/cool-retro-term/themes/futuristic-v2.json": ".config/cool-retro-term/themes/futuristic-v2.json",
       "~/.config/cool-retro-term/themes/green-scanlines-v2.json": ".config/cool-retro-term/themes/green-scanlines-v2.json",
-      "~/.config/nitrogen/nitrogen.cfg": ".config/nitrogen/nitrogen.cfg"
+      "~/.config/nitrogen/nitrogen.cfg": ".config/nitrogen/nitrogen.cfg",
+      "~/.config/pulse/default.pa": ".config/pulse/default.pa"
     }
   },
   {
