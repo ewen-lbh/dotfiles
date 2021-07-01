@@ -33,7 +33,7 @@ resources" | rofi -dmenu)
 	case "reboot"
 		reboot
 	case "back up all & shutdown"
-		kitty fish -c 'for dir in music ideas projects; $HOME/$dir/backup; end; shutdown'
+		kitty fish -c '~/do-backups && shutdown now'
 	case "sync clock"
 		kitty fish -c 'sudo ntpd -qg'
 	case "upgrade"
