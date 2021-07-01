@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+
+concurrently \
+	"~/sync-todos" \
+	"~/music/backup" \
+	"~/ideas/backup" \
+&& ~/projects/backup \
