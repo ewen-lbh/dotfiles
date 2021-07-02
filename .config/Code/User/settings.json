@@ -1,0 +1,136 @@
+{
+  "telemetry.enableTelemetry": false,
+  "editor.fontFamily": "Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "editor.minimap.enabled": false,
+  "files.autoSave": "afterDelay",
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Snazzy Light",
+  "workbench.preferredDarkColorTheme": "Palenight Italic",
+  "workbench.colorTheme": "Palenight Italic",
+  "i18n-ally.displayLanguage": "fr",
+  "editor.renderWhitespace": "none",
+  "svelte-autoimport.useSemiColon": false,
+  "editor.fontLigatures": true,
+  "git.autofetch": true,
+  "window.zoomLevel": 0,
+  "gitmoji.additionalEmojis": [
+    {
+      "code": ":mega:",
+      "description": "Logo, name or other brand resources changes",
+      "emoji": "📣"
+    },
+    {
+      "code": ":comet:",
+      "description": "Massive changes",
+      "emoji": "☄"
+    },
+    {
+      "code": ":hammer_and_wrench:",
+      "description": "Update developer's tooling",
+      "emoji": "🛠"
+    }
+  ],
+  "git.confirmSync": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertBraces": false,
+  "i18n-ally.indent": 4,
+  "i18n-ally.sortKeys": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "editor.renderFinalNewline": false,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "githubIssues.workingIssueFormatScm": "${issueTitle} (Closes #${issueNumber})",
+  "explorer.openEditors.visible": 0,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "python.insidersChannel": "off",
+  "go.inferGopath": true,
+  "python.linting.pylintArgs": [
+    "--disable=unused-wildcard-import",
+    "--disable=wildcard-import",
+    "--disable=bad-continuation",
+    "--disable=unidiomatic-typecheck"
+  ],
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "githubIssues.issueCompletionFormatScm": "${issueTitle} (Closes #${issueNumber})",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ],
+  "githubPullRequests.telemetry.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.egg-info": true
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.codeLens": false,
+  "editor.fontSize": 16,
+  "sync.ignoredSettings": [
+    "editor.fontSize"
+  ],
+  "githubIssues.issueBranchTitle": "${sanitizedIssueTitle}",
+  "todo-tree.general.tags": [
+    "XXX",
+    "TODO",
+    "HACK",
+    "FIXME",
+    "BUG",
+    "obsolete"
+  ],
+  "python.formatting.provider": "black",
+  "terminal.integrated.fontSize": 16,
+  "emmet.excludeLanguages": [
+    "markdown",
+    "jade"
+  ],
+  "languageStylus.useSeparator": false,
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertParenthesisAroundIfCondition": false,
+  "stylusSupremacy.reduceMarginAndPaddingValues": true,
+  "stylusSupremacy.sortProperties": "grouped",
+  "markdown-toc.depthTo": 5,
+  "markdown.extension.toc.levels": "2..6",
+  "search.quickOpen.includeSymbols": true,
+  "githubIssues.useBranchForIssues": "prompt",
+  "files.associations": {
+    "*.txt": "plaintext"
+  },
+  "nim.logNimsuggest": true,
+  "vim.easymotion": true,
+  "editor.wordWrap": "off",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+},
+  "go.toolsManagement.autoUpdate": true,
+  "cSpell.userWords": [
+    "chmod",
+    "docopt",
+    "ewen",
+    "repo's",
+    "repos"
+  ]
+}

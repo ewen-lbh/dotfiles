@@ -67,7 +67,8 @@
       "~/sync-todos": "sync-todos",
       "~/do-backups": "do-backups",
       "~/projects/backup": "projects/backup",
-      "~/music/backup": "music/backup"
+      "~/music/backup": "music/backup",
+      "~/.config/Code/User/settings.json": ".config/Code/User/settings.json"
     }
   },
   {
