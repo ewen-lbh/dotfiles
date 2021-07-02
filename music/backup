@@ -1,0 +1,29 @@
+#!/bin/bash
+
+library=$HOME/music/library.tsv
+	echo "Using $library"
+
+# First, remove tsv header (Artist	Title	etc.) & vim set tabtop= command (first line and last line respoectively)
+# We do this because sort -u would sort these lines when we want them to be first & last
+tail $library -n +2 | head -n -1 | sponge $library
+	echo "Trimmed first & last line"
+
+spt list --liked --limit 50 \
+| sed 's/\s*(spotify:.*)$//' \
+| sed -E 's/^(.*) - (.*)$/\2\t\1/' \
+| sed -E 's/"(.*)"/“\1”/g' \
+| cat - $library \
+| sort -bu \
+| sponge $library
+	echo "Added last 50 liked titles from spotify"
+
+# Re-add the tsv header & vim command
+printf "Artist\tTitle\n%s\n# vim: set tabstop=64 :\t.\n" "$(cat $library)" | sponge $library
+	echo "Added back the first & last lines"
+
+# Update the gist
+gistid=cb0ad1f51a1dad4c87844948af337273
+	echo "Using gist https://gist.github.com/ewen-lbh/$gistid"
+
+gh gist edit $gistid --add $library # adding a file whose filename is already in the gist updates the file.
+	echo "Updated the gist"

@@ -65,7 +65,9 @@
       "~/.config/nitrogen/nitrogen.cfg": ".config/nitrogen/nitrogen.cfg",
       "~/.config/pulse/default.pa": ".config/pulse/default.pa",
       "~/sync-todos": "sync-todos",
-      "~/do-backups": "do-backups"
+      "~/do-backups": "do-backups",
+      "~/projects/backup": "projects/backup",
+      "~/music/backup": "music/backup"
     }
   },
   {
