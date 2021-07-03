@@ -122,12 +122,9 @@
   "editor.wordWrap": "off",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter-notebook",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+},
   "go.toolsManagement.autoUpdate": true,
   "cSpell.userWords": [
     "chmod",

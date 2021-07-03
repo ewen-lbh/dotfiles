@@ -55,6 +55,7 @@ community/rustup
 (run: rustup update stable && rustup self upgrade-data)
 
 community/python-poetry
+(run: pip install poetrify)
 
 aur/ckb-next
 
@@ -284,3 +285,4 @@ community/cool-retro-term
 ?/broot
 ?/hyperfine
 ?/gping 
+aur/glow-bin

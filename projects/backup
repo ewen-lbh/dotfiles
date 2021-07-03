@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+rclone sync --progress --filter-from ~/projects/.rclonefilter --max-size=1G ~/projects/ penrose:projects --log-file $HOME/projects/.rclonelatest.log
+
+
