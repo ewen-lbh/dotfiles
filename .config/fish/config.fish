@@ -45,7 +45,7 @@ for program in zathura sxiv vlc qimgv neovide neovide-kbd-fix
 end
 
 # devour mpv smartly
-function mpv --wraps mpv --description "mpv that devours only for video files"
+function mpvd --wraps mpv --description "mpv that devours only for video files"
 	set mpv_program (which mpv)
 	set has_non_video_files false
 	set has_files false
