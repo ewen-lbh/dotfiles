@@ -297,3 +297,6 @@ bindsym $mod+Tab exec --no-startup-id ~/.config/i3/open_i3expo
 
 # setup compose key
 exec --no-startup-id setxkbmap -option compose:rwin
+
+# start udiskie (automount USB devices)
+exec --no-startup-id udiskie
