@@ -68,7 +68,8 @@
       "~/do-backups": "do-backups",
       "~/projects/backup": "projects/backup",
       "~/music/backup": "music/backup",
-      "~/.config/Code/User/settings.json": ".config/Code/User/settings.json"
+      "~/.config/Code/User/settings.json": ".config/Code/User/settings.json",
+      "~/.config/qutebrowser/quickmarks": ".config/qutebrowser/quickmarks"
     }
   },
   {
