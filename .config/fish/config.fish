@@ -30,7 +30,7 @@ starship init fish | source
 # alias gcal='gcalcli agenda --details description --details end --details location'
 # lsd configuration
 # alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --blocks permission,name,size,date --no-symlink'
-alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M"'
+alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --git'
 
 # opam configuration
 source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
