@@ -300,3 +300,7 @@ exec --no-startup-id setxkbmap -option compose:rwin
 
 # start udiskie (automount USB devices)
 exec --no-startup-id udiskie
+
+# start Scream (for audio passthrough in RDPWindows)
+
+exec --no-startup-id scream -o pulse -i virbr0 
