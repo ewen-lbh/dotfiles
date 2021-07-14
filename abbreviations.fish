@@ -60,3 +60,16 @@ abbr -a -U -- ytdl youtube-dl
 abbr -a -U -- clearbitwarden 'keyctl purge user bw_session'
 abbr -a -U -- d devour
 abbr -a -U -- ts 'sudo ntpd -qg'
+abbr -a -U -- afk while\ true\nxdotool\ mousemove\ 20\ 20\ \nsleep\ 10\nxdotool\ mousemove\ 500\ 500\ \nsleep\ 10\nend
+abbr -a -U -- de 'devour neovide-kbd-fix'
+abbr -a -U -- df duf
+abbr -a -U -- dotlg 'z dot; lazygit'
+abbr -a -U -- du 'du -h'
+abbr -a -U -- e neovide-kbd-fix
+abbr -a -U -- ideap 'idea user'
+abbr -a -U -- l lsd
+abbr -a -U -- make-local-py-env-symlink 'ln -s (poetry env info --path) venv'
+abbr -a -U -- nd nextd
+abbr -a -U -- pd prevd
+abbr -a -U -- penrose 'rclone copy penrose:'
+abbr -a -U -- time hyperfine
