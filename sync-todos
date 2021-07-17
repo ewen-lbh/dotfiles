@@ -9,6 +9,6 @@ else
 	echo "------------ upstream ↑ / local ↓ ------------" >> ~/todo
 	cat ~/todo.bak >> ~/todo
 	rm ~/todo.bak
-	$EDITOR ~/todo
+	neovide-kbd-fix ~/todo
 	rclone --progress sync ~/todo penrose:
 end
