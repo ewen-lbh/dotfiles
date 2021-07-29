@@ -22,9 +22,10 @@ set -xU LESS_TERMCAP_se (printf "\e[0m")
 set -xU LESS_TERMCAP_so (printf "\e[01;44;33m")
 set -xU LESS_TERMCAP_ue (printf "\e[0m")
 set -xU LESS_TERMCAP_us (printf "\e[01;32m")
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
+alias ..="cd .."
+for i in (seq 3 20)
+	alias (string repeat -n $i ".")="cd .."(string repeat -n (math $i - 1) "/..")
+end
 # starship prompt
 starship init fish | source
 # alias gcal='gcalcli agenda --details description --details end --details location'
@@ -77,3 +78,6 @@ alias neovide-kbd-fix "neovide-kbd-fix --multiGrid"
 
 thefuck --alias | source
 alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-for-updates --self-assign --create-missing --local-copy=/home/ewen/ideas --default-project=\'{repository}\' --default-column=todo --default-user-column=willmake --default-user-project=incubator'
+
+# duf theme
+alias duf "duf -theme "(cat $HOME/.config/current_color_scheme)

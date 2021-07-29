@@ -60,16 +60,37 @@ abbr -a -U -- ytdl youtube-dl
 abbr -a -U -- clearbitwarden 'keyctl purge user bw_session'
 abbr -a -U -- d devour
 abbr -a -U -- ts 'sudo ntpd -qg'
+abbr -a -U -- à 'idea rocketbook àrevoir thermodynamique "'
+abbr -a -U -- àcf 'idea rocketbook àrevoir champs-forces'
+abbr -a -U -- àtherm 'idea rocketbook àrevoir thermodynamique'
+abbr -a -U -- é /home/ewen
+abbr -a -U -- a 'ffcss init; mv ffcss.yaml'
 abbr -a -U -- afk while\ true\nxdotool\ mousemove\ 20\ 20\ \nsleep\ 10\nxdotool\ mousemove\ 500\ 500\ \nsleep\ 10\nend
+abbr -a -U -- codestable code
 abbr -a -U -- de 'devour neovide-kbd-fix'
 abbr -a -U -- df duf
 abbr -a -U -- dotlg 'z dot; lazygit'
 abbr -a -U -- du 'du -h'
 abbr -a -U -- e neovide-kbd-fix
+abbr -a -U -- grep rg
+abbr -a -U -- grepp grep
+abbr -a -U -- ideaidx 'idea schoolsyst/indentex -i'
 abbr -a -U -- ideap 'idea user'
+abbr -a -U -- idxheaders rg\ -N\ \'\^\[\~=-\]\{3,4\}\\s\'
+abbr -a -U -- indentexnew rg\ -A\ 4\ \'\(NEW\|TODO\)!\'\ \~/\*\*.indentex
 abbr -a -U -- l lsd
+abbr -a -U -- lzn lazynpm
 abbr -a -U -- make-local-py-env-symlink 'ln -s (poetry env info --path) venv'
+abbr -a -U -- math =
 abbr -a -U -- nd nextd
 abbr -a -U -- pd prevd
 abbr -a -U -- penrose 'rclone copy penrose:'
+abbr -a -U -- ping gping
+abbr -a -U -- savealias 'echo alias = '
+abbr -a -U -- ssudo sudo
 abbr -a -U -- time hyperfine
+abbr -a -U -- tipecompterendu i3-msg\ \'workspace\ 1\;\ exec\ kitty\ fish\ -c\ \\\'nvim\ \~/tipe/comptes-rendus/2021-04.tex\\\'\;\ workspace\ 2\;\ exec\ zathura\ \~/tipe/comptes-rendus/2021-04.pdf\;\ exec\ zathura\ \~/tipe/comptes-rendus/2021-04-consignes.pdf\'\;\ exit
+abbr -a -U -- todo todo.sh
+abbr -a -U -- ttime hyperfine
+abbr -a -U -- whats 'tuxi what is'
+abbr -a -U -- whattodo python\ -c\ \"import\ random\;\ print\(random.choice\(\'tipe\ tipe\ démineur\ démineur\ ffcss\ ideaseed\'.split\(\'\ \'\)\)\)\"

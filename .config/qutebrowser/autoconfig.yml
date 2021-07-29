@@ -17,4 +17,6 @@ settings:
         gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
         pkg: open pkg.go.dev/{url:host}{url:path}
   content.notifications.enabled:
+    https://mail.ewen.works: true
+    https://messages.google.com: true
     https://www.reddit.com: false

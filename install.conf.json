@@ -70,7 +70,8 @@
       "~/music/backup": "music/backup",
       "~/.config/Code/User/settings.json": ".config/Code/User/settings.json",
       "~/.config/qutebrowser/quickmarks": ".config/qutebrowser/quickmarks",
-      "~/.config/fish/conf.d/done.fish": ".config/fish/conf.d/done.fish"
+      "~/.config/fish/conf.d/done.fish": ".config/fish/conf.d/done.fish",
+      "~/.config/fish/functions/switch-color-scheme.fish": ".config/fish/functions/switch-color-scheme.fish"
     }
   },
   {

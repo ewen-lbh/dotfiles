@@ -18,4 +18,5 @@ for d in (status dirname)/*
 	end
 end
 
-concurrently $commands --names $names
+concurrently $commands --names $names  | grep -P --invert-match '\[.+\]\s*.+ exited with code \d+\.?'
+

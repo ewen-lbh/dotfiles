@@ -86,7 +86,6 @@
   },
   "todo-tree.tree.showScanModeButton": false,
   "editor.codeLens": false,
-  "editor.fontSize": 16,
   "sync.ignoredSettings": [
     "editor.fontSize"
   ],
@@ -124,7 +123,7 @@
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"
-},
+  },
   "go.toolsManagement.autoUpdate": true,
   "cSpell.userWords": [
     "chmod",
@@ -132,5 +131,9 @@
     "ewen",
     "repo's",
     "repos"
-  ]
+  ],
+  "makefileCommandRunner.makefilePath": "${workspaceDir}",
+  "makefileCommandRunner.filePathEnv": "",
+  "makefileCommandRunner.unitTestCommand": "tests",
+  "ruby.useLanguageServer": true
 }
