@@ -13,6 +13,7 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	else
 		set varianttitlecase Dark
 	end
+	cp ~/projects/abstract-wallpapers-per-color-scheme/$variant/preferred.png ~/.config/wallpaper.png
 	echo $variant > $HOME/.config/current_color_scheme
 	# update config files that can't update on their own
 	# preferred is a symlink to the current wal theme (in dark/ and light/ subdirectories, see ~/.config/wal)
