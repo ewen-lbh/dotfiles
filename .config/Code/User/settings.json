@@ -135,5 +135,8 @@
   "makefileCommandRunner.makefilePath": "${workspaceDir}",
   "makefileCommandRunner.filePathEnv": "",
   "makefileCommandRunner.unitTestCommand": "tests",
-  "ruby.useLanguageServer": true
+  "ruby.useLanguageServer": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "jnbt.vscode-rufo"
+  }
 }
