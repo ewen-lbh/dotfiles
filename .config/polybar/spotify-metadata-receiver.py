@@ -25,6 +25,10 @@ def resolve_parsed_qs(parsed_qs):
             return False
         if v == "undefined":
             return None
+        try:
+            v = int(v)
+        except ValueError:
+            v = str(v)
         return v
     return { k: value(v) for k, v in parsed_qs.items() } 
 
@@ -41,21 +45,16 @@ class SpotifyReceiver(BaseHTTPRequestHandler):
     def log_request(self, code='-', size='-'):
         pass
     def do_GET(self):
-        print("got GET request")
         _, qs = self.path.split('?')
         data = resolve_parsed_qs(parse_qs(qs, keep_blank_values=True))
-        print(f"data resolved to {data}")
         if data.get('title') is None and data.get('artist') is None:
             evaluated_format_string = ""
         else:
             evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f'{format_string}')(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
-        print(f"format string resolved to {evaluated_format_string!r}")
         Path(output_filepath).expanduser().write_text(evaluated_format_string, encoding="utf8")
-        print(f"wrote to {output_filepath}")
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
-        print("sent 200 OK")
 
 receiver = HTTPServer((hostname, int(port)), SpotifyReceiver)
 receiver.serve_forever()
