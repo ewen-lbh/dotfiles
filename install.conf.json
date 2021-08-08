@@ -89,6 +89,7 @@
       "~/.config/Code/User/snippets/go.json": ".config/Code/User/snippets/go.json",
       "~/.config/Code/User/snippets/jade.json": ".config/Code/User/snippets/jade.json",
       "~/.config/Code/User/snippets/markdown.json": ".config/Code/User/snippets/markdown.json"
+      "~/.config/lvim/config.lua": ".config/lvim/config.lua"
     }
   },
   {
