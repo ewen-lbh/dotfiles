@@ -17,7 +17,7 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	echo $variant > $HOME/.config/current_color_scheme
 	# update config files that can't update on their own
 	# preferred is a symlink to the current wal theme (in dark/ and light/ subdirectories, see ~/.config/wal)
-	wal --theme preferred (test $variant = light && echo -- -l)
+	wal -e --theme preferred (test $variant = light && echo -- -l)
 	cat $HOME/.config/lazygit/config.yml | yq -Y '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
 	git config --global delta.syntax-theme (test $variant = light && echo OneHalfLight || echo OneHalfDark)
 	set vscodesettings "$HOME/.config/Code/User/settings.json"
