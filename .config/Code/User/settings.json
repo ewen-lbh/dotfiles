@@ -138,5 +138,12 @@
   "ruby.useLanguageServer": true,
   "[ruby]": {
     "editor.defaultFormatter": "jnbt.vscode-rufo"
-  }
+  },
+  "testExplorer.useNativeTesting": true,
+  "material-icon-theme.folders.associations": {
+    "testadata": "mocks"
+  },
+  "workbench.editor.sharedViewState": true,
+  "workbench.editor.untitled.experimentalLanguageDetection": true,
+  "javascript.updateImportsOnFileMove.enabled": "always"
 }
