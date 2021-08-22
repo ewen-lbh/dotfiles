@@ -1,0 +1,6 @@
+{
+"name": "github",
+"apps": [{
+  "container": "github",
+  "url": "https://github.com"}]
+}

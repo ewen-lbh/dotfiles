@@ -1,0 +1,17 @@
+{
+	"name": "communicate",
+	"apps": [
+		{
+			"container": "discord",
+			"url": "https://discord.com/app"
+		},
+		{
+			"container": "whatsapp",
+			"url": "https://web.whatsapp.com/"
+		},
+		{
+			"container": "sms",
+			"url": "https://messages.android.com/"
+		}
+	]
+}

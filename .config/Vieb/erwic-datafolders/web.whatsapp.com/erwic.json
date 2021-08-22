@@ -1,0 +1,6 @@
+{
+"name": "whatsapp",
+"apps": [{
+  "container": "whatsapp",
+  "url": "https://web.whatsapp.com"}]
+}
