@@ -314,7 +314,8 @@ include "%L"
 # Using <slash> conflicts.
 <Multi_key> <equal> <bar> <equal>	: "≢"	U2262		# NOT IDENTICAL TO
 # We already have ±
-<Multi_key> <minus> <plus>		: "∓"	U2213		# MINUS OR PLUS SIGN
+<Multi_key> <minus> <plus>		: "±"	U00B1		# PLUS OR MINUS SIGN
+<Multi_key> <plus> <minus>		: "∓"	U2213		# MINUS OR PLUS SIGN
 <Multi_key> <s> <q>			: "√"	U221A		# SQUARE ROOT
 # keystrokes might not make the most sense, but you know what they mean...
 <Multi_key> <3> <s> <q>			: "∛"	U221B	        # CUBE ROOT

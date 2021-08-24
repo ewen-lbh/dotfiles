@@ -3,5 +3,6 @@
 concurrently \
 	"~/sync-todos" \
 	"~/music/backup" \
-	"~/ideas/backup"
-~/projects/backup
+	"~/ideas/backup" \
+	"~/projects/backup"
+rsync --archive --info=progress2 /mnt/datacore/ /mnt/datacore2

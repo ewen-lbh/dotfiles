@@ -13,15 +13,17 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	else
 		set varianttitlecase Dark
 	end
+	cp ~/projects/abstract-wallpapers-per-color-scheme/$variant/preferred.png ~/.config/wallpaper.png
 	echo $variant > $HOME/.config/current_color_scheme
 	# update config files that can't update on their own
-	wal --theme one-half (test $variant = light && echo -- -l)
+	# preferred is a symlink to the current wal theme (in dark/ and light/ subdirectories, see ~/.config/wal)
+	wal -e --theme preferred (test $variant = light && echo -- -l)
 	cat $HOME/.config/lazygit/config.yml | yq -Y '.gui.theme.lightTheme = '(test $variant = light && echo true || echo false) | sponge $HOME/.config/lazygit/config.yml
 	git config --global delta.syntax-theme (test $variant = light && echo OneHalfLight || echo OneHalfDark)
 	set vscodesettings "$HOME/.config/Code/User/settings.json"
 	jq (echo -s '."workbench.colorTheme" = ."workbench.preferred' $varianttitlecase 'ColorTheme"') < $vscodesettings | sponge $vscodesettings
     # update wallpaper
-    cp $HOME/.config/wallpaper-$variant.png $HOME/.config/wallpaper.png
+
     # reload wallpaper & polybar
     i3-msg restart
 end

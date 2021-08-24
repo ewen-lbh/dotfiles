@@ -70,7 +70,18 @@
       "~/music/backup": "music/backup",
       "~/.config/Code/User/settings.json": ".config/Code/User/settings.json",
       "~/.config/qutebrowser/quickmarks": ".config/qutebrowser/quickmarks",
-      "~/.config/fish/conf.d/done.fish": ".config/fish/conf.d/done.fish"
+      "~/.config/fish/conf.d/done.fish": ".config/fish/conf.d/done.fish",
+      "~/.config/fish/functions/switch-color-scheme.fish": ".config/fish/functions/switch-color-scheme.fish",
+      "~/.config/Vieb/viebrc": ".config/Vieb/viebrc",
+      "~/.config/Vieb/erwic-datafolders/discord.com/erwic.json": ".config/Vieb/erwic-datafolders/discord.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/github.com/erwic.json": ".config/Vieb/erwic-datafolders/github.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/mail.ewen.works/erwic.json": ".config/Vieb/erwic-datafolders/mail.ewen.works/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/mail.google.com/erwic.json": ".config/Vieb/erwic-datafolders/mail.google.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/messages.android.com/erwic.json": ".config/Vieb/erwic-datafolders/messages.android.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/open.spotify.com/erwic.json": ".config/Vieb/erwic-datafolders/open.spotify.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/web.whatsapp.com/erwic.json": ".config/Vieb/erwic-datafolders/web.whatsapp.com/erwic.json",
+      "~/.config/Vieb/erwic-datafolders/.bundles/communicate/communicate.json": ".config/Vieb/erwic-datafolders/.bundles/communicate/communicate.json",
+      "~/.config/Vieb/erwic-datafolders/.bundles/mail/erwic.json": ".config/Vieb/erwic-datafolders/.bundles/mail/erwic.json"
     }
   },
   {

@@ -41,6 +41,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug '907th/vim-auto-save'
 
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'drewtemplermeyer/palenight.vim'
 
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
@@ -116,6 +117,8 @@ Plug 'pangloss/vim-javascript'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 let g:svelte_preprocessors = ["typescript"]
 
+Plug 'fladson/vim-kitty'
+
 " Initialize plugin system
 call plug#end()
 
@@ -133,7 +136,7 @@ endif
 
 let current_wal_variant = system('cat $HOME/.config/current_color_scheme')
 if current_wal_variant =~# 'dark'
-	colorscheme onehalfdark
+	colorscheme palenight
 	set background=dark
 endif
 " colorscheme palenight

@@ -1,0 +1,6 @@
+{
+"name": "mail",
+"apps": [{
+  "container": "mail",
+  "url": "https://mail.mail.works"}]
+}

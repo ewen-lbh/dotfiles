@@ -232,6 +232,7 @@ bindsym $mod+e mode "default"
 exec_always --no-startup-id picom --config ~/.config/picom.conf -b --experimental-backends
 exec_always --no-startup-id ibus-daemon -drx
 exec_always --no-startup-id sh ~/.config/polybar/run_polybar.sh
+exec_always --no-startup-id feh --bg-fill --no-xinerama ~/.config/wallpaper.png
 
 # Enable natural scrolling for the trackpad
 exec --no-startup-id xinput set-prop "ELAN1400:00 04F3:30AD Touchpad" "libinput Natural Scrolling Enabled" 1
@@ -282,6 +283,8 @@ bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
 # Launch rofi power menu ("power" is used loosesly here, I tend to shove unrelated, misc. stuff here)
 bindsym $mod+x exec $HOME/.config/rofi/powermenu 
+bindsym $mod+g exec $HOME/.config/rofi/work_on
+bindsym $mod+i exec $HOME/.config/rofi/edit_dotfiles
 
 # Origin game launcher
 # see https://github.com/lutris/docs/blob/master/Origin.md#blank-window-with-i3-wm

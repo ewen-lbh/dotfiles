@@ -1,0 +1,6 @@
+{
+"name": "google",
+"apps": [{
+  "container": "google",
+  "url": "https://mail.google.com"}]
+}

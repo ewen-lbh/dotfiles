@@ -13,7 +13,9 @@
 	diffFilter = delta --color-only
 [delta]
 	line-numbers = true
-	syntax-theme = OneHalfLight
+	syntax-theme = OneHalfDark
 [difftool "diffpdf"]
 	cmd = diff-pdf --view \"$LOCAL\" \"$REMOTE\"
 
+[diff "odp"]
+	textconv=/home/ewen/.local/bin/odp2txt

@@ -1,0 +1,9 @@
+{
+	"name": "spotify",
+	"apps": [
+		{
+			"container": "spotify",
+			"url": "https://open.spotify.com"
+		}
+	]
+}

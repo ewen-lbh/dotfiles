@@ -1,0 +1,13 @@
+{
+	"name": "mail",
+	"apps": [
+		{
+			"container": "gmail",
+			"url": "https://mail.google.com/"
+		},
+		{
+			"container": "mail",
+			"url": "https://mail.ewen.works/"
+		}
+	]
+}

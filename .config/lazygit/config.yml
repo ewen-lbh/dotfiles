@@ -9,7 +9,7 @@ git:
 customCommands:
   - key: g
     context: files
-    command: gitmoji -c
+    command: gh il; gitmoji -c
     description: commit with gitmoji
     subprocess: true
   - key: I
@@ -19,7 +19,8 @@ customCommands:
     subprocess: true
   - key: 'N'
     description: create annotated tag
-    command: git tag -a {{index .PromptResponses 0}} -m "{{index .PromptResponses 1}}"
+    command: git tag -a {{index .PromptResponses 0}} -m "{{index .PromptResponses
+      1}}"
     context: tags
     prompts:
       - type: input
