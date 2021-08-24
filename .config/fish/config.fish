@@ -33,7 +33,7 @@ starship init fish | source
 alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --git'
 
 # opam configuration
-source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+# source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 # tabtab source for packages
 # uninstall by removing these lines
