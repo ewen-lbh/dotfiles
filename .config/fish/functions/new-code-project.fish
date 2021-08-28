@@ -6,8 +6,13 @@ function _mutate_json
     jq -i (string join '|' $argv[2..]) $argv[1] 
 end
 
+set description  "new-code-project NAME TECH [[OWNER/]REPO] [-d DESC] [-# TAG]... [--private]"
 
-function new-code-project --description "new-code-project NAME TECH [[OWNER/]REPO] [-d DESC] [-# TAG]... [--private]"
+function new-code-project --description "$description"
+    if test (count $argv) -eq 1 -a $argv[1] = "--help"
+	    echo $description
+	    return
+    end
     argparse --name=new-code-project \
         'h/help'\
         'd/description='\
