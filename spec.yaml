@@ -1,0 +1,94 @@
+package managers:
+  nodejs: pnpm
+  python: poetry
+
+version managers:
+  nodejs: nvm
+
+wm: i3-gaps
+
+compositor: 
+  is: picom
+  fork: jonaburg
+
+bar: polybar
+
+browsers:
+  - qutebrowser
+  - firefox
+  - lynx
+
+editors:
+  text: *text
+    - vscode
+    - neovim
+  markdown: marktext
+  images:
+    - !wine photoshop
+    - GIMP
+    - imagemagick
+  videos:
+    - !vm after effects
+    - !vm premiere pro
+    - manim
+  svg:
+    - !wine illustrator
+  audio:
+    - !wine fl studio
+    - audacity
+
+viewers:
+  images:
+    - viu
+    - qimgv
+  pdf: zathura
+
+notifications: dunst
+menu: rofi
+
+file managers:
+  - thunar
+  - ranger
+
+terminal: kitty
+
+wallpaper setter: feh
+
+shell: fish
+
+colorschemes: wal
+
+dotfiles: dotbot
+
+audio system: pulseaudio
+init system: systemd
+
+pager: bat
+
+replacements:
+  ls: lsd
+  df: duf
+  du: ncdu
+  cat: bat
+  sed: sd
+  grep: rg
+  find: fd
+
+typesetting: latex
+
+programming languages:
+  - python
+  - node
+  - rust
+  - go
+  - v
+  - pug
+  - livescript
+  - stylus
+  - svelte
+  - imba
+  - lua
+  - nim
+  - ruby
+  - crystal
+  - typescript
