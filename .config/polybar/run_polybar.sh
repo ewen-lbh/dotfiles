@@ -13,11 +13,11 @@ echo "Using interface $interface"
 # Determine font size & bar height from hostname
 # TODO: from screen size instead (figure out the ratios)
 if test `hostname` = "stealth"; then
-    fz=14
     height=35
+    fz=12
 else
-    fz=14
     height=35
+    fz=12
 fi
 
 font1="unifont:fontformat=truetype:antialias=false:size=$fz;0"
