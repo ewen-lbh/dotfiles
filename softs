@@ -28,6 +28,7 @@ community/fish
 (! add trim plugin !)
 (! add crop plugin !)
 (! remove keybind conflicts !)
+?/mpv-mpris
 
 community/qutebrowser
 community/pdfjs
