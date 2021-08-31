@@ -81,3 +81,6 @@ alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-f
 
 # duf theme
 alias duf "duf -theme "(cat $HOME/.config/current_color_scheme)
+
+set -gx PNPM_HOME "/home/ewen/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
