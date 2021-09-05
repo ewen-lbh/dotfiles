@@ -287,6 +287,7 @@ bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 bindsym $mod+x exec $HOME/.config/rofi/powermenu 
 bindsym $mod+g exec $HOME/.config/rofi/work_on
 bindsym $mod+i exec $HOME/.config/rofi/edit_dotfiles
+bindsym $mod+q exec $HOME/.config/rofi/query
 
 # Origin game launcher
 # see https://github.com/lutris/docs/blob/master/Origin.md#blank-window-with-i3-wm

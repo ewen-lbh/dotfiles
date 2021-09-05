@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set query (rofi -dmenu -p "search for")
+if test "$query"
+	qutebrowser "$query"
+end
