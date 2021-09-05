@@ -1,0 +1,1 @@
+/home/ewen/projects/wifiqr/wifiqr.fish
