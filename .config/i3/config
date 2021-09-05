@@ -249,8 +249,10 @@ exec_always --no-startup-id clipmenud
 exec --no-startup-id test `hostname` = "stealth" && ckb-next --background
 
 # Adjust brightness
-bindsym XF86MonBrightnessUp exec xbacklight +5
-bindsym XF86MonBrightnessDown exec xbacklight -5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight +10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -10
+bindsym shift+XF86MonBrightnessUp exec --no-startup-id xbacklight +1
+bindsym shift+XF86MonBrightnessDown exec --no-startup-id xbacklight -1
 
 # Toggle touchpad
 bindsym XF86TouchpadToggle exec /home/ewen/.config/i3/toggle_touchpad.fish
