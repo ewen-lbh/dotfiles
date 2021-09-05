@@ -83,8 +83,12 @@
       "~/.config/Vieb/erwic-datafolders/.bundles/communicate/communicate.json": ".config/Vieb/erwic-datafolders/.bundles/communicate/communicate.json",
       "~/.config/Vieb/erwic-datafolders/.bundles/mail/erwic.json": ".config/Vieb/erwic-datafolders/.bundles/mail/erwic.json",
       "~/.config/qutebrowser/greasemonkey/youtube-block.js": ".config/qutebrowser/greasemonkey/youtube-block.js",
+      "~/music/download.py": "music/download.py",
       "~/.config/fish/functions/shebang.fish": ".config/fish/functions/shebang.fish",
-      "~/.config/rofi/query": ".config/rofi/query"
+      "~/.config/rofi/query": ".config/rofi/query",
+      "~/.config/Code/User/snippets/go.json": ".config/Code/User/snippets/go.json",
+      "~/.config/Code/User/snippets/jade.json": ".config/Code/User/snippets/jade.json",
+      "~/.config/Code/User/snippets/markdown.json": ".config/Code/User/snippets/markdown.json"
     }
   },
   {

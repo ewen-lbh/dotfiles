@@ -1,6 +1,6 @@
 {
   "telemetry.enableTelemetry": false,
-  "editor.fontFamily": "Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
+  "editor.fontFamily": "Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
@@ -96,7 +96,9 @@
     "HACK",
     "FIXME",
     "BUG",
-    "obsolete"
+    "obsolete",
+    "[ ]",
+    "[x]"
   ],
   "python.formatting.provider": "black",
   "terminal.integrated.fontSize": 16,
