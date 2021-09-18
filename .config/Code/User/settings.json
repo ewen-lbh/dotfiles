@@ -1,6 +1,6 @@
 {
   "telemetry.enableTelemetry": false,
-  "editor.fontFamily": "Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
+  "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
@@ -152,4 +152,6 @@
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "editor.fontSize": 13,
+  "debug.console.fontSize": 13
 }

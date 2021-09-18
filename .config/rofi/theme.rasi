@@ -18,7 +18,7 @@
    blackselect:      #303030;
    darkgray:         #848484;
    scrollbarcolor:   #505050;
-   font: "Scientifica 14";
+   font: "Victor Mono Bold 10";
    background-color: @blackdarkest;
 }
 
