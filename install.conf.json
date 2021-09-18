@@ -84,7 +84,8 @@
       "~/.config/Vieb/erwic-datafolders/.bundles/mail/erwic.json": ".config/Vieb/erwic-datafolders/.bundles/mail/erwic.json",
       "~/.config/qutebrowser/greasemonkey/youtube-block.js": ".config/qutebrowser/greasemonkey/youtube-block.js",
       "~/.config/fish/functions/shebang.fish": ".config/fish/functions/shebang.fish",
-      "~/.config/rofi/query": ".config/rofi/query"
+      "~/.config/rofi/query": ".config/rofi/query",
+      "~/.config/lvim/config.lua": ".config/lvim/config.lua"
     }
   },
   {
