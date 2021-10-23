@@ -26,3 +26,7 @@ settings:
     https://mail.ewen.works: true
     https://messages.google.com: true
     https://www.reddit.com: false
+  fonts.default_family:
+    global: Victor Mono
+  fonts.default_size:
+    global: 9.5pt
