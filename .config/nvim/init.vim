@@ -157,5 +157,5 @@ set nowrap
 let g:auto_save = 1
 
 " GUI stuff (for e.g. Neovide)
-set guifont=Victor\ Mono:h14
+set guifont=Victor\ Mono:h12
 
