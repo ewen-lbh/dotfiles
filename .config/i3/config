@@ -182,7 +182,7 @@ workspace $ws10 output $secondary
 workspace $ws7 output $secondary
 # $ws2 is only for secondary browsers, main browsers should be spawned on $ws1
 workspace $ws2 output $secondary 
-workspace $ws3 output $primary
+workspace $ws3 output $secondary
 workspace $ws1 output $primary
 
 # move current workspace to other monitor
