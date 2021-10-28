@@ -310,5 +310,8 @@ exec --no-startup-id udiskie
 
 exec --no-startup-id scream -o pulse -i virbr0 
 
+# set theme (dark / light)
+# WARNING: **DON'T** use exec_always, or we'll get an infinite loop, since switch-color-theme reloads i3!!!
+exec --no-startup-id fish -c "switch-color-scheme auto"
 
 assign [class="ortfo"] $ws3
