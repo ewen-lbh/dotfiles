@@ -309,3 +309,6 @@ exec --no-startup-id udiskie
 # start Scream (for audio passthrough in RDPWindows)
 
 exec --no-startup-id scream -o pulse -i virbr0 
+
+
+assign [class="ortfo"] $ws3
