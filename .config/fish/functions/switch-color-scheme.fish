@@ -26,4 +26,7 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 
     # reload wallpaper & polybar
     i3-msg restart
+    # reload picom
+    kill (pidof picom)
+    picom --experimental-backends & disown
 end
