@@ -18,6 +18,8 @@ settings:
         pkg: open pkg.go.dev/{url:host}{url:path}
   content.desktop_capture:
     https://meet.google.com: true
+  content.javascript.can_access_clipboard:
+    global: true
   content.media.audio_capture:
     https://meet.google.com: true
   content.media.video_capture:
