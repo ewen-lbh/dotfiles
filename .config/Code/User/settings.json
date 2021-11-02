@@ -157,6 +157,9 @@
   "editor.fontSize": 13,
   "debug.console.fontSize": 13
   "editor.inlineSuggest.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "github.copilot.enable": {
     "*": true,
     "yaml": false,
