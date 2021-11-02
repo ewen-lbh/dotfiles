@@ -95,8 +95,6 @@ community/starship
 
 community/python-pywal
 
-aur/nerd-fonts-fira-code
-
 aur/fish-z-git
 
 community/jq
@@ -114,6 +112,8 @@ aur/cani
 extra/noto-fonts-emoji
 aur/ttf-unifont
 extra/bdf-unifont
+aur/nerd-fonts-victor-mono
+aur/nerd-fonts-fira-code
 (run: cd ~/resources/fonts && ./collect && cd ~)
 (run: cp ~/resources/fonts/.all/*.ttf /usr/share/fonts/TTF/)
 (run: cp ~/resources/fonts/.all/*.otf /usr/share/fonts/OTF/)
@@ -171,6 +171,7 @@ aur/vimv-git
 
 # games
 multilib/steam-manjaro
+aur/protonup-git
 aur/multimc5
 # install overwatch
 community/lutris
