@@ -157,4 +157,10 @@
   "editor.fontSize": 13,
   "debug.console.fontSize": 13
   "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  }
 }
