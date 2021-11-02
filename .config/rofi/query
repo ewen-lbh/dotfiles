@@ -1,6 +1,7 @@
 #!/usr/bin/env fish
 
-set query (rofi -dmenu -p "search for")
+set query (rofi -dmenu -p "search or go to")
 if test "$query"
+	# TODO if query in ~/.config/qutebrowser/quickmarks then use that 
 	qutebrowser "$query"
 end
