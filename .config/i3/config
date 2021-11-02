@@ -182,7 +182,7 @@ workspace $ws10 output $secondary
 workspace $ws7 output $secondary
 # $ws2 is only for secondary browsers, main browsers should be spawned on $ws1
 workspace $ws2 output $secondary 
-workspace $ws3 output $primary
+workspace $ws3 output $secondary
 workspace $ws1 output $primary
 
 # move current workspace to other monitor
@@ -309,3 +309,9 @@ exec --no-startup-id udiskie
 # start Scream (for audio passthrough in RDPWindows)
 
 exec --no-startup-id scream -o pulse -i virbr0 
+
+# set theme (dark / light)
+# WARNING: **DON'T** use exec_always, or we'll get an infinite loop, since switch-color-theme reloads i3!!!
+exec --no-startup-id fish -c "switch-color-scheme auto"
+
+assign [class="ortfo"] $ws3

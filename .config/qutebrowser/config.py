@@ -136,6 +136,12 @@ config.set('content.images', True, 'chrome-devtools://*')
 # Type: Bool
 config.set('content.images', True, 'devtools://*')
 
+# Allow JavaScript to read from or write to the clipboard. With
+# QtWebEngine, writing the clipboard as response to a user interaction
+# is always allowed.
+# Type: Bool
+c.content.javascript.can_access_clipboard = True
+
 # Enable JavaScript.
 # Type: Bool
 config.set('content.javascript.enabled', True, 'chrome-devtools://*')
@@ -246,4 +252,8 @@ c.fonts.hints = 'default_size default_family'
 # Bindings for normal mode
 config.bind(',M', 'hint links spawn mpv {hint-url}')
 config.bind(',m', 'spawn mpv {url}')
+config.bind(';c', 'hint links right-click')
+config.bind('gkp', 'open https://{url:path}')
+config.bind('gr', 'greasemonkey-reload')
+config.bind('gytdl', 'hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"')
 config.bind('pkg', 'open pkg.go.dev/{url:host}{url:path}')

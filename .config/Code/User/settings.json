@@ -101,7 +101,7 @@
     "[x]"
   ],
   "python.formatting.provider": "black",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 13,
   "emmet.excludeLanguages": [
     "markdown",
     "jade"
@@ -167,4 +167,5 @@
     "plaintext": false,
     "markdown": false
   }
+  "editor.acceptSuggestionOnCommitCharacter": false,
 }
