@@ -296,3 +296,4 @@ community/docker-compose
 (run: sudo usermod -a -G docker $USER)
 
 aur/scream
+community/pdftk
