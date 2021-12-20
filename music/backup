@@ -3,10 +3,10 @@
 library=$HOME/music/library.tsv
 	echo "Using $library"
 
-# First, remove tsv header (Artist	Title	etc.) & vim set tabtop= command (first line and last line respoectively)
-# We do this because sort -u would sort these lines when we want them to be first & last
-tail $library -n +2 | head -n -1 | sponge $library
-	echo "Trimmed first & last line"
+# First, remove tsv header (Artist	Title	etc.) & vim set tabtop= command (first two lines)
+# We do this because sort -u would sort these lines and jumble them up into the rest
+tail $library -n +3 | sponge $library
+	echo "Trimmed header"
 
 spt list --liked --limit 50 \
 | sed 's/\s*(spotify:.*)$//' \
@@ -18,8 +18,8 @@ spt list --liked --limit 50 \
 	echo "Added last 50 liked titles from spotify"
 
 # Re-add the tsv header & vim command
-printf "Artist\tTitle\n%s\n# vim: set tabstop=64 :\t.\n" "$(cat $library)" | sponge $library
-	echo "Added back the first & last lines"
+printf "Artist\tTitle\n# vim: set tabstop=64 :\t.\n%s\n" "$(cat $library)" | sponge $library
+	echo "Added back the header"
 
 # Update the gist
 gistid=cb0ad1f51a1dad4c87844948af337273
