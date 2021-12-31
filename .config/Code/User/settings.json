@@ -155,7 +155,7 @@
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
   "editor.fontSize": 13,
-  "debug.console.fontSize": 13
+  "debug.console.fontSize": 13,
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
   "[typescript]": {
@@ -166,6 +166,6 @@
     "yaml": false,
     "plaintext": false,
     "markdown": false
-  }
-  "editor.acceptSuggestionOnCommitCharacter": false,
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false
 }
