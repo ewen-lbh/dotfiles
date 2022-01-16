@@ -44,8 +44,8 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty
-# the cooler ~~daniel~~ terminal
-bindsym $mod+Shift+Return exec cool-retro-term
+# one-shot execute command (Win+R be like)
+bindsym $mod+Shift+Return exec $HOME/.config/rofi/run
 # start a browser
 bindsym $mod+b exec --no-startup-id qutebrowser
 # start an alternative browser
@@ -295,10 +295,6 @@ for_window [instance="origin.exe"] floating enable
 
 # Startup applications
 # exec --no-startup-id i3-msg 'workspace 2; exec kitty qutebrowser; workspace 7; exec kitty -d $HOME/.dotfiles; exec kitty -d $HOME/.dotfiles fish -c lazygit; workspace 8; layout tabbed; exec qutebrowser mail.ewen.works mail.google.com; workspace 9; exec spotifyd; exec qutebrowser open.spotify.com; workspace 10; layout tabbed; exec kitty fish -c tiny; exec kitty fish -c gomuks; exec discord; workspace 1; exec qutebrowser https://github.com/issues?q=is%3Aopen+is%3Aissue+author%3Aewen-lbh+archived%3Afalse+-repo%3Aewen-lbh%2Fgh-api-playground'
-
-# i3expo-ng (Overview of all workspaces)
-exec_always --no-startup-id "i3expod.py -f -w ~/.config/wallpaper.png"
-bindsym $mod+Tab exec --no-startup-id ~/.config/i3/open_i3expo
 
 # setup compose key
 exec --no-startup-id setxkbmap -option compose:rwin
