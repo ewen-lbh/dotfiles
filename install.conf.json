@@ -90,7 +90,7 @@
       "~/.config/Code/User/snippets/jade.json": ".config/Code/User/snippets/jade.json",
       "~/.config/Code/User/snippets/markdown.json": ".config/Code/User/snippets/markdown.json",
       "~/.config/lvim/config.lua": ".config/lvim/config.lua",
-      "~/.config/rofi/launchpad.rasi": ".config/rofi/launchpad.rasi"
+      "~/.config/rofi/launchpad.rasi": ".config/rofi/launchpad.rasi",
       "~/.config/rofi/run": ".config/rofi/run"
     }
   },
