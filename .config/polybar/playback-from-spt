@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+if set --local sptstatus (spt pb --format "%f %{T3}%a%{T-} %t" 2>/dev/null)
+	echo $sptstatus | tee cached-sptstatus
+else
+	cat cached-sptstatus
+end
+
+
+
