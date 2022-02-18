@@ -167,5 +167,16 @@
     "plaintext": false,
     "markdown": false
   },
-  "editor.acceptSuggestionOnCommitCharacter": false
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "typescript.tsserver.enableTracing": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "σ": true
+  }
 }

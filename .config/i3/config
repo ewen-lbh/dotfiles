@@ -49,7 +49,7 @@ bindsym $mod+Shift+Return exec $HOME/.config/rofi/run
 # start a browser
 bindsym $mod+b exec --no-startup-id qutebrowser
 # start an alternative browser
-bindsym $mod+Shift+b exec --no-startup-id firefox
+bindsym $mod+shift+b exec --no-startup-id firefox
 
 # smart_gaps on
 gaps inner 25
@@ -59,7 +59,7 @@ gaps bottom -25
 for_window [class="^.*"] border pixel 0
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+shift+q kill
 
 # program launcher
 bindsym $mod+d exec "rofi -show drun -matching fuzzy -drun-match-fields name,generic -modi window,drun,ssh,file-browser fb:~/.config/rofi/rofi-fb"
@@ -81,16 +81,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+shift+h move left
+bindsym $mod+shift+j move down
+bindsym $mod+shift+k move up
+bindsym $mod+shift+l move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+shift+Left move left
+bindsym $mod+shift+Down move down
+bindsym $mod+shift+Up move up
+bindsym $mod+shift+Right move right
 
 
 # split in horizontal orientation
@@ -108,7 +108,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+t layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+shift+space floating toggle
 
 # TODO: $mod+space : switch keyboard layout
 
@@ -129,7 +129,7 @@ bindsym $mod+a focus parent
 #bindsym ?? focus child
 
 # take screenhots
-bindsym --release Shift+Print exec scrot --select --freeze -e 'mv $f /tmp/screenshot.png' && cp /tmp/screenshot.png ~/screenshots/$(date --iso-8601=seconds).png && xclip -selection clipboard -target image/png -i /tmp/screenshot.png
+bindsym --release shift+Print exec scrot --select --freeze -e 'mv $f /tmp/screenshot.png' && cp /tmp/screenshot.png ~/screenshots/$(date --iso-8601=seconds).png && xclip -selection clipboard -target image/png -i /tmp/screenshot.png
 bindsym --release Print exec scrot -e 'mv $f ~/screenshots/$(date --iso-8601=seconds).png'
 
 # workspace_auto_back_and_forth true
@@ -164,16 +164,16 @@ bindsym $mod+9 workspace $ws9
 bindsym $mod+0 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+shift+1 move container to workspace $ws1
+bindsym $mod+shift+2 move container to workspace $ws2
+bindsym $mod+shift+3 move container to workspace $ws3
+bindsym $mod+shift+4 move container to workspace $ws4
+bindsym $mod+shift+5 move container to workspace $ws5
+bindsym $mod+shift+6 move container to workspace $ws6
+bindsym $mod+shift+7 move container to workspace $ws7
+bindsym $mod+shift+8 move container to workspace $ws8
+bindsym $mod+shift+9 move container to workspace $ws9
+bindsym $mod+shift+0 move container to workspace $ws10
 
 # assign workspaces to monitors
 workspace $ws9 output $secondary
@@ -190,11 +190,11 @@ bindsym $mod+ctrl+l move workspace to output right
 bindsym $mod+ctrl+h move workspace to output left
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # border_radius 4
 
@@ -280,7 +280,7 @@ bindsym $mod+z exec rofi -show file-browser -matching fuzzy
 bindsym $mod+p exec rofi-rbw
 
 # Launch rofi clipboard manager
-bindsym $mod+Shift+ugrave exec CM_LAUNCHER=rofi clipmenu
+bindsym $mod+shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
 
 # Launch rofi power menu ("power" is used loosesly here, I tend to shove unrelated, misc. stuff here)
@@ -288,6 +288,8 @@ bindsym $mod+x exec $HOME/.config/rofi/powermenu
 bindsym $mod+g exec $HOME/.config/rofi/work_on
 bindsym $mod+i exec $HOME/.config/rofi/edit_dotfiles
 bindsym $mod+q exec $HOME/.config/rofi/query
+bindsym $mod+y exec rofi -show emoji -modi emoji
+bindsym $mod+o exec $HOME/.config/rofi/current_audio
 
 # Origin game launcher
 # see https://github.com/lutris/docs/blob/master/Origin.md#blank-window-with-i3-wm
@@ -311,3 +313,7 @@ exec --no-startup-id scream -o pulse -i virbr0
 exec --no-startup-id fish -c "switch-color-scheme auto"
 
 assign [class="ortfo"] $ws3
+assign [class="gui"] $ws3
+assign [class="Gui"] $ws3
+assign [class="Backend"] $ws3
+assign [class="backend"] $ws3

@@ -18,10 +18,15 @@ switch $action
 		$HOME/pomodoro --sessions-of=4 --total-cycles=(rofi -dmenu -p "number of cycles")
 	case "back up..."
 		set dir (echo "music
+music (w/ download)
 ideas
 projects
 resources" | rofi -dmenu)
-		kitty $HOME/$dir/backup
+		if test $dir = "music (w/ download)"
+			kitty fish -c "$HOME/music/backup && $HOME/music/download.py && $HOME/music/fill-playlists.py && $HOME/music/update-artist-counts.py"
+		else
+			kitty $HOME/$dir/backup
+		end
 	case "sync rocketbook"
 		kitty $HOME/rb/routine
 	case "lock"
@@ -35,8 +40,8 @@ resources" | rofi -dmenu)
 	case "back up all & shutdown"
 		kitty fish -c '~/do-backups && shutdown now'
 	case "sync clock"
-		kitty fish -c 'sudo ntpd -qg'
+		kitty fish -c 'sudo ntpd -qg && sudo hwclock --systohc'
 	case "upgrade"
-		kitty fish -c paru
+		kitty fish -c yay
 end
 

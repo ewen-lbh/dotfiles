@@ -113,7 +113,7 @@ function new-code-project --description "$description"
                 (echo -s ".author = \"" (git config user.name) " <" (git config user.email) ">" "\"")
 
         case '*'
-            echo $tech is not implemented.
+            echo $tech is not implemented. Available technologies: python, rust, go, javascript
             return 1
     end
 

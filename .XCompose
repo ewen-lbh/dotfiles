@@ -1422,3 +1422,6 @@ include "%L"
 
 # My own
 <Multi_key> <exclam> <greater> : "↦" U21A6 # RIGHTWARDS ARROW FROM BAR
+<Multi_key> <p> <bar> : "¶" U0086 # PILCROW SIGN
+<Multi_key> <bracketleft> <bar> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
+<Multi_key> <bracketright> <bar> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET

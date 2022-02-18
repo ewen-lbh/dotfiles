@@ -41,7 +41,7 @@ alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --git'
 [ -f ~/.config/tabtab/fish/__tabtab.fish ]; and . ~/.config/tabtab/fish/__tabtab.fish; or true
 
 # devour some programs (window swallowing, see https://youtu.be/mBNLzHcUtTo)
-for program in zathura sxiv vlc qimgv neovide neovide-kbd-fix
+for program in zathura sxiv vlc qimgv neovide neovide-kbd-fix marktext
 	alias $program "devour $program"
 end
 
@@ -84,3 +84,5 @@ alias duf "duf -theme "(cat $HOME/.config/current_color_scheme)
 
 set -gx PNPM_HOME "/home/ewen/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
+
+setxkbmap -option compose:(switch $hostname; case voyager; echo "rctrl"; case stealth; echo "rwin"; end)

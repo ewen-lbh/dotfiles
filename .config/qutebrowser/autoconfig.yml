@@ -12,10 +12,13 @@ settings:
         ',M': hint links spawn mpv {hint-url}
         ',m': spawn mpv {url}
         ;c: hint links right-click
+        anilist: open -t -- !al {title}
         gkp: open https://{url:path}
         gr: greasemonkey-reload
         gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
         pkg: open pkg.go.dev/{url:host}{url:path}
+  content.autoplay:
+    global: false
   content.desktop_capture:
     https://meet.google.com: true
   content.javascript.can_access_clipboard:
@@ -25,9 +28,12 @@ settings:
   content.media.video_capture:
     https://meet.google.com: true
   content.notifications.enabled:
+    global: true
     https://mail.ewen.works: true
     https://messages.google.com: true
     https://www.reddit.com: false
+  downloads.prevent_mixed_content:
+    global: false
   fonts.default_family:
     global: Victor Mono
   fonts.default_size:
