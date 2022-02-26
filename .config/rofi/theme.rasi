@@ -1,151 +1,124 @@
-/**
- * ROFI Color theme
- * User: mbfraga
- * Tweaked by: ewen-lbh
- * Copyright: Martin B. Fraga
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
  */
 
-/* global settings and color variables */
-* {
-   maincolor:        #456fb6;
-   highlight:        bold #456fb6;
-   urgentcolor:      #e53714;
+configuration {
+	/* font:							"Sine Sans 13"; */
+	font:							"VictorMono Nerd Font 13";
+    show-icons:                     true;
+	icon-theme: 					"Papirus";
+    display-drun: 					"";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+	sidebar-mode: 					false;
+}
 
-   fgwhite:          #cfcfcf;
-   blackdarkest:     #1d1d1d;
-   blackwidget:      #262626;
-   blackentry:       #292929;
-   blackselect:      #303030;
-   darkgray:         #848484;
-   scrollbarcolor:   #505050;
-   font: "Victor Mono Bold 10";
-   background-color: @blackdarkest;
+* {
+    background:                     #00000060;
+    background-alt:              	#00000000;
+    background-bar:                 #f2f2f215;
+    foreground:                     #f2f2f2EE;
+    accent:			            	#ffffff66;
+    highlight:				bold #ffffffEE;
 }
 
 window {
-   background-color: @blackdarkest;
-   anchor: north;
-   location: north;
-   y-offset: 30%;
-   height: 500px;
-   width: 500px;
-   border-radius: 8px;
-}
-
-mainbox {
-   background-color: @blackdarkest;
-   spacing:0px;
-   children: [inputbar, message, mode-switcher, listview];
-}
-
-message {
-   padding: 6px 10px;
-   background-color:@blackwidget;
-}
-
-textbox {
-   text-color:@darkgray;
-   background-color:@blackwidget;
-}
-
-listview {
-   fixed-height: false;
-   dynamic: true;
-   scrollbar: true;
-   spacing: 0px;
-   padding: 1px 0px 0px 0px;
-   margin: 0px 0px 1px 0px;
-   background: @blackdarkest;
-}
-
-element {
-   padding: 2px 15px;
-}
-
-element normal.normal {
-   padding: 0px 15px;
-   background-color: @blackentry;
-   text-color: @fgwhite;
-}
-
-element normal.urgent {
-   background-color: @blackentry;
-   text-color: @urgentcolor;
-}
-
-element normal.active {
-   background-color: @blackentry;
-   text-color: @maincolor;
-}
-
-element selected.normal {
-    background-color: @blackselect;
-    text-color:       @fgwhite;
-}
-
-element selected.urgent {
-    background-color: @urgentcolor;
-    text-color:       @blackdarkest;
-}
-
-element selected.active {
-    background-color: @maincolor;
-    text-color:       @blackdarkest;
-}
-
-element alternate.normal {
-    background-color: @blackentry;
-    text-color:       @fgwhite;
-}
-
-element alternate.urgent {
-    background-color: @blackentry;
-    text-color:       @urgentcolor;
-}
-
-element alternate.active {
-    background-color: @blackentry;
-    text-color:       @maincolor;
-}
-
-scrollbar {
-   background-color: @blackwidget;
-   handle-color: @darkgray;
-   handle-width: 15px;
-}
-
-mode-switcher {
-   background-color: @blackwidget;
-}
-
-button {
-   background-color: @blackwidget;
-   text-color:       @darkgray;
-}
-
-button selected {
-    text-color:       @maincolor;
-}
-
-inputbar {
-   background-color: @blackdarkest;
-   spacing: 0px;
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @foreground;
+	border:							0px;
+	border-color:					@border;
+    border-radius:                  0px;
+	width:							100%;
+	height:							100%;
 }
 
 prompt {
-   padding:6px 9px;
-   background-color: @maincolor;
-   text-color:@blackwidget;
+    enabled: 						true;
+	padding: 						0.30% 1% 0% -0.5%;
+	background-color: 				@background-alt;
+	text-color: 					@foreground;
+	font:							"VictorMono Nerd Font 12";
 }
 
 entry {
-   padding:6px 10px;
-   background-color:@blackwidget;
-   text-color:@fgwhite;
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    placeholder-color:              @foreground;
+    expand:                         true;
+    horizontal-align:               0;
+    placeholder:                    "Search";
+    padding:                        0.10% 0% 0% 0%;
+    blink:                          true;
 }
 
-case-indicator {
-   padding:6px 10px;
-   text-color:@maincolor;
-   background-color:@blackwidget;
+inputbar {
+	children: 						[ prompt, entry ];
+    background-color:               @background-bar;
+    text-color:                     @foreground;
+    expand:                         false;
+	border:							0.1%;
+    border-radius:                  6px;
+	border-color:					@accent;
+    margin:                         0% 25% 0% 25%;
+    padding:                        1%;
+}
+
+listview {
+    background-color:               @background-alt;
+    columns:                        7;
+    lines:                          4;
+    spacing:                        2%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               @background-alt;
+	border:							0% 0% 0% 0%;
+    border-radius:                  0% 0% 0% 0%;
+	border-color:					@accent;
+    children:                       [ inputbar, listview ];
+    spacing:                       	8%;
+    padding:                        10% 8.5% 10% 8.5%;
+}
+
+element {
+    background-color:               @background-alt;
+    text-color:                     @foreground;
+    orientation:                    vertical;
+    border-radius:                  0%;
+    padding:                        2.5% 0% 2.5% 0%;
+}
+
+element-icon {
+    background-color: 				@background-alt;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           81px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 				@background-alt;
+    text-color:       				inherit;
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         0.5% 0.5% -0.5% 0.5%;
+}
+
+element selected {
+    background-color:               @background-bar;
+    text-color:                     @foreground;
+	border:							0% 0% 0% 0%;
+    border-radius:                  12px;
+    border-color:                  	@accent;
 }
