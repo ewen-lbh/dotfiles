@@ -64,8 +64,7 @@ aur/spotify-tui
 
 community/polybar
 
-# community/picom
-aur/picom-rounded-corners
+community/picom
 
 community/neovim
 community/python-pynvim
