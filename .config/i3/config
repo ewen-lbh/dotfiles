@@ -129,7 +129,7 @@ bindsym $mod+a focus parent
 #bindsym ?? focus child
 
 # take screenhots
-bindsym --release shift+Print exec picom-trans --toggle --current && scrot --select --freeze -e 'mv $f /tmp/screenshot.png' && cp /tmp/screenshot.png ~/screenshots/$(date --iso-8601=seconds).png && xclip -selection clipboard -target image/png -i /tmp/screenshot.png && picom-trans --toggle --current
+bindsym --release shift+Print exec "picom-trans --toggle --current; scrot --select --freeze -e 'mv $f /tmp/screenshot.png' && cp /tmp/screenshot.png ~/screenshots/$(date --iso-8601=seconds).png && xclip -selection clipboard -target image/png -i /tmp/screenshot.png; picom-trans --toggle --current"
 bindsym --release Print exec scrot -e 'mv $f ~/screenshots/$(date --iso-8601=seconds).png'
 
 # workspace_auto_back_and_forth true
