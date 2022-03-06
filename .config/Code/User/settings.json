@@ -40,7 +40,7 @@
   "i18n-ally.indent": 4,
   "i18n-ally.sortKeys": true,
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.renderFinalNewline": false,
   "files.insertFinalNewline": true,
@@ -179,5 +179,11 @@
   "typescript.tsserver.enableTracing": true,
   "editor.unicodeHighlight.allowedCharacters": {
     "σ": true
-  }
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }
