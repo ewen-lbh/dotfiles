@@ -1,4 +1,5 @@
 {
+  "editor.fontWeight": "600",
   "telemetry.enableTelemetry": false,
   "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
   "workbench.iconTheme": "material-icon-theme",
