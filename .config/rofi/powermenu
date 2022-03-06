@@ -9,7 +9,8 @@ shutdown
 reboot
 back up all & shutdown
 sync clock
-upgrade" | rofi -dmenu -p power)
+upgrade
+switch color scheme" | rofi -dmenu -p power)
 
 switch $action
 	case "pomodoro (infinite)"
@@ -43,5 +44,7 @@ resources" | rofi -dmenu)
 		kitty fish -c 'sudo ntpd -qg && sudo hwclock --systohc'
 	case "upgrade"
 		kitty fish -c yay
+	case "switch color scheme"
+		switch-color-scheme auto
 end
 
