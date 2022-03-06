@@ -15,6 +15,10 @@ h4[data-kind] > span:first-child {
     letter-spacing: -0.03em;
 }
 
+.Documentation-declaration pre {
+    font-family: SF Mono;
+}
+
 .UnitHeader-title h1 {
     font-size: 2.75rem;
     font-family: Manrope;
