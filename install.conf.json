@@ -93,7 +93,8 @@
       "~/.config/rofi/launchpad.rasi": ".config/rofi/launchpad.rasi",
       "~/.config/rofi/run": ".config/rofi/run",
       "~/.config/polybar/bluetooth": ".config/polybar/bluetooth",
-      "~/.config/polybar/playback-from-spt": ".config/polybar/playback-from-spt"
+      "~/.config/polybar/playback-from-spt": ".config/polybar/playback-from-spt",
+      "~/.config/pypoetry/config.toml": ".config/pypoetry/config.toml"
     }
   },
   {
