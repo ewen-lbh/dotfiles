@@ -74,7 +74,7 @@ class SpotifyReceiver(BaseHTTPRequestHandler):
             evaluated_format_string = ""
         else:
             evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f'{format_string}')(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
-        Path(output_filepath).expanduser().write_text(evaluated_format_string, encoding="utf8")
+        Path(output_filepath).expanduser().write_text(evaluated_format_string if data.get('playing') else "", encoding="utf8")
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()

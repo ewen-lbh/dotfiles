@@ -6,13 +6,14 @@ interface=`ip link | grep 'mode DORMANT' | head -n1 | cut -d':' -f2 | cut -d' ' 
 echo "Using interface $interface"
 
 # Determine color depending on color scheme
-color=$(grep light $HOME/.config/current_color_scheme 1>/dev/null && echo \#000 || echo \#FFF)
+color=$(grep light $HOME/.config/current_color_scheme 1>/dev/null && echo 000 || echo FFF)
+other_color=$(test $color = "000" && echo FFF || echo 000)
 
 # Launch spotify metadata receiver script
 # TODO: kill previous instances within spotify-metadata-receiver.py itself
 kill $(pgrep -af "python $HOME/.config/polybar/spotify-metadata-receiver.py" | cut -d' ' -f1)
 python ~/.config/polybar/spotify-metadata-receiver.py localhost 8887 \
-	'%{{T3}}{i("%{F#F00} %{F-} ", liked)}{i("ﯩ ", loop)}{i("列", shuffle)}%{{T-}}  %{{T3}}{artist}%{{T-}} {title} %{{T4}}-{duration_string(duration - elapsed)}%{{T-}}' \
+	'%{{T3}}{i("%{F#F00} %{F-} ", liked)}%{{T-}}%{{T3}}{artist}%{{T-}}{"  " if " " in artist else " "}{title}' \
 	~/.config/polybar/spotify-metadata.txt 2>receiver_errors.txt &
 
 # Terminate already running bar instances
@@ -23,8 +24,8 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch Polybar, using default config location ~/.config/polybar/config
 for monitor in $(xrandr --query | grep ' connected' | cut -d' ' -f1); do
-    FONT_FAMILY=$(cat $HOME/.config/current_font_family) COLOR_PRIM=$color COLOR_SEC=$color BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini top &
-    FONT_FAMILY=$(cat $HOME/.config/current_font_family) COLOR_PRIM=$color COLOR_SEC=$color BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini bottom &
+	FONT_FAMILY=$(cat $HOME/.config/current_font_family) FG="#$color" BG="#A$other_color" BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini top &
+    FONT_FAMILY=$(cat $HOME/.config/current_font_family) FG="#$color" BG="#A$other_color" BAR_HEIGHT=$height INTERFACE=$interface MONITOR=$monitor polybar -c ~/.config/polybar/config.ini bottom &
 done
 
 echo "Polybar launched."
