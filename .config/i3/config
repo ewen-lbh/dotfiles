@@ -62,7 +62,7 @@ for_window [class="^.*"] border pixel 0
 bindsym $mod+shift+q kill
 
 # program launcher
-bindsym $mod+d exec "rofi -show drun -matching fuzzy -drun-match-fields name,generic -modi window,drun,ssh,file-browser fb:~/.config/rofi/rofi-fb"
+bindsym $mod+d exec "rofi -show drun -matching fuzzy -drun-match-fields name,generic -modi window,drun,ssh,filebrowser"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -274,7 +274,7 @@ bindsym $mod+ctrl+Scroll_Lock exec spt pb --repeat
 # bindsym $mod+ctrl+Next exec Todo: Next & Prior keys: seek in track
 
 # Launch rofi file browser
-bindsym $mod+z exec rofi -show file-browser -matching fuzzy
+bindsym $mod+z exec rofi -show filebrowser -matching fuzzy
 
 # Launch rofi bitwarden
 bindsym $mod+p exec rofi-rbw

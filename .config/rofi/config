@@ -1,1 +1,1 @@
-rofi.theme: /home/ewen/.config/rofi/theme.rasi
+@theme "/home/ewen/.config/rofi/theme.rasi"
