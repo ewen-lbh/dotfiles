@@ -12,7 +12,7 @@ color=$(grep light $HOME/.config/current_color_scheme 1>/dev/null && echo \#000 
 # TODO: kill previous instances within spotify-metadata-receiver.py itself
 kill $(pgrep -af "python $HOME/.config/polybar/spotify-metadata-receiver.py" | cut -d' ' -f1)
 python ~/.config/polybar/spotify-metadata-receiver.py localhost 8887 \
-	'%{{T3}}{i("%{F#F00}♥%{F-} ", liked)}{i("↺", loop)}{i("↹", shuffle)}%{{T-}} %{{T3}}{artist}%{{T-}} {title} %{{T4}}-{duration_string(duration - elapsed)}%{{T-}}"' \
+	'%{{T3}}{i("%{F#F00} %{F-} ", liked)}{i("ﯩ ", loop)}{i("列", shuffle)}%{{T-}}  %{{T3}}{artist}%{{T-}} {title} %{{T4}}-{duration_string(duration - elapsed)}%{{T-}}' \
 	~/.config/polybar/spotify-metadata.txt 2>receiver_errors.txt &
 
 # Terminate already running bar instances
