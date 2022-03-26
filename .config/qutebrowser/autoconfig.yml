@@ -13,6 +13,7 @@ settings:
         ',m': spawn mpv {url}
         ;c: hint links right-click
         anilist: open -t -- !al {title}
+        archive: open https://web.archive.org/web/*/{url}
         gkp: open https://{url:path}
         gr: greasemonkey-reload
         gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
