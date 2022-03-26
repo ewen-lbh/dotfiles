@@ -1,4 +1,9 @@
 from ranger.api.commands import Command
+from pathlib import Path
+from shutil import copy
+import subprocess
+
+here = Path(__file__).parent
 
 class paste_as_root(Command):
 	def execute(self):
@@ -36,3 +41,13 @@ class fzf_select(Command):
                 self.fm.cd(fzf_file)
             else:
                 self.fm.select_file(fzf_file)
+
+class screen_to_crop(Command):
+    def execute(self):
+        thisfile = self.fm.thisfile
+        output = Path(self.fm.thisdir.path) / "cropped" / thisfile.basename
+        output.parent.mkdir(exist_ok=True, parents=True)
+        subprocess.run('picom-trans --toggle --current', shell=True)
+        subprocess.run(f"scrot --select --freeze -e 'mv $f {output}'", shell=True)
+        subprocess.run('picom-trans --toggle --current', shell=True)
+        self.fm.notify(f"Saved crop to {output}")
