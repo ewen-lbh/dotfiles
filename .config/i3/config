@@ -52,9 +52,9 @@ bindsym $mod+b exec --no-startup-id qutebrowser
 bindsym $mod+shift+b exec --no-startup-id firefox
 
 # smart_gaps on
-gaps inner 25
-gaps top -25
-gaps bottom -25
+gaps inner 15
+gaps left 50
+gaps right 50
 
 for_window [class="^.*"] border pixel 0
 
