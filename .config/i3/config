@@ -288,7 +288,7 @@ bindsym $mod+x exec $HOME/.config/rofi/powermenu
 bindsym $mod+g exec $HOME/.config/rofi/work_on
 bindsym $mod+i exec $HOME/.config/rofi/edit_dotfiles
 bindsym $mod+q exec $HOME/.config/rofi/query
-bindsym $mod+y exec rofi -show emoji -modi emoji
+bindsym $mod+y exec rofimoji
 bindsym $mod+o exec $HOME/.config/rofi/current_audio
 
 # Origin game launcher
