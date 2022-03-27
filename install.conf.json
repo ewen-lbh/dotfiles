@@ -95,7 +95,8 @@
       "~/.config/polybar/bluetooth": ".config/polybar/bluetooth",
       "~/.config/polybar/playback-from-spt": ".config/polybar/playback-from-spt",
       "~/.config/pypoetry/config.toml": ".config/pypoetry/config.toml",
-      "~/.config/fish/functions/desktop-file.fish": ".config/fish/functions/desktop-file.fish"
+      "~/.config/fish/functions/desktop-file.fish": ".config/fish/functions/desktop-file.fish",
+      "~/.config/theme-switcher/schedule-switches-for-tomorrow": ".config/theme-switcher/schedule-switches-for-tomorrow"
     }
   },
   {

@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Rough location to get accurate times
+lat=43.8374249
+lon=4.3600687
+
+# Get data from a public API
+data=$(wget -q -O - "https://api.sunrise-sunset.org/json?lat=$lat&lng=$lon&formatted=0&date=tomorrow")
+
+# Get dates from the response with jq and convert to the right format for use with `at`
+time_format="%H:%M %Y-%m-%d"
+sunrise=$(echo $data | jq .results.sunrise -r | xargs -I@ date -d @ +"$time_format")
+sunset=$(echo $data | jq .results.sunset -r | xargs -I@ date -d @ +"$time_format")
+
+# Discard previous jobs (make the command idempotent)
+atq | grep " t " | cut -f1 | xargs atrm
+
+# Schedule switches
+echo fish -c switch-color-scheme light | at -q t $sunrise
+echo fish -c switch-color-scheme dark | at -q t $sunset
