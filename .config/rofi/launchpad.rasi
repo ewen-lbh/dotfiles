@@ -1,3 +1,4 @@
+/* vim: set filetype=css: */
 /*
  *
  * Author  : Aditya Shakya
@@ -6,6 +7,7 @@
  * Twitter : @adi1090x
  *
  */
+
 
 configuration {
 	/* font:							"Sine Sans 13"; */
