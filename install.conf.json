@@ -96,7 +96,9 @@
       "~/.config/polybar/playback-from-spt": ".config/polybar/playback-from-spt",
       "~/.config/pypoetry/config.toml": ".config/pypoetry/config.toml",
       "~/.config/fish/functions/desktop-file.fish": ".config/fish/functions/desktop-file.fish",
-      "~/.config/theme-switcher/schedule-switches-for-tomorrow": ".config/theme-switcher/schedule-switches-for-tomorrow"
+      "~/.config/theme-switcher/schedule-switches-for-tomorrow": ".config/theme-switcher/schedule-switches-for-tomorrow",
+      "~/.config/fish/functions/ya.fish": ".config/fish/functions/ya.fish",
+      "~/.config/fish/functions/ay.fish": ".config/fish/functions/ay.fish"
     }
   },
   {
