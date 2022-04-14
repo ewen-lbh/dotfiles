@@ -10,10 +10,7 @@ other_color=$(test $color = "000" && echo FFF || echo 000)
 
 # Launch spotify metadata receiver script
 # TODO: kill previous instances within spotify-metadata-receiver.py itself
-kill $(pgrep -af "python $HOME/.config/polybar/spotify-metadata-receiver.py" | cut -d' ' -f1)
-python ~/.config/polybar/spotify-metadata-receiver.py localhost 8887 \
-	'%{{T3}}{i("%{T5}%{F#F00} %{F-}%{T-}  ", liked)}%{{T-}}%{{T3}}{artist_clean}%{{T-}}{"  " if " " in artist_clean else " "}{title.replace("(", "%{T4}" + ("  " if " " in artist_clean else " ")).replace(")", "%{T-}" + ("  " if " " in artist_clean else " ")).replace("[", "%{T4}" + ("  " if " " in artist_clean else " ")).replace("]", "%{T-}" + ("  " if " " in artist_clean else " ")).replace(" - ", ("  " if " " in artist_clean else " ") + "%{T4}")}\n%{{F#AAA}}{upcoming_lyric}{"%{T3}    ⁄    %{T-}" if upcoming_lyric and current_lyric else ""}%{{F-}}{current_lyric}\n' \
-	~/.config/polybar/spotify-metadata.txt 2>receiver_errors.txt &
+$HOME/.config/polybar/launch-spotify-metadata-receiver & disown
 
 # Terminate already running bar instances
 killall -q polybar

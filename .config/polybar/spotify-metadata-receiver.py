@@ -70,16 +70,12 @@ class SpotifyReceiver(BaseHTTPRequestHandler):
     def do_GET(self):
         _, qs = self.path.split('?')
         data = resolve_parsed_qs(parse_qs(qs, keep_blank_values=True))
-        data["artist_clean"] = ", ".join(a for a in data.get('artist', '').split(', ') if a not in data.get('title', ''))
+        data["artist_clean"] = ", ".join(a for a in str(data.get('artist', '')).split(', ') if a not in str(data.get('title', '')))
         if data.get('title') is None and data.get('artist') is None:
             evaluated_format_string = ""
         else:
-            try:
-                evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f'{format_string}')(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
-            except Exception as e:
-                print(e)
-                raise e
-        Path(output_filepath).expanduser().write_text(evaluated_format_string if data.get('playing') else "", encoding="utf8")
+            evaluated_format_string = eval(f"(lambda {', '.join(data.keys())}: f'{format_string}')(" + ", ".join(f"data[{key!r}]" for key in data)  + ")")
+        Path(output_filepath).expanduser().write_text(evaluated_format_string, encoding="utf8")
         self.send_response(200)
         self.send_header("Access-Control-Allow-Origin", "*")
         self.end_headers()
