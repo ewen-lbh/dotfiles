@@ -321,3 +321,5 @@ assign [class="gui"] $ws3
 assign [class="Gui"] $ws3
 assign [class="Backend"] $ws3
 assign [class="backend"] $ws3
+
+exec_always --no-startup-id autotiling
