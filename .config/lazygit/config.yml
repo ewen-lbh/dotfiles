@@ -12,6 +12,10 @@ customCommands:
     command: gh il; gitmoji -c
     description: commit with gitmoji
     subprocess: true
+  - key: G
+    context: files
+    command: close-issue
+    description: make a commit that closes an issue
   - key: I
     context: files
     command: gh issue list
