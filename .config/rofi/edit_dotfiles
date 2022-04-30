@@ -9,25 +9,25 @@ set CONFIG "$HOME/.config"
 
 switch (echo $program | string trim)
 	case nvim
-		neovide-kbd-fix "$CONFIG/nvim/init.vim"
+		kitty -e nvim "$CONFIG/nvim/init.vim"
 	case fish
-		neovide-kbd-fix "$CONFIG/fish/config.fish"
+		kitty -e nvim "$CONFIG/fish/config.fish"
 	case rofi
-		neovide-kbd-fix "$CONFIG/rofi/theme.rasi"
+		kitty -e nvim "$CONFIG/rofi/theme.rasi"
 	case polybar
-		neovide-kbd-fix "$CONFIG/polybar/config.ini"
+		kitty -e nvim "$CONFIG/polybar/config.ini"
 	case i3
-		neovide-kbd-fix "$CONFIG/i3/config"
+		kitty -e nvim "$CONFIG/i3/config"
 	case dunst
-		neovide-kbd-fix "$CONFIG/dunst/dunstrc"
+		kitty -e nvim "$CONFIG/dunst/dunstrc"
 	case ranger
-		neovide-kbd-fix "$CONFIG/ranger/rc.conf"
+		kitty -e nvim "$CONFIG/ranger/rc.conf"
 	case picom
-		neovide-kbd-fix "$CONFIG/picom.conf"
+		kitty -e nvim "$CONFIG/picom.conf"
 	case kitty
 		echo $CONFIG
 		ls $CONFIG/kitty
-		neovide-kbd-fix "$CONFIG/kitty/kitty.conf"
+		kitty -e nvim "$CONFIG/kitty/kitty.conf"
 	case '*'
 		notify-send "dotfile for $program not found"
 end
