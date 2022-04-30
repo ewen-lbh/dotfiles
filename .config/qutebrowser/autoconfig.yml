@@ -39,3 +39,6 @@ settings:
     global: Victor Mono
   fonts.default_size:
     global: 9.5pt
+  url.searchengines:
+    global:
+      DEFAULT: https://search.brave.com/search?q={}
