@@ -1,0 +1,2 @@
+#!/usr/bin/env fish
+kitty fish -c "idea "(rofi -dmenu -p "idea")"; sleep 3"

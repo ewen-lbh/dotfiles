@@ -99,7 +99,8 @@
       "~/.config/theme-switcher/schedule-switches-for-tomorrow": ".config/theme-switcher/schedule-switches-for-tomorrow",
       "~/.config/fish/functions/ya.fish": ".config/fish/functions/ya.fish",
       "~/.config/fish/functions/ay.fish": ".config/fish/functions/ay.fish",
-      "~/.config/polybar/launch-spotify-metadata-receiver": ".config/polybar/launch-spotify-metadata-receiver"
+      "~/.config/polybar/launch-spotify-metadata-receiver": ".config/polybar/launch-spotify-metadata-receiver",
+      "~/.config/rofi/ideaseed_interactive": ".config/rofi/ideaseed_interactive"
     }
   },
   {

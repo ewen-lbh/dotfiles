@@ -286,7 +286,8 @@ bindsym $mod+shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 # Launch rofi power menu ("power" is used loosesly here, I tend to shove unrelated, misc. stuff here)
 bindsym $mod+x exec $HOME/.config/rofi/powermenu 
 bindsym $mod+g exec $HOME/.config/rofi/work_on
-bindsym $mod+i exec $HOME/.config/rofi/edit_dotfiles
+bindsym $mod+shift+i exec $HOME/.config/rofi/edit_dotfiles
+bindsym $mod+i exec $HOME/.config/rofi/ideaseed_interactive
 bindsym $mod+q exec $HOME/.config/rofi/query
 bindsym $mod+y exec rofimoji
 bindsym $mod+o exec $HOME/.config/rofi/current_audio
