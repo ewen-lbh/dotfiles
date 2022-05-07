@@ -24,6 +24,8 @@ switch (echo $program | string trim)
 		kitty -e nvim "$CONFIG/ranger/rc.conf"
 	case picom
 		kitty -e nvim "$CONFIG/picom.conf"
+	case qutebrowser
+		kitty -e nvim "$CONFIG/qutebrowser/config.py"
 	case kitty
 		echo $CONFIG
 		ls $CONFIG/kitty
