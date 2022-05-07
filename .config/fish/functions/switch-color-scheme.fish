@@ -22,6 +22,7 @@ function switch-color-scheme --description "switch-color-scheme VARIANT, where V
 	git config --global delta.syntax-theme (test $variant = light && echo OneHalfLight || echo OneHalfDark)
 	set vscodesettings "$HOME/.config/Code/User/settings.json"
 	jq (echo -s '."workbench.colorTheme" = ."workbench.preferred' $varianttitlecase 'ColorTheme"') < $vscodesettings | sponge $vscodesettings
+	jq (echo -s '.theme = "' $variant '"') < $HOME/.config/ortfo/settings.json | sponge $HOME/.config/ortfo/settings.json
     # update wallpaper
 
     # reload wallpaper & polybar
