@@ -261,5 +261,5 @@ config.bind('gytdl', 'hint links spawn youtube-dl -x --audio-format mp3 "{hint-u
 config.bind('pkg', 'open pkg.go.dev/{url:host}{url:path}')
 
 # Per-site passthrough mode override
-for domain in ["design.penpot.app"]:
+for domain in ["design.penpot.app", "github.dev"]:
     config.set("input.mode_override", "passthrough", domain)
