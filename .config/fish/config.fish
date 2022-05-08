@@ -77,7 +77,7 @@ alias neovide-kbd-fix "neovide-kbd-fix --multiGrid"
 
 
 thefuck --alias | source
-alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-for-updates --self-assign --create-missing --local-copy=/home/ewen/ideas --default-project=\'{repository}\' --default-column=todo --default-user-column=willmake --default-user-project=incubator'
+alias idea='ideaseed --auth-cache=/home/ewen/.cache/ideaseed/auth.json --check-for-updates --self-assign --create-missing --local-copy=/home/ewen/ideas --default-project=\'{repository}\' --default-column=todo --default-user-column=willmake --default-user-project=incubator --queyd=https://notes.ewen.works/api'
 
 # duf theme
 alias duf "duf -theme "(cat $HOME/.config/current_color_scheme)
