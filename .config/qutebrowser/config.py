@@ -259,6 +259,7 @@ config.bind('gkp', 'open https://{url:path}')
 config.bind('gr', 'greasemonkey-reload')
 config.bind('gytdl', 'hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"')
 config.bind('pkg', 'open pkg.go.dev/{url:host}{url:path}')
+config.bind('pw', 'spawn --userscript ~/.config/qutebrowser/userscripts/qute-bitwarden')
 
 # Per-site passthrough mode override
 for domain in ["design.penpot.app", "github.dev"]:
