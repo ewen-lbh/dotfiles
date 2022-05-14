@@ -100,7 +100,8 @@
       "~/.config/fish/functions/ya.fish": ".config/fish/functions/ya.fish",
       "~/.config/fish/functions/ay.fish": ".config/fish/functions/ay.fish",
       "~/.config/polybar/launch-spotify-metadata-receiver": ".config/polybar/launch-spotify-metadata-receiver",
-      "~/.config/rofi/ideaseed_interactive": ".config/rofi/ideaseed_interactive"
+      "~/.config/rofi/ideaseed_interactive": ".config/rofi/ideaseed_interactive",
+      "~/.config/qutebrowser/userscripts/qute-bitwarden": ".config/qutebrowser/userscripts/qute-bitwarden"
     }
   },
   {
