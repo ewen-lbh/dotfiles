@@ -188,4 +188,5 @@
   },
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto"
+  "editor.bracketPairColorization.enabled": false,
 }
