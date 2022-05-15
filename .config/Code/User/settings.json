@@ -189,4 +189,24 @@
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.gotoLocation.multipleTypeDefinitions": "goto"
   "editor.bracketPairColorization.enabled": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.go": "${basename}_test.go",
+    "*.ls": "${basename}.js",
+    "*.coffee": "${basename}.js",
+    "*.styl": "${basename}.css, ${basename}.css.map",
+    "*.sass": "${basename}.css, ${basename}.css.map",
+    "*.scss": "${basename}.css, ${basename}.css.map",
+    "README.md": "README_*.md, README-*.md",
+    "*.work": "${basename}.work.sum",
+    "go.mod": "go.sum",
+    "pyproject.toml": "poetry.lock",
+    "*.pug": "${capture}.*.js"
+  },
+  "explorer.fileNesting.enabled": true,
 }
