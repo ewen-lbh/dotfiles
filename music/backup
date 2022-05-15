@@ -1,7 +1,12 @@
 #!/bin/bash
 
+gistid=cb0ad1f51a1dad4c87844948af337273
 library=$HOME/music/library.tsv
-	echo "Using $library"
+	echo "Using $library and gist https://gist.github.com/ewen-lbh/$gistid"
+
+	echo "Retrieving latest library"
+wget https://gist.githubusercontent.com/ewen-lbh/$gistid/raw -O $library
+	echo "Retrieved latest library"
 
 # First, remove tsv header (Artist	Title	etc.) & vim set tabtop= command (first two lines)
 # We do this because sort -u would sort these lines and jumble them up into the rest
@@ -22,8 +27,5 @@ printf "Artist\tTitle\n# vim: set tabstop=64 :\t.\n%s\n" "$(cat $library)" | spo
 	echo "Added back the header"
 
 # Update the gist
-gistid=cb0ad1f51a1dad4c87844948af337273
-	echo "Using gist https://gist.github.com/ewen-lbh/$gistid"
-
 gh gist edit $gistid --add $library # adding a file whose filename is already in the gist updates the file.
 	echo "Updated the gist"
