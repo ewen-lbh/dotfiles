@@ -26,6 +26,8 @@ switch (echo $program | string trim)
 		kitty -e nvim "$CONFIG/picom.conf"
 	case qutebrowser
 		kitty -e nvim "$CONFIG/qutebrowser/config.py"
+	case lazygit
+		kitty -e nvim "$CONFIG/lazygit/config.yml"
 	case kitty
 		echo $CONFIG
 		ls $CONFIG/kitty
