@@ -119,6 +119,8 @@ let g:svelte_preprocessors = ["typescript"]
 
 Plug 'fladson/vim-kitty'
 
+Plug 'github/copilot.vim'
+
 " Initialize plugin system
 call plug#end()
 
