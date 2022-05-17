@@ -1,1 +1,76 @@
-/mnt/datacore/projects/lazygit-commit-close-issue/close-issue.rb
+#!/usr/bin/env ruby
+#!/usr/bin/env ruby
+require "pathname"
+require "json"
+require "tty-prompt"
+require "pastel"
+
+LABEL_TO_GITMOJI = {
+  bug: :bug,
+  perf: :zap,
+  important: :ambulance,
+  enhancement: :sparkles,
+  feature: :sparkles,
+  "new-feature": :sparkles,
+  ui: :lipstick,
+  deployment: :rocket,
+  testing: :"white-check-mark",
+  security: :lock,
+  documentation: :memo,
+  docs: :memo,
+  analytics: :"chart-with-upwards-trend",
+  legal: :"page-facing-up",
+  "breaking-changes": :boom,
+  breaking: :boom,
+  accessibility: :wheelchair,
+  database: :"card-file-box",
+  "easter-egg": :egg,
+  seo: :mag,
+  typing: :label,
+  types: :label,
+  cli: :"triangular-flag-on-post",
+  flags: :"triangular-flag-on-post",
+  flag: :"triangular-flag-on-post",
+  errors: :"goal-net",
+  "error-handling": :"goal-net",
+  auth: :"passport-control",
+  authentication: :"passport-control",
+  dev: :technologist,
+  devx: :technologist,
+}
+
+prompt = TTY::Prompt.new active_color: :cyan
+pastel = Pastel.new
+
+gitmojis = JSON.load((Pathname.new(Dir.home) / ".gitmoji" / "gitmojis.json").read)
+by_name = gitmojis.to_h{|e| [e['name'].to_sym, e]}
+issues = JSON.load `gh #{ARGV.first ? "-R " + ARGV.first : ""} issue list --json number,title,labels`
+by_number = issues.to_h{|i| [i['number'].to_i, i]}
+
+
+begin
+  choices = issues.map do |i| 
+    { 
+      name: pastel.cyan.bold("##{i['number']}") + " #{i['title']} " + "[#{i['labels'].map{|l| l['name']}.join "  "}]",
+      value: i['number'].to_i 
+    }
+  end
+  issue = by_number[prompt.select("Close issue…", choices, cycle: true, per_page: 15, filter: true, symbols: { marker: pastel.bold("—")})]
+  found = nil
+  issue['labels'].each do |label|
+    name = label['name'].to_sym
+    found = LABEL_TO_GITMOJI[name] if LABEL_TO_GITMOJI.has_key? name
+  end 
+  gitmoji = by_name[found || prompt.select("Select a gitmoji", by_name.keys)]
+rescue TTY::Reader::InputInterrupt
+  exit 
+end
+
+keyword = gitmoji['name'] == "bug" ? "Fixes" : "Closes"
+message = "#{gitmoji['emoji']} #{issue['title']} (#{keyword} ##{issue['number']})"
+
+if prompt.yes? "Commit with message \"#{message}\"?"
+  `git commit -m "#{message}"`
+else
+  puts "Cancelled."
+end
