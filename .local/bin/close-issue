@@ -8,33 +8,45 @@ require "pastel"
 LABEL_TO_GITMOJI = {
   bug: :bug,
   perf: :zap,
+  performance: :zap,
   important: :ambulance,
   enhancement: :sparkles,
   feature: :sparkles,
-  "new-feature": :sparkles,
+  new_feature: :sparkles,
   ui: :lipstick,
+  styling: :lipstick,
   deployment: :rocket,
-  testing: :"white-check-mark",
+  testing: :white_check_mark,
+  test: :white_check_mark,
   security: :lock,
   documentation: :memo,
   docs: :memo,
-  analytics: :"chart-with-upwards-trend",
-  legal: :"page-facing-up",
-  "breaking-changes": :boom,
+  analytics: :chart_with_upwards_trend,
+  legal: :page_facing_up,
+  breaking_changes: :boom,
   breaking: :boom,
+  assets: :bento,
+  brand: :bento,
+  branding: :bento,
+  brand_resources: :bento,
   accessibility: :wheelchair,
-  database: :"card-file-box",
-  "easter-egg": :egg,
+  database: :card_file_box,
+  ux: :children_crossing,
+  architecture: :building_construction,
+  meta: :building_construction,
+  responsive: :iphone,
+  mobile: :iphone,
+  easter_egg: :egg,
   seo: :mag,
   typing: :label,
   types: :label,
-  cli: :"triangular-flag-on-post",
-  flags: :"triangular-flag-on-post",
-  flag: :"triangular-flag-on-post",
-  errors: :"goal-net",
-  "error-handling": :"goal-net",
-  auth: :"passport-control",
-  authentication: :"passport-control",
+  cli: :triangular_flag_on_post,
+  flags: :triangular_flag_on_post,
+  flag: :triangular_flag_on_post,
+  errors: :goal_net,
+  error_handling: :goal_net,
+  auth: :passport_control,
+  authentication: :passport_control,
   dev: :technologist,
   devx: :technologist,
 }
@@ -43,7 +55,7 @@ prompt = TTY::Prompt.new active_color: :cyan
 pastel = Pastel.new
 
 gitmojis = JSON.load((Pathname.new(Dir.home) / ".gitmoji" / "gitmojis.json").read)
-by_name = gitmojis.to_h{|e| [e['name'].to_sym, e]}
+by_name = gitmojis.to_h{|e| [e['code'].gsub(':', '').to_sym, e]}
 issues = JSON.load `gh #{ARGV.first ? "-R " + ARGV.first : ""} issue list --json number,title,labels`
 by_number = issues.to_h{|i| [i['number'].to_i, i]}
 
@@ -58,7 +70,7 @@ begin
   issue = by_number[prompt.select("Close issue…", choices, cycle: true, per_page: 15, filter: true, symbols: { marker: pastel.bold("—")})]
   found = nil
   issue['labels'].each do |label|
-    name = label['name'].to_sym
+    name = label['name'].gsub('-', '_').to_sym
     found = LABEL_TO_GITMOJI[name] if LABEL_TO_GITMOJI.has_key? name
   end 
   gitmoji = by_name[found || prompt.select("Select a gitmoji", by_name.keys)]
