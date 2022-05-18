@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+#!/usr/bin/env ruby
+require "pathname"
+require "json"
+require "tty-prompt"
+require "pastel"
+
+LABEL_TO_GITMOJI = {
+  bug: :bug,
+  perf: :zap,
+  performance: :zap,
+  important: :ambulance,
+  enhancement: :sparkles,
+  feature: :sparkles,
+  new_feature: :sparkles,
+  ui: :lipstick,
+  styling: :lipstick,
+  deployment: :rocket,
+  testing: :white_check_mark,
+  test: :white_check_mark,
+  security: :lock,
+  documentation: :memo,
+  docs: :memo,
+  analytics: :chart_with_upwards_trend,
+  legal: :page_facing_up,
+  breaking_changes: :boom,
+  breaking: :boom,
+  assets: :bento,
+  brand: :bento,
+  branding: :bento,
+  brand_resources: :bento,
+  accessibility: :wheelchair,
+  database: :card_file_box,
+  ux: :children_crossing,
+  architecture: :building_construction,
+  meta: :building_construction,
+  responsive: :iphone,
+  mobile: :iphone,
+  easter_egg: :egg,
+  seo: :mag,
+  typing: :label,
+  types: :label,
+  cli: :triangular_flag_on_post,
+  flags: :triangular_flag_on_post,
+  flag: :triangular_flag_on_post,
+  errors: :goal_net,
+  error_handling: :goal_net,
+  auth: :passport_control,
+  authentication: :passport_control,
+  dev: :technologist,
+  devx: :technologist,
+}
+
+prompt = TTY::Prompt.new active_color: :cyan
+pastel = Pastel.new
+
+gitmojis = JSON.load((Pathname.new(Dir.home) / ".gitmoji" / "gitmojis.json").read)
+by_name = gitmojis.to_h{|e| [e['code'].gsub(':', '').to_sym, e]}
+issues = JSON.load `gh #{ARGV.first ? "-R " + ARGV.first : ""} issue list --json number,title,labels`
+by_number = issues.to_h{|i| [i['number'].to_i, i]}
+
+
+begin
+  choices = issues.map do |i| 
+    { 
+      name: pastel.cyan.bold("##{i['number']}") + " #{i['title']} " + "[#{i['labels'].map{|l| l['name']}.join "  "}]",
+      value: i['number'].to_i 
+    }
+  end
+  issue = by_number[prompt.select("Close issue…", choices, cycle: true, per_page: 15, filter: true, symbols: { marker: pastel.bold("—")})]
+  found = nil
+  issue['labels'].each do |label|
+    name = label['name'].gsub('-', '_').to_sym
+    found = LABEL_TO_GITMOJI[name] if LABEL_TO_GITMOJI.has_key? name
+  end 
+  gitmoji = by_name[found || prompt.select("Select a gitmoji", by_name.keys)]
+rescue TTY::Reader::InputInterrupt
+  exit 
+end
+
+keyword = gitmoji['name'] == "bug" ? "Fixes" : "Closes"
+message = "#{gitmoji['emoji']} #{issue['title']} (#{keyword} ##{issue['number']})"
+
+if prompt.yes? "Commit with message \"#{message}\"?"
+  `git commit -m "#{message}"`
+else
+  puts "Cancelled."
+end

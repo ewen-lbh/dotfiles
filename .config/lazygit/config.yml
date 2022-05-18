@@ -16,6 +16,7 @@ customCommands:
     context: files
     command: close-issue
     description: make a commit that closes an issue
+    subprocess: true
   - key: I
     context: files
     command: gh issue list
