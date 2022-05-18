@@ -101,7 +101,9 @@
       "~/.config/fish/functions/ay.fish": ".config/fish/functions/ay.fish",
       "~/.config/polybar/launch-spotify-metadata-receiver": ".config/polybar/launch-spotify-metadata-receiver",
       "~/.config/rofi/ideaseed_interactive": ".config/rofi/ideaseed_interactive",
-      "~/.config/qutebrowser/userscripts/qute-bitwarden": ".config/qutebrowser/userscripts/qute-bitwarden"
+      "~/.config/qutebrowser/userscripts/qute-bitwarden": ".config/qutebrowser/userscripts/qute-bitwarden",
+      "~/music/download-niceartworks": "music/download-niceartworks",
+      "~/music/download-cover-arts-of-playlist.py": "music/download-cover-arts-of-playlist.py"
     }
   },
   {

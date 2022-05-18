@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+./download-cover-arts-of-playlist.py "https://open.spotify.com/playlist/1GWt5QdQge4u7t0IW5h9KX" niceartworks/
