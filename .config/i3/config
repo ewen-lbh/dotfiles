@@ -114,7 +114,7 @@ bindsym $mod+shift+space floating toggle
 
 # lock
 # also press caps_lock w/ xdotool so that the caps lock state does not change
-bindsym $mod+Caps_Lock exec xdotool key Caps_Lock && betterlockscreen --lock 
+bindsym $mod+Caps_Lock exec sleep 0.1 && xdotool key Caps_Lock && betterlockscreen --lock 
 
 # lock on startup for laptop (no need for desktop)
 exec --no-startup-id test `hostname` = "voyager" && betterlockscreen --lock 
