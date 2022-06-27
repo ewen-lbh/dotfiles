@@ -104,7 +104,8 @@
       "~/.config/qutebrowser/userscripts/qute-bitwarden": ".config/qutebrowser/userscripts/qute-bitwarden",
       "~/music/download-niceartworks": "music/download-niceartworks",
       "~/music/download-cover-arts-of-playlist.py": "music/download-cover-arts-of-playlist.py",
-      "~/.local/bin/close-issue": ".local/bin/close-issue"
+      "~/.local/bin/close-issue": ".local/bin/close-issue",
+      "~/.config/fish/functions/random-xkcd.fish": ".config/fish/functions/random-xkcd.fish"
     }
   },
   {
