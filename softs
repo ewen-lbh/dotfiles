@@ -98,6 +98,7 @@ aur/fish-z-git
 
 community/jq
 community/yq
+(run: cargo install htmlq)
 
 community/dunst
 
