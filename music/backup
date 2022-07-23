@@ -5,7 +5,7 @@ library=$HOME/music/library.tsv
 	echo "Using $library and gist https://gist.github.com/ewen-lbh/$gistid"
 
 	echo "Retrieving latest library"
-wget https://gist.githubusercontent.com/ewen-lbh/$gistid/raw -O $library
+wget https://gist.githubusercontent.com/ewen-lbh/$gistid/raw/library.tsv -O $library
 	echo "Retrieved latest library"
 
 # First, remove tsv header (Artist	Title	etc.) & vim set tabtop= command (first two lines)
