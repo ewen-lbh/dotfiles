@@ -86,3 +86,4 @@ set -gx PNPM_HOME "/home/ewen/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 
 setxkbmap -option compose:(switch $hostname; case voyager; echo "rctrl"; case stealth; echo "rwin"; end)
+xdg-mime default org.pwmt.zathura.desktop application/pdf
