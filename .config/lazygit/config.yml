@@ -6,6 +6,7 @@ git:
   paging:
     colorArg: always
     pager: delta --paging=never
+promptToReturnFromSubprocess: false
 customCommands:
   - key: g
     context: files
