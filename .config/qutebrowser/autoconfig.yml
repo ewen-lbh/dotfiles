@@ -18,6 +18,7 @@ settings:
         gr: greasemonkey-reload
         gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
         pkg: open pkg.go.dev/{url:host}{url:path}
+        firefox: spawn firefox "{url}"
   content.autoplay:
     global: false
   content.desktop_capture:
