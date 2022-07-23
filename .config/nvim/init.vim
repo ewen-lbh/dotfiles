@@ -51,6 +51,7 @@ Plug 'godlygeek/tabular'
 " Language support
 Plug 'plasticboy/vim-markdown'
 Plug 'digitaltoad/vim-pug'
+Plug 'gkz/vim-ls' " Livescript
 
 " Multi cursors
 Plug 'terryma/vim-multiple-cursors'
