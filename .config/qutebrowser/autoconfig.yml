@@ -18,11 +18,17 @@ settings:
         gr: greasemonkey-reload
         gytdl: hint links spawn youtube-dl -x --audio-format mp3 "{hint-url}"
         pkg: open pkg.go.dev/{url:host}{url:path}
-        firefox: spawn firefox "{url}"
+        tff: spawn firefox "{url}"
+  colors.webpage.darkmode.enabled:
+    global: false
+  completion.shrink:
+    global: false
   content.autoplay:
     global: false
   content.desktop_capture:
     https://meet.google.com: true
+  content.geolocation:
+    https://www.ubereats.com: true
   content.javascript.can_access_clipboard:
     global: true
   content.media.audio_capture:

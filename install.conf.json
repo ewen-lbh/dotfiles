@@ -38,7 +38,7 @@
       "~/.config/Code - Insiders/User/snippets/jade.json": ".config/Code - Insiders/User/snippets/jade.json",
       "~/.config/Code - Insiders/User/snippets/markdown.json": ".config/Code - Insiders/User/snippets/markdown.json",
       "~/.config/Code - Insiders/User/snippets/ocaml.json": ".config/Code - Insiders/User/snippets/ocaml.json",
-      "~/.XCompose": ".XCompose",
+      "~/.config/X11/xcompose": ".XCompose",
       "~/.config/nvim/init.vim": ".config/nvim/init.vim",
       "~/.config/fontconfig/fonts.conf": ".config/fontconfig/fonts.conf",
       "~/.xinitrc": ".xinitrc",
@@ -105,7 +105,8 @@
       "~/music/download-niceartworks": "music/download-niceartworks",
       "~/music/download-cover-arts-of-playlist.py": "music/download-cover-arts-of-playlist.py",
       "~/.local/bin/close-issue": ".local/bin/close-issue",
-      "~/.config/fish/functions/random-xkcd.fish": ".config/fish/functions/random-xkcd.fish"
+      "~/.config/fish/functions/random-xkcd.fish": ".config/fish/functions/random-xkcd.fish",
+      "~/.config/fish/functions/sun-is-up.fish": ".config/fish/functions/sun-is-up.fish"
     }
   },
   {

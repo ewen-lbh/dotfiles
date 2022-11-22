@@ -71,6 +71,8 @@ class SpotifyReceiver(BaseHTTPRequestHandler):
         _, qs = self.path.split('?')
         data = resolve_parsed_qs(parse_qs(qs, keep_blank_values=True))
         data["artist_clean"] = ", ".join(a for a in str(data.get('artist', '')).split(', ') if a not in str(data.get('title', '')))
+        if data["artist_clean"].strip() == "":
+            data["artist_clean"] = data["artist"]
         if data.get('title') is None and data.get('artist') is None:
             evaluated_format_string = ""
         else:

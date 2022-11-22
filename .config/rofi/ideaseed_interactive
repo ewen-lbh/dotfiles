@@ -1,2 +1,3 @@
 #!/usr/bin/env fish
-kitty fish -c "idea "(rofi -dmenu -p "idea")"; sleep 3"
+set -l command "idea "(rofi -dmenu -p "idea")
+kitty fish -c "echo '\$ $command'; $command; sleep 10"

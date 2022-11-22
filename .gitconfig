@@ -8,6 +8,7 @@
 [init]
 	defaultBranch = main
 [credential "https://github.com"]
+	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [interactive]
 	diffFilter = delta --color-only
@@ -16,6 +17,21 @@
 	syntax-theme = OneHalfDark
 [difftool "diffpdf"]
 	cmd = diff-pdf --view \"$LOCAL\" \"$REMOTE\"
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
+[diff]
+	tool = difftastic
+[difftool]
+	prompt = false
 
 [diff "odp"]
 	textconv=/home/ewen/.local/bin/odp2txt
+[pager]
+	difftool = true
+[alias]
+	dft = difftool
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[pull]
+	rebase = false

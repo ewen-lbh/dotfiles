@@ -62,17 +62,21 @@ for_window [class="^.*"] border pixel 0
 bindsym $mod+shift+q kill
 
 # program launcher
-bindsym $mod+d exec "rofi -show drun -matching fuzzy -drun-match-fields name,generic -modi window,drun,ssh,filebrowser"
+bindsym $mod+d exec "~ewen/.config/rofi/scripts/launcher_t3"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+h exec i3-msg border pixel 5; focus left
+bindsym --release $mod+h exec i3-msg border pixel 0
+bindsym $mod+j exec i3-msg border pixel 5; focus down
+bindsym --release $mod+j exec i3-msg border pixel 0
+bindsym $mod+k exec i3-msg border pixel 5; focus up
+bindsym --release $mod+k exec i3-msg border pixel 0
+bindsym $mod+l exec i3-msg border pixel 5; focus right
+bindsym --release $mod+l exec i3-msg border pixel 0
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -135,8 +139,8 @@ bindsym --release Print exec scrot -e 'mv $f ~/screenshots/$(date --iso-8601=sec
 # workspace_auto_back_and_forth true
 
 # Define names for monitors
-set $primary HDMI-A-0
-set $secondary DVI-D-0
+set $primary DVI-D-0
+set $secondary HDMI-A-0
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -284,7 +288,7 @@ bindsym $mod+shift+ugrave exec CM_LAUNCHER=rofi clipmenu
 
 
 # Launch rofi power menu ("power" is used loosesly here, I tend to shove unrelated, misc. stuff here)
-bindsym $mod+x exec $HOME/.config/rofi/powermenu 
+bindsym $mod+x exec $HOME/.config/rofi/powermenu
 bindsym $mod+g exec $HOME/.config/rofi/work_on
 bindsym $mod+shift+i exec $HOME/.config/rofi/edit_dotfiles
 bindsym $mod+i exec $HOME/.config/rofi/ideaseed_interactive
@@ -324,3 +328,4 @@ assign [class="Backend"] $ws3
 assign [class="backend"] $ws3
 
 exec_always --no-startup-id autotiling
+exec --no-startup-id $HOME/.screenlayout/default.sh

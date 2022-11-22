@@ -32,6 +32,7 @@ def download_artwork(query, save_into):
         return
     print(f"Downloading: {query}", end=" ")
     start_chrome("https://bendodson.com/projects/itunes-artwork-finder/", headless=True)
+    link = None
     try:
         entity_selector = S("#entity").web_element
         select(entity_selector, "Album")
@@ -50,6 +51,10 @@ def download_artwork(query, save_into):
         print()
     finally:
         kill_browser()
+
+    if not link:
+        print(f"Couldn't get {query}'s artwork image URL")
+        return 
 
     print(f"-> {link} -> {save_as}")
     image_response = requests.get(link)

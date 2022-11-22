@@ -238,14 +238,14 @@ c.colors.webpage.darkmode.policy.page = 'always'
 # font setting, it's replaced with the fonts listed here. If set to an
 # empty value, a system-specific monospace default is used.
 # Type: List of Font, or Font
-c.fonts.default_family = "Victor Mono"
+c.fonts.default_family = "Product Sans"
 
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = "9.5pt"
+c.fonts.default_size = "11pt"
 
 # Font used for the hints.
 # Type: Font
@@ -264,3 +264,221 @@ config.bind('pw', 'spawn --userscript ~/.config/qutebrowser/userscripts/qute-bit
 # Per-site passthrough mode override
 for domain in ["design.penpot.app", "github.dev"]:
     config.set("input.mode_override", "passthrough", domain)
+
+fore="#000000"
+lightfore="#555555"
+back="#ffffff"
+altback="#E0E0E0"
+darkback="#bdbdbd"
+accent="#2962FF"
+
+# Background color of the completion widget category headers.
+c.colors.completion.category.bg = darkback
+# Bottom border color of the completion widget category headers.
+c.colors.completion.category.border.bottom = darkback
+# Top border color of the completion widget category headers.
+c.colors.completion.category.border.top = darkback
+# Foreground color of completion widget category headers.
+c.colors.completion.category.fg = fore
+## Background color of the completion widget for even rows.
+c.colors.completion.even.bg = altback
+## Text color of the completion widget.
+c.colors.completion.fg = fore
+## Background color of the selected completion item.
+c.colors.completion.item.selected.bg = accent
+## Bottom border color of the selected completion item.
+c.colors.completion.item.selected.border.bottom = accent
+## Top border color of the selected completion item.
+c.colors.completion.item.selected.border.top = accent
+## Foreground color of the selected completion item.
+c.colors.completion.item.selected.fg = back
+## Foreground color of the matched text in the selected completion item.
+c.colors.completion.item.selected.match.fg = back
+## Foreground color of the matched text in the completion.
+c.colors.completion.match.fg = accent
+## Background color of the completion widget for odd rows.
+c.colors.completion.odd.bg = back
+## Color of the scrollbar in the completion view.
+c.colors.completion.scrollbar.bg = back
+## Color of the scrollbar handle in the completion view.
+c.colors.completion.scrollbar.fg = fore
+## Background color of disabled items in the context menu.
+#c.colors.contextmenu.disabled.bg = ""
+## Foreground color of disabled items in the context menu.
+#c.colors.contextmenu.disabled.fg = ""
+## Background color of the context menu.
+#c.colors.contextmenu.menu.bg = ""
+## Foreground color of the context menu.
+#c.colors.contextmenu.menu.fg = ""
+## Background color of the context menu’s selected item.
+#c.colors.contextmenu.selected.bg = ""
+## Foreground color of the context menu’s selected item.
+#c.colors.contextmenu.selected.fg = ""
+## Background color for the download bar.
+#c.colors.downloads.bar.bg = ""
+## Background color for downloads with errors.
+#c.colors.downloads.error.bg = ""
+## Foreground color for downloads with errors.
+#c.colors.downloads.error.fg = ""
+## Color gradient start for download backgrounds.
+#c.colors.downloads.start.bg = ""
+## Color gradient start for download text.
+#c.colors.downloads.start.fg = ""
+## Color gradient stop for download backgrounds.
+#c.colors.downloads.stop.bg = ""
+## Color gradient end for download text.
+#c.colors.downloads.stop.fg = ""
+## Color gradient interpolation system for download backgrounds.
+#c.colors.downloads.system.bg = ""
+## Color gradient interpolation system for download text.
+#c.colors.downloads.system.fg = ""
+## Background color for hints.
+c.colors.hints.bg = accent
+## Font color for hints.
+c.colors.hints.fg = back
+## Font color for the matched part of hints.
+c.colors.hints.match.fg = darkback
+## Background color of the keyhint widget.
+#c.colors.keyhint.bg = ""
+## Text color for the keyhint widget.
+#c.colors.keyhint.fg = ""
+## Highlight color for keys to complete the current keychain.
+#c.colors.keyhint.suffix.fg = ""
+## Background color of an error message.
+#c.colors.messages.error.bg = ""
+## Border color of an error message.
+#c.colors.messages.error.border = ""
+## Foreground color of an error message.
+#c.colors.messages.error.fg = ""
+## Background color of an info message.
+#c.colors.messages.info.bg = ""
+## Border color of an info message.
+#c.colors.messages.info.border = ""
+## Foreground color of an info message.
+#c.colors.messages.info.fg = ""
+## Background color of a warning message.
+#c.colors.messages.warning.bg = ""
+## Border color of a warning message.
+#c.colors.messages.warning.border = ""
+## Foreground color of a warning message.
+#c.colors.messages.warning.fg = ""
+## Background color for prompts.
+#c.colors.prompts.bg = ""
+## Border used around UI elements in prompts.
+#c.colors.prompts.border = ""
+## Foreground color for prompts.
+#c.colors.prompts.fg = ""
+## Background color for the selected item in filename prompts.
+#c.colors.prompts.selected.bg = ""
+## Foreground color for the selected item in filename prompts.
+#c.colors.prompts.selected.fg = ""
+## Background color of the statusbar in caret mode.
+#c.colors.statusbar.caret.bg = ""
+## Foreground color of the statusbar in caret mode.
+#c.colors.statusbar.caret.fg = ""
+## Background color of the statusbar in caret mode with a selection.
+#c.colors.statusbar.caret.selection.bg = ""
+## Foreground color of the statusbar in caret mode with a selection.
+#c.colors.statusbar.caret.selection.fg = ""
+## Background color of the statusbar in command mode.
+#c.colors.statusbar.command.bg = ""
+## Foreground color of the statusbar in command mode.
+#c.colors.statusbar.command.fg = ""
+## Background color of the statusbar in private browsing + command mode.
+#c.colors.statusbar.command.private.bg = ""
+## Foreground color of the statusbar in private browsing + command mode.
+#c.colors.statusbar.command.private.fg = ""
+## Background color of the statusbar in insert mode.
+#c.colors.statusbar.insert.bg = ""
+## Foreground color of the statusbar in insert mode.
+#c.colors.statusbar.insert.fg = ""
+## Background color of the statusbar.
+c.colors.statusbar.normal.bg = back
+## Foreground color of the statusbar.
+c.colors.statusbar.normal.fg = fore
+## Background color of the statusbar in passthrough mode.
+#c.colors.statusbar.passthrough.bg = ""
+## Foreground color of the statusbar in passthrough mode.
+#c.colors.statusbar.passthrough.fg = ""
+## Background color of the statusbar in private browsing mode.
+#c.colors.statusbar.private.bg = ""
+## Foreground color of the statusbar in private browsing mode.
+#c.colors.statusbar.private.fg = ""
+## Background color of the progress bar.
+#c.colors.statusbar.progress.bg = ""
+## Foreground color of the URL in the statusbar on error.
+#c.colors.statusbar.url.error.fg = ""
+## Default 		foreground color of the URL in the statusbar.
+c.colors.statusbar.url.fg = fore
+## Foreground color of the URL in the statusbar for hovered links.
+c.colors.statusbar.url.hover.fg = accent
+## Foreground color of the URL in the statusbar on successful load (http).
+c.colors.statusbar.url.success.http.fg = fore
+## Foreground color of the URL in the statusbar on successful load (https).
+c.colors.statusbar.url.success.https.fg = fore
+## Foreground color of the URL in the statusbar when there’s a warning.
+c.colors.statusbar.url.warn.fg = fore
+## Background color of the tab bar.
+c.colors.tabs.bar.bg = altback
+## Background color of unselected even tabs.
+c.colors.tabs.even.bg = back
+## Foreground color of unselected even tabs.
+c.colors.tabs.even.fg = lightfore
+## Color for the tab indicator on errors.
+#c.colors.tabs.indicator.error = ""
+## Color gradient start for the tab indicator.
+#c.colors.tabs.indicator.start = ""
+## Color gradient end for the tab indicator.
+#c.colors.tabs.indicator.stop = ""
+## Color gradient interpolation system for the tab indicator.
+#c.colors.tabs.indicator.system = ""
+## Background color of unselected odd tabs.
+c.colors.tabs.odd.bg = back
+## Foreground color of unselected odd tabs.
+c.colors.tabs.odd.fg = lightfore
+## Background color of pinned unselected even tabs.
+c.colors.tabs.pinned.even.bg = back
+## Foreground color of pinned unselected even tabs.
+c.colors.tabs.pinned.even.fg = accent
+## Background color of pinned unselected odd tabs.
+c.colors.tabs.pinned.odd.bg = back
+## Foreground color of pinned unselected odd tabs.
+c.colors.tabs.pinned.odd.fg = accent
+## Background color of pinned selected even tabs.
+c.colors.tabs.pinned.selected.even.bg = back
+## Foreground color of pinned selected even tabs.
+c.colors.tabs.pinned.selected.even.fg = back
+## Background color of pinned selected odd tabs.
+c.colors.tabs.pinned.selected.odd.bg = accent
+## Foreground color of pinned selected odd tabs.
+c.colors.tabs.pinned.selected.odd.fg = back
+## Background color of selected even tabs.
+c.colors.tabs.selected.even.bg = accent
+## Foreground color of selected even tabs.
+c.colors.tabs.selected.even.fg = back
+## Background color of selected odd tabs.
+c.colors.tabs.selected.odd.bg = accent
+## Foreground color of selected odd tabs.
+c.colors.tabs.selected.odd.fg = back
+## Background color for webpages if unset (or empty to use the theme’s color).
+#c.colors.webpage.bg = ""
+## Which algorithm to use for modifying how colors are rendered with darkmode.
+#c.colors.webpage.darkmode.algorithm = ""
+## Contrast for dark mode.
+#c.colors.webpage.darkmode.contrast = ""
+## Render all web contents using a dark theme.
+#c.colors.webpage.darkmode.enabled = ""
+## Render all colors as grayscale.
+#c.colors.webpage.darkmode.grayscale.all = ""
+## Desaturation factor for images in dark mode.
+#c.colors.webpage.darkmode.grayscale.images = ""
+## Which images to apply dark mode to.
+#c.colors.webpage.darkmode.policy.images = ""
+## Which pages to apply dark mode to.
+#c.colors.webpage.darkmode.policy.page = ""
+## Threshold for inverting background elements with dark mode.
+#c.colors.webpage.darkmode.threshold.background = ""
+## Threshold for inverting text with dark mode.
+#c.colors.webpage.darkmode.threshold.text = ""
+## Value to use for prefers-color-scheme: for websites.
+#c.colors.webpage.preferred_color_scheme = ""

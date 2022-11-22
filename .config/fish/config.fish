@@ -31,7 +31,7 @@ starship init fish | source
 # alias gcal='gcalcli agenda --details description --details end --details location'
 # lsd configuration
 # alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --blocks permission,name,size,date --no-symlink'
-alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M" --git'
+alias lsd 'lsd --group-dirs first --date +"%Y-%m-%d %H:%M"'
 
 # opam configuration
 # source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
@@ -87,3 +87,17 @@ set -gx PATH "$PNPM_HOME" $PATH
 
 setxkbmap -option compose:(switch $hostname; case voyager; echo "rctrl"; case stealth; echo "rwin"; end)
 xdg-mime default org.pwmt.zathura.desktop application/pdf
+
+# pnpm
+set -gx PNPM_HOME "/home/ewen/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
+
+# set theme for ytop
+alias ytop 'ytop -c default(test (cat ~/.config/current_color_scheme) = light && echo "-dark")'
+
+# opam configuration
+source /home/ewen/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+# location
+source (status dirname)/set-location.sensitive.fish

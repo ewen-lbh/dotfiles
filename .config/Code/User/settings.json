@@ -1,7 +1,7 @@
 {
   "editor.fontWeight": "600",
   "telemetry.enableTelemetry": false,
-  "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji",
+  "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji, Ubuntu Mono",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
@@ -9,7 +9,7 @@
   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "Snazzy Light",
-  "workbench.colorTheme": "Palenight Italic",
+  "workbench.colorTheme": "Moonlight II Italic",
   "workbench.preferredDarkColorTheme": "Moonlight II Italic",
   "i18n-ally.displayLanguage": "fr",
   "editor.renderWhitespace": "none",
@@ -102,7 +102,6 @@
     "[x]"
   ],
   "python.formatting.provider": "black",
-  "terminal.integrated.fontSize": 13,
   "emmet.excludeLanguages": [
     "markdown",
     "jade"
@@ -121,7 +120,7 @@
   },
   "nim.logNimsuggest": true,
   "vim.easymotion": true,
-  "editor.wordWrap": "off",
+  "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.editorAssociations": {
@@ -187,8 +186,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.gotoLocation.multipleDefinitions": "goto",
-  "editor.gotoLocation.multipleTypeDefinitions": "goto"
-  "editor.bracketPairColorization.enabled": false,
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
   "explorer.fileNesting.patterns": {
     "*.ts": "${capture}.js",
     "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
@@ -209,4 +207,17 @@
     "*.pug": "${capture}.*.js"
   },
   "explorer.fileNesting.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
+  "inlineFold.regex": "data-.[^= ]+=([^ >]+)",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "prettier.semi": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "settingsSync.ignoredSettings": [
+    "terminal.integrated.fontSize"
+  ]
 }

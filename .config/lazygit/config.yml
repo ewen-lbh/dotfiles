@@ -2,10 +2,7 @@ gui:
   theme:
     lightTheme: false
   showFileTree: true
-git:
-  paging:
-    colorArg: always
-    pager: delta --paging=never
+  showBottomBar: false
 promptToReturnFromSubprocess: false
 customCommands:
   - key: g

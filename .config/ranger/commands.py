@@ -51,3 +51,22 @@ class screen_to_crop(Command):
         subprocess.run(f"scrot --select --freeze -e 'mv $f {output}'", shell=True)
         subprocess.run('picom-trans --toggle --current', shell=True)
         self.fm.notify(f"Saved crop to {output}")
+
+class move_to_subfolder(Command):
+    def execute(self):
+        selection = self.fm.thisdir.get_selection() or [self.fm.thisfile]
+        if not selection:
+            return
+
+        self.fm.notify("Work in progress, sowwy !")
+        return
+
+        self.fm.ui.console.ask(
+            "Move to: ./",
+            lambda ans: self.move_to(ans, selection),
+        )
+
+    def move_to(self, dest, selection):
+        if dest:
+            for f in selection:
+                Path(f.path).rename(Path(f.path).parent / dest / f.basename)

@@ -1427,3 +1427,4 @@ include "%L"
 <Multi_key> <p> <bar> : "¶" U0086 # PILCROW SIGN
 <Multi_key> <bracketleft> <bar> : "⟦" U27E6 # MATHEMATICAL LEFT WHITE SQUARE BRACKET
 <Multi_key> <bracketright> <bar> : "⟧" U27E7 # MATHEMATICAL RIGHT WHITE SQUARE BRACKET
+<Multi_key> <v> <v> : "✓" U2713 # CHECK MARK
