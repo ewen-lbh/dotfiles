@@ -106,7 +106,9 @@
       "~/music/download-cover-arts-of-playlist.py": "music/download-cover-arts-of-playlist.py",
       "~/.local/bin/close-issue": ".local/bin/close-issue",
       "~/.config/fish/functions/random-xkcd.fish": ".config/fish/functions/random-xkcd.fish",
-      "~/.config/fish/functions/sun-is-up.fish": ".config/fish/functions/sun-is-up.fish"
+      "~/.config/fish/functions/sun-is-up.fish": ".config/fish/functions/sun-is-up.fish",
+      "~/.config/nvim/UltiSnips/snippets.snippets": ".config/nvim/UltiSnips/snippets.snippets",
+      "~/.config/nvim/UltiSnips/tex.snippets": ".config/nvim/UltiSnips/tex.snippets"
     }
   },
   {
