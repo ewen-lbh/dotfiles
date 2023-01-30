@@ -29,3 +29,6 @@ printf "Artist\tTitle\n# vim: set tabstop=64 :\t.\n%s\n" "$(cat $library)" | spo
 # Update the gist
 gh gist edit $gistid --add $library # adding a file whose filename is already in the gist updates the file.
 	echo "Updated the gist"
+
+# Back up the scripts (including this one, so meta!!! to penrose)
+rclone copy --progress . --include '*.py' --include backup --include '*.tsv' penrose:music/
