@@ -3,5 +3,5 @@ function sun-is-up
 	set sunrise (date --date=(echo "$data" | jq .sunrise -r) +%s)
 	set sunset (date --date=(echo "$data" | jq .sunset -r) +%s)
 	set now (date +%s)
-	test $sunrise -gt $now -a $sunset -lt $now
+	test $sunset -gt $now -a $sunrise -lt $now
 end
