@@ -156,8 +156,12 @@ set relativenumber
 " Disable softwrap
 set nowrap
 
+
+
 " Enable autosave
 let g:auto_save = 1
+
+let g:python3_host_prog = "/usr/bin/python"
 
 " GUI stuff (for e.g. Neovide)
 set guifont=Victor\ Mono:h12
