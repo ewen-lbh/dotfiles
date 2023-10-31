@@ -26,4 +26,5 @@ vim.g.neovide_padding_left = 20
 vim.o.guifont = "VictorMono:h8"
 
 -- Theme
-vim.cmd.colorscheme "catppuccin-latte"
+local system_colorscheme = io.open("/home/uwun/.config/colorscheme", "r"):read("*all"):gsub("%s+", "")
+vim.cmd.colorscheme (system_colorscheme == "dark" and "catppuccin-mocha" or "catppuccin-latte")
