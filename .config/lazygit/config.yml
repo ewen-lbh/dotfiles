@@ -1,23 +1,30 @@
 gui:
-  theme:
-    activeBorderColor:
-      - '#179299'
-      - bold
-    inactiveBorderColor:
-      - '#6c6f85'
-    optionsTextColor:
-      - '#1e66f5'
-    selectedLineBgColor:
-      - '#ccd0da'
-    selectedRangeBgColor:
-      - '#ccd0da'
-    cherryPickedCommitBgColor:
-      - '#bcc0cc'
-    cherryPickedCommitFgColor:
-      - '#179299'
-    unstagedChangesColor:
-      - '#d20f39'
-    defaultFgColor:
-      - '#4c4f69'
-    searchingActiveBorderColor:
-      - '#df8e1d'
+  showFileTree: true
+  showBottomBar: false
+promptToReturnFromSubprocess: false
+customCommands:
+  - key: g
+    context: files
+    command: gh il; gitmoji -c
+    description: commit with gitmoji
+    subprocess: true
+  - key: G
+    context: files
+    command: close-issue
+    description: make a commit that closes an issue
+    subprocess: true
+  - key: I
+    context: files
+    command: gh issue list
+    description: see open github issues
+    subprocess: true
+  - key: 'N'
+    description: create annotated tag
+    command: git tag -a {{index .PromptResponses 0}} -m "{{index .PromptResponses
+      1}}"
+    context: tags
+    prompts:
+      - type: input
+        title: Annotated tag name
+      - type: input
+        title: Annotated tag message

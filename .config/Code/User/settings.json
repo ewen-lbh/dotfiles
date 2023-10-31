@@ -1,0 +1,260 @@
+{
+  "editor.fontWeight": "600",
+  "telemetry.enableTelemetry": false,
+  "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji, Ubuntu Mono",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Snazzy Light",
+  "workbench.colorTheme": "Default Light Modern",
+  "workbench.preferredDarkColorTheme": "Moonlight II",
+  "i18n-ally.displayLanguage": "fr",
+  "editor.renderWhitespace": "none",
+  "svelte-autoimport.useSemiColon": false,
+  "editor.fontLigatures": true,
+  "git.autofetch": true,
+  "gitmoji.additionalEmojis": [
+    {
+      "code": ":mega:",
+      "description": "Logo, name or other brand resources changes",
+      "emoji": "📣"
+    },
+    {
+      "code": ":comet:",
+      "description": "Massive changes",
+      "emoji": "☄"
+    },
+    {
+      "code": ":hammer_and_wrench:",
+      "description": "Update developer's tooling",
+      "emoji": "🛠"
+    }
+  ],
+  "git.confirmSync": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertBraces": false,
+  "i18n-ally.indent": 4,
+  "i18n-ally.sortKeys": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.renderFinalNewline": "off",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "githubIssues.workingIssueFormatScm": "${issueTitle} (Closes #${issueNumber})",
+  "explorer.openEditors.visible": 0,
+  "go.formatTool": "goimports",
+  "go.useLanguageServer": true,
+  "python.insidersChannel": "off",
+  "go.inferGopath": true,
+  "python.linting.pylintArgs": [
+    "--disable=unused-wildcard-import",
+    "--disable=wildcard-import",
+    "--disable=bad-continuation",
+    "--disable=unidiomatic-typecheck"
+  ],
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    }
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "githubIssues.issueCompletionFormatScm": "${issueTitle} (Closes #${issueNumber})",
+  "githubIssues.queries": [
+    {
+      "label": "My Issues",
+      "query": "default"
+    },
+    {
+      "label": "Created Issues",
+      "query": "author:${user} state:open repo:${owner}/${repository} sort:created-desc"
+    }
+  ],
+  "githubPullRequests.telemetry.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.egg-info": true
+  },
+  "todo-tree.tree.showScanModeButton": false,
+  "editor.codeLens": false,
+  "sync.ignoredSettings": [
+    "editor.fontSize"
+  ],
+  "githubIssues.issueBranchTitle": "${sanitizedIssueTitle}",
+  "todo-tree.general.tags": [
+    "XXX",
+    "TODO",
+    "HACK",
+    "FIXME",
+    "BUG",
+    "obsolete",
+    "[ ]",
+    "[x]"
+  ],
+  "python.formatting.provider": "black",
+  "emmet.excludeLanguages": [
+    "markdown",
+    "jade"
+  ],
+  "languageStylus.useSeparator": false,
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertParenthesisAroundIfCondition": false,
+  "stylusSupremacy.reduceMarginAndPaddingValues": true,
+  "stylusSupremacy.sortProperties": "grouped",
+  "markdown-toc.depthTo": 5,
+  "markdown.extension.toc.levels": "2..6",
+  "search.quickOpen.includeSymbols": true,
+  "githubIssues.useBranchForIssues": "prompt",
+  "files.associations": {
+    "*.txt": "plaintext"
+  },
+  "nim.logNimsuggest": true,
+  "vim.easymotion": true,
+  "editor.wordWrap": "on",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "cSpell.userWords": [
+    "chmod",
+    "docopt",
+    "ewen",
+    "repo's",
+    "repos"
+  ],
+  "makefileCommandRunner.makefilePath": "${workspaceDir}",
+  "makefileCommandRunner.filePathEnv": "",
+  "makefileCommandRunner.unitTestCommand": "tests",
+  "ruby.useLanguageServer": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "mbessey.vscode-rufo"
+  },
+  "testExplorer.useNativeTesting": true,
+  "material-icon-theme.folders.associations": {
+    "testadata": "mocks"
+  },
+  "workbench.editor.sharedViewState": true,
+  "workbench.editor.untitled.experimentalLanguageDetection": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggest.preview": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "editor.fontSize": 13,
+  "debug.console.fontSize": 13,
+  "redhat.telemetry.enabled": false,
+  "editor.inlineSuggest.enabled": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "yaml": true,
+    "ocaml": false
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "svelte.enable-ts-plugin": true,
+  "typescript.tsserver.enableTracing": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "σ": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.go": "${basename}_test.go",
+    "*.ls": "${basename}.js",
+    "*.coffee": "${basename}.js",
+    "*.styl": "${basename}.css, ${basename}.css.map",
+    "*.sass": "${basename}.css, ${basename}.css.map",
+    "*.scss": "${basename}.css, ${basename}.css.map",
+    "README.md": "README_*.md, README-*.md",
+    "*.work": "${basename}.work.sum",
+    "go.mod": "go.sum",
+    "pyproject.toml": "poetry.lock",
+    "*.pug": "${capture}.*.js"
+  },
+  "explorer.fileNesting.enabled": true,
+  "editor.bracketPairColorization.enabled": false,
+  "inlineFold.regex": "data-.[^= ]+=([^ >]+)",
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "svelte.plugin.svelte.note-new-transformation": false,
+  "prettier.semi": false,
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "settingsSync.ignoredSettings": [
+    "terminal.integrated.fontSize"
+  ],
+  "git.ignoredRepositories": [
+    "/home/uwun/.vscode/extensions/stepsize.stepsize-1.0.15/resources/demo-repository"
+  ],
+  "terminal.integrated.tabFocusMode": false,
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  "evenBetterToml.schema.associations": {
+    ".pretterrc.json": "https://json.schemastore.org/prettierrc"
+  },
+  "diffEditor.renderSideBySide": false,
+  "git.inputValidationSubjectLength": 100,
+  "files.autoSaveDelay": 0,
+  "workbench.sideBar.location": "right",
+  "git.autoStash": true,
+  "vim.handleKeys": {
+    "<C-p>": false
+  },
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "files.autoSave": "afterDelay",
+  "ocaml.server.extendedHover": true,
+  "[graphql]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "codeium.enableConfig": {
+    "*": true,
+    "graphql": true,
+    "ocaml": false
+  },
+  "window.titleBarStyle": "custom",
+  "workbench": {
+    "colorTheme": "Moonlight II"
+  }
+}
