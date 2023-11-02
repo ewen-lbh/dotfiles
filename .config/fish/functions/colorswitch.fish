@@ -20,6 +20,7 @@ function colorswitch
 
 	# Lazygit
 	set lazygit_config_dir (lazygit --print-config-dir)
+	set -ge LG_CONFIG_FILE
 	set -Ux LG_CONFIG_FILE "$lazygit_config_dir/config.yml,$lazygit_config_dir/$variant.yml"
 
 	# Dunst
@@ -29,9 +30,17 @@ function colorswitch
 	dunst & disown
 
 	# Bat
+	set -ge BAT_THEME
 	set -Ux BAT_THEME "Catppuccin-$variant"
 
 	# VS Code
 	set vscode_settings "$HOME/.config/Code/User/settings.json"
-	jq (echo -s '.workbench.colorTheme = ."workbench.preferred' $DarkOrLight 'ColorTheme"') < $vscode_settings | sponge $vscode_settings
+	yq -i $vscode_settings ".workbench.colorTheme = .\"workbench.preferred$(echo $DarkOrLight)ColorTheme\"" 
+	yq -i $vscode_settings ".workbench.iconTheme = \"catppuccin-$variant\"" 
+
+	# (Better)Discord
+	set betterdiscord_themes_config "$HOME/.config/BetterDiscord/data/stable/themes.json"
+	yq -i $betterdiscord_themes_config "map_values(false) | .\"Catppuccin $Variant\" = true" 
+	betterdiscordctl reinstall
+	discord &
 end

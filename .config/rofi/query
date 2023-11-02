@@ -1,0 +1,6 @@
+#!/usr/bin/env fish
+
+set query (rofi -dmenu -p "search or go to")
+if test "$query"
+	firefox "https://search.brave.com/search?q=$query"
+end

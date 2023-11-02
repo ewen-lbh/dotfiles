@@ -2,7 +2,7 @@
   "editor.fontWeight": "600",
   "telemetry.enableTelemetry": false,
   "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji, Ubuntu Mono",
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "editor.minimap.enabled": false,
   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
   "window.autoDetectColorScheme": true,
@@ -255,6 +255,6 @@
   },
   "window.titleBarStyle": "custom",
   "workbench": {
-    "colorTheme": "Moonlight II"
+    "colorTheme": "Snazzy Light"
   }
 }
