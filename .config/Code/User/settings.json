@@ -255,6 +255,7 @@
   },
   "window.titleBarStyle": "custom",
   "workbench": {
-    "colorTheme": "Snazzy Light"
+    "colorTheme": "Moonlight II",
+    "iconTheme": "catppuccin-mocha"
   }
 }
