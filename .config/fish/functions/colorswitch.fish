@@ -8,18 +8,27 @@ function colorswitch
 		set Variant Mocha
 		set DarkOrLight Dark
 		set darkOrLight dark
+		set contrast_color white
 	else
 		set variant latte
 		set Variant Latte
 		set DarkOrLight Light
 		set darkOrLight light
+		set contrast_color black
 	end
 
 	# Others
 	echo $argv[1] > ~/.config/colorscheme
 
+	# Waybar's custom logo
+	set waybar_config "$HOME/.config/waybar"
+	rm $waybar_config/net7.png
+	ln -s $waybar_config/net7-$contrast_color.png $waybar_config/net7.png
+	killall waybar
+	waybar & disown
+
 	# Wallpaper (hyprpaper)
-	sed -i "s|^wallpaper = .*\$|wallpaper = eDP-1,$HOME/.config/wallpaper-$darkOrLight.png|" $HOME/.config/hypr/hyprpaper.conf
+	sed -i "s|^wallpaper = .*\$|wallpaper = ,$HOME/.config/wallpaper-$darkOrLight.png|" $HOME/.config/hypr/hyprpaper.conf
 	killall hyprpaper
 	hyprpaper &>/dev/null & disown
 
