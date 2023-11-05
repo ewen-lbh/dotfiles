@@ -1,8 +1,27 @@
-{
+[{
+    "layer": "top",
+    "position": "bottom",
+    "spacing": 0,
+    "height": 34,
+    "margin": "0 15",
+    "modules-left": [
+        "custom/media"
+    ],
+    "custom/media": {
+    	"format": "󰝚  {}",
+        "return-type": "json",
+        "exec": "/home/ewen/.config/waybar/waybar-media.py status",
+        "on-click": "/home/ewen/.config/waybar/waybar-media.py playpause",
+        "on-scroll-up": "/home/ewen/.config/waybar/waybar-media.py previous",
+        "on-scroll-down": "/home/ewen/.config/waybar/waybar-media.py next",
+        "escape": true
+    }
+}, {
     "layer": "top",
     "position": "top",
     "spacing": 0,
     "height": 34,
+    "margin": "0 15 0 0",
     "modules-left": [
         "custom/logo",
         "hyprland/workspaces"
@@ -89,7 +108,7 @@
         "scroll-step": 1
     },
     "custom/logo": {
-        "format": "  ",
+        "format": "        ",
         "tooltip": false,
         "on-click": "~/.config/rofi/launchers/misc/launcher.sh &"
     },
@@ -134,4 +153,4 @@
         "tooltip": false,
         "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
     }
-}
+}]
