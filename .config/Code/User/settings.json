@@ -56,12 +56,12 @@
   ],
   "[go]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll": true
+      "source.fixAll": "explicit"
     }
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "editor.cursorSmoothCaretAnimation": "on",
@@ -159,7 +159,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
@@ -255,7 +255,7 @@
   },
   "window.titleBarStyle": "custom",
   "workbench": {
-    "colorTheme": "Moonlight II",
-    "iconTheme": "catppuccin-mocha"
+    "colorTheme": "Snazzy Light",
+    "iconTheme": "catppuccin-latte"
   }
 }

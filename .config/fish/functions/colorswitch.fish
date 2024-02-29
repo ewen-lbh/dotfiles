@@ -1,4 +1,5 @@
 function edit-json
+	echo Editing $argv[1]
 	jq $argv[2] $argv[1] | sponge $argv[1]
 end
 
@@ -30,18 +31,14 @@ function colorswitch
 	# Wallpaper (hyprpaper)
 	sed -i "s|^wallpaper = .*\$|wallpaper = ,$HOME/.config/wallpaper-$darkOrLight.png|" $HOME/.config/hypr/hyprpaper.conf
 	killall hyprpaper
-	hyprpaper &>/dev/null & disown
+	hyprpaper & disown
 
-
-	# Kitty
-	kitten themes --reload-in=all "Catppuccin-$variant"
 
 	# Fish
 	yes | fish_config theme save "Catppuccin $Variant" 
 
 	# Lazygit
 	set lazygit_config_dir (lazygit --print-config-dir)
-	set -ge LG_CONFIG_FILE
 	set -Ux LG_CONFIG_FILE "$lazygit_config_dir/config.yml,$lazygit_config_dir/$variant.yml"
 
 	# Dunst
@@ -51,7 +48,6 @@ function colorswitch
 	dunst &>/dev/null & disown
 
 	# Bat
-	set -ge BAT_THEME
 	set -Ux BAT_THEME "Catppuccin-$variant"
 
 	# VS Code
@@ -67,4 +63,12 @@ function colorswitch
 		"map_values(false) | .\"Catppuccin $Variant\" = true" 
 	betterdiscordctl &>/dev/null reinstall
 	discord &>/dev/null & disown
+
+	# Warp
+	set warp_settings "$HOME/.config/warp-terminal/user_preferences.json"
+	edit-json $warp_settings \
+		".prefs.Theme = \"{\\\"Custom\\\": {\\\"name\\\": \\\"Catppuccin $Variant\\\", \\\"path\\\": \\\"$HOME/.local/share/warp-terminal/themes/catppuccin_$variant.yml\\\"}}\""
+
+	# Kitty
+	kitten themes --reload-in=all "Catppuccin-$variant"
 end

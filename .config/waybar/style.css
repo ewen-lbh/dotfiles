@@ -84,7 +84,7 @@ window#waybar.hidden {
   font-size: 15px;
   border-radius: 8px 0px 0px 8px;
   color: #1793d1;
-  background-image: url("/home/ewen/.config/waybar/net7.png");
+  background-image: url("/home/uwun/.config/waybar/net7.png");
   background-size: cover; /* Réduire la taille à 50% de la largeur et 50% de la hauteur */
   background-repeat: no-repeat;
   background-position: center;

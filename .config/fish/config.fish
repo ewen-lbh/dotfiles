@@ -16,9 +16,15 @@ end
 abbr lg lazygit
 abbr :q exit
 abbr v nvim
+abbr yay paru
+abbr up "paru && paru -R emacs"
 
 # opam configuration
 source /home/uwun/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 
 eval (starship init fish)
 fish_add_path /home/uwun/.spicetify
+
+
+abbr bunr bun --bun run
+abbr glab GL_HOST=git.inpt.fr glab
