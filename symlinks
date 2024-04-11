@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+ln -s /mnt/datacore/administrative $HOME/administrative
+ln -s /mnt/datacore/apps $HOME/apps
+ln -s /mnt/datacore/asmr $HOME/asmr
+ln -s /mnt/datacore/backups $HOME/backups
+ln -s /mnt/datacore/books $HOME/books
+ln -s /mnt/datacore/enseeiht $HOME/enseeiht
+ln -s /mnt/datacore/games $HOME/games
+ln -s /mnt/datacore/ideas $HOME/ideas
+ln -s /mnt/datacore/images $HOME/images
+ln -s /mnt/datacore/memes $HOME/memes
+ln -s /mnt/datacore/music $HOME/music
+ln -s /mnt/datacore/playground $HOME/playground
+ln -s /mnt/datacore/projects $HOME/projects
+ln -s /mnt/datacore/resources $HOME/resources
+ln -s /mnt/datacore/screencaps $HOME/screencaps
+ln -s /mnt/datacore/screenshots $HOME/screenshots
+ln -s /mnt/datacore/steam $HOME/steam
+ln -s /mnt/datacore/videos $HOME/videos
+ln -s /mnt/datacore/virtual-disks $HOME/virtual-disks
+ln -s /mnt/datacore/wallpapers $HOME/wallpapers
+

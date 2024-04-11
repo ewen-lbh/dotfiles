@@ -84,7 +84,7 @@
     "network": {
         "format-wifi" : "{essid} {icon}",
         "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
-        "format-ethernet": "{ifname} 󰀂",
+        "format-ethernet": ":3 󰀂",
 	"format-alt" : "󱛇",
         "format-disconnected" : "󰖪",
 	"tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",

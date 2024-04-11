@@ -2,13 +2,11 @@
   "editor.fontWeight": "600",
   "telemetry.enableTelemetry": false,
   "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji, Ubuntu Mono",
-  "workbench.iconTheme": "catppuccin-latte",
   "editor.minimap.enabled": false,
   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
   "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "Snazzy Light",
-  "workbench.colorTheme": "Default Light Modern",
-  "workbench.preferredDarkColorTheme": "Moonlight II",
+  "workbench.preferredDarkColorTheme": "Moonlight Italic",
   "i18n-ally.displayLanguage": "fr",
   "editor.renderWhitespace": "none",
   "svelte-autoimport.useSemiColon": false,
@@ -62,7 +60,8 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
-    }
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "editor.cursorSmoothCaretAnimation": "on",
   "githubIssues.issueCompletionFormatScm": "${issueTitle} (Closes #${issueNumber})",
@@ -161,7 +160,7 @@
   "github.copilot.enable": {
     "*": true,
     "plaintext": false,
-    "markdown": false,
+    "markdown": true,
     "scminput": false,
     "yaml": true,
     "ocaml": false
@@ -176,7 +175,8 @@
   "svelte.enable-ts-plugin": true,
   "typescript.tsserver.enableTracing": true,
   "editor.unicodeHighlight.allowedCharacters": {
-    "σ": true
+    "σ": true,
+    "α": true
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -213,7 +213,7 @@
   "svelte.plugin.svelte.note-new-transformation": false,
   "prettier.semi": false,
   "[yaml]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "editor.inlayHints.enabled": "offUnlessPressed",
   "settingsSync.ignoredSettings": [
@@ -234,7 +234,6 @@
   },
   "diffEditor.renderSideBySide": false,
   "git.inputValidationSubjectLength": 100,
-  "files.autoSaveDelay": 0,
   "workbench.sideBar.location": "right",
   "git.autoStash": true,
   "vim.handleKeys": {
@@ -257,5 +256,29 @@
   "workbench": {
     "colorTheme": "Snazzy Light",
     "iconTheme": "catppuccin-latte"
-  }
+  },
+  "remote.SSH.remotePlatform": {
+    "sandbox.fw9hzk.csb": "linux"
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "github.copilot.terminal.suggestCommand",
+    "matlab.interrupt"
+  ],
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "[snippets]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "Snazzy Light",
+  "git.openRepositoryInParentFolders": "always",
+  "[sql]": {
+    "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
+  },
+  "workbench.iconTheme": "catppuccin-latte",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "debug.internalConsoleOptions": "neverOpen"
 }

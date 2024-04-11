@@ -16,8 +16,11 @@ end
 abbr lg lazygit
 abbr :q exit
 abbr v nvim
-abbr yay paru
-abbr up "paru && paru -R emacs"
+abbr gj gitmoji -c
+abbr oadd ortfodb ~/projects add 
+
+# env vars
+set -gx EDITOR nvim
 
 # opam configuration
 source /home/uwun/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
@@ -25,6 +28,12 @@ source /home/uwun/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 eval (starship init fish)
 fish_add_path /home/uwun/.spicetify
 
-
-abbr bunr bun --bun run
+# vscode shell integration
+# https://code.visualstudio.com/docs/terminal/shell-integration#_manual-installation
+string match -q "$TERM_PROGRAM" "vscode"
+and . (code --locate-shell-integration-path fish)
 abbr glab GL_HOST=git.inpt.fr glab
+
+set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:~/.local/lib/mojo"
+
+source (kubebuilder completion fish | psub)
