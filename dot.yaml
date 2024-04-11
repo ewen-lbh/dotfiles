@@ -1,0 +1,27 @@
+links:
+  .config/btop/btop.conf: ~/.config/btop/btop.conf
+  .config/btop/themes: ~/.config/btop/themes
+  .config/Code/User/settings.json: ~/.config/Code/User/settings.json
+  .config/dunst/base.conf: ~/.config/dunst/base.conf
+  .config/dunst/dunstrc: ~/.config/dunst/dunstrc
+  .config/dunst/latte.conf: ~/.config/dunst/latte.conf
+  .config/dunst/mocha.conf: ~/.config/dunst/mocha.conf
+  .config/fish/functions: ~/.config/fish/functions
+  .config/fish/themes: ~/.config/fish/themes
+  .config/fish/config.fish: ~/.config/fish/config.fish
+  .config/hypr: ~/.config/hypr
+  .config/kitty/kitty.conf: ~/.config/kitty/kitty.conf
+  .config/kitty/latte.conf: ~/.config/kitty/latte.conf
+  .config/kitty/mocha.conf: ~/.config/kitty/mocha.conf
+  .config/lazygit/config.yml: ~/.config/lazygit/config.yml
+  .config/lazygit/latte.yml: ~/.config/lazygit/latte.yml
+  .config/lazygit/mocha.yml: ~/.config/lazygit/mocha.yml
+  .config/nvim/init.lua: ~/.config/nvim/init.lua
+  .config/nvim/lazy-lock.json: ~/.config/nvim/lazy-lock.json
+  .config/wallpaper-dark.png: ~/.config/wallpaper-dark.png
+  .config/wallpaper-light.png: ~/.config/wallpaper-light.png
+  .config/waybar/config: ~/.config/waybar/config
+  .config/waybar/style.css: ~/.config/waybar/style.css
+  .config/waybar/mocha.css: ~/.config/waybar/mocha.css
+  .config/waybar/net7-black.png: ~/.config/waybar/net7-black.png
+  .config/waybar/net7-white.png: ~/.config/waybar/net7-white.png
