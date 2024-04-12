@@ -9,12 +9,9 @@
     ],
     "custom/media": {
     	"format": "󰝚  {}",
-        "return-type": "json",
-        "exec": "/home/ewen/.config/waybar/waybar-media.py status",
-        "on-click": "/home/ewen/.config/waybar/waybar-media.py playpause",
-        "on-scroll-up": "/home/ewen/.config/waybar/waybar-media.py previous",
-        "on-scroll-down": "/home/ewen/.config/waybar/waybar-media.py next",
-        "escape": true
+        "return-type": "text",
+        "exec": "cat $HOME/.config/waybar/spotify-status.txt",
+	"interval": 1
     }
 }, {
     "layer": "top",
@@ -24,7 +21,7 @@
     "margin": "0 15 0 0",
     "modules-left": [
         "custom/logo",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
     ],
     "modules-center": [
         "clock"

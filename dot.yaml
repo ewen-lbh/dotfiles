@@ -21,6 +21,7 @@ links:
   .config/wallpaper-dark.png: ~/.config/wallpaper-dark.png
   .config/wallpaper-light.png: ~/.config/wallpaper-light.png
   .config/waybar/config: ~/.config/waybar/config
+  .config/waybar/spotify-receiver: ~/.config/waybar/spotify-receiver
   .config/waybar/style.css: ~/.config/waybar/style.css
   .config/waybar/mocha.css: ~/.config/waybar/mocha.css
   .config/waybar/net7-black.png: ~/.config/waybar/net7-black.png
