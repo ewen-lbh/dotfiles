@@ -18,6 +18,8 @@ abbr :q exit
 abbr v nvim
 abbr gj gitmoji -c
 abbr oadd ortfodb ~/projects add 
+abbr wlc wl-copy
+abbr wlp wl-paste
 
 # env vars
 set -gx EDITOR nvim
