@@ -1,0 +1,1 @@
+/home/uwun/projects/spotify-browser-metadata-script/scraper.user.js

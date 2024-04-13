@@ -28,3 +28,4 @@ links:
   .config/waybar/mocha.css: ~/.config/waybar/mocha.css
   .config/waybar/net7-black.png: ~/.config/waybar/net7-black.png
   .config/waybar/net7-white.png: ~/.config/waybar/net7-white.png
+  .config/spicetify/Extensions: ~/.config/spicetify/Extensions
