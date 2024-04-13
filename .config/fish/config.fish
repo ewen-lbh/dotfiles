@@ -17,7 +17,7 @@ abbr lg lazygit
 abbr :q exit
 abbr v nvim
 abbr gj gitmoji -c
-abbr oadd ortfodb ~/projects add 
+abbr oadd ortfodb -c ~/projects/portfolio/ortfodb.yaml add 
 abbr wlc wl-copy
 abbr wlp wl-paste
 
@@ -39,3 +39,6 @@ abbr glab GL_HOST=git.inpt.fr glab
 set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:~/.local/lib/mojo"
 
 source (kubebuilder completion fish | psub)
+
+ortfodb completion fish | source
+
