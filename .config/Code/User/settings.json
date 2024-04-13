@@ -280,5 +280,8 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
   },
-  "debug.internalConsoleOptions": "neverOpen"
+  "debug.internalConsoleOptions": "neverOpen",
+  "yaml.schemas": {
+    "https://raw.githubusercontent.com/ortfo/db/main/schemas/configuration.schema.json": "ortfodb.yaml"
+  }
 }
