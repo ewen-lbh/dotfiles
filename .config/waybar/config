@@ -7,10 +7,19 @@
     "modules-left": [
         "custom/media"
     ],
+    "modules-center": [
+    	"custom/lyrics"
+    ],
     "custom/media": {
     	"format": "󰝚  {}",
         "return-type": "text",
-        "exec": "cat $HOME/.config/waybar/spotify-status.txt",
+        "exec": "cat $HOME/.local/share/spotify-status.txt",
+	"interval": 1
+    },
+    "custom/lyrics": {
+    	"format": "{}",
+	"return-type": "text",
+	"exec": "cat $HOME/.local/share/spotify-status.txt | tail -1",
 	"interval": 1
     }
 }, {
