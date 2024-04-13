@@ -42,3 +42,4 @@ source (kubebuilder completion fish | psub)
 
 ortfodb completion fish | source
 
+abbr cha chachacha
