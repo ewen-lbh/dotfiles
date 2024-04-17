@@ -1,1 +1,1 @@
-python $HOME/projects/spotify-browser-metadata-script/receiver.py localhost 8887 '{i("♥ ", liked)}{i("→ ", not repeat)}{i("¹↷", loop)}{i("⇄", shuffle)}{artist} — {title}\n{current_lyric}𝈺{upcoming_lyric}' ~/.local/share/spotify-status.txt
+python $HOME/projects/spotify-browser-metadata-script/receiver.py localhost 8887 '{i("♥ ", liked)}{i("→ ", not repeat)}{i("¹↷", loop)}{i("⇄", shuffle)}{artist_clean} — {title}\n{current_lyric}𝈺{upcoming_lyric}' ~/.local/share/spotify-status.txt
