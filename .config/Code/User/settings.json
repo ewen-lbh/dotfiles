@@ -135,7 +135,7 @@
   "makefileCommandRunner.unitTestCommand": "tests",
   "ruby.useLanguageServer": true,
   "[ruby]": {
-    "editor.defaultFormatter": "mbessey.vscode-rufo"
+    "editor.defaultFormatter": "jnbt.vscode-rufo"
   },
   "testExplorer.useNativeTesting": true,
   "material-icon-theme.folders.associations": {
@@ -283,5 +283,12 @@
   "debug.internalConsoleOptions": "neverOpen",
   "yaml.schemas": {
     "https://raw.githubusercontent.com/ortfo/db/main/schemas/configuration.schema.json": "ortfodb.yaml"
-  }
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar"
+  },
+  "files.autoSave": "afterDelay",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "workbench.editor.languageDetection": false,
+  "ortfo.globalConfigPath": "/home/uwun/projects/portfolio/ortfodb.yaml"
 }

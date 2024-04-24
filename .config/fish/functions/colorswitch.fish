@@ -9,13 +9,18 @@ function colorswitch
 		set DarkOrLight Dark
 		set darkOrLight dark
 		set contrast_color white
+		set adwaita Adwaita-dark
 	else
 		set variant latte
 		set Variant Latte
 		set DarkOrLight Light
 		set darkOrLight light
 		set contrast_color black
+		set adwaita Adwaita
 	end
+
+	# GTK (should apply to firefox)
+	gsettings set org.gnome.desktop.interface gtk-theme $adwaita
 
 	# Others
 	echo $argv[1] > ~/.config/colorscheme
@@ -41,7 +46,9 @@ function colorswitch
 
 	# Lazygit
 	set lazygit_config_dir (lazygit --print-config-dir)
-	yq -Y -s '.[0] * .[1]' $lazygit_config_dir/config.yml $lazygit_config_dir/themes/$variant.yml | sponge $lazygit_config_dir/config.yml
+	# yq doesn't resolve symlinks...
+	cp $lazygit_config_dir/$variant.yml /tmp/colorswitch-lazygit-$variant.yml
+	yq -Y -s '.[0] * .[1]' $lazygit_config_dir/config.yml /tmp/colorswitch-lazygit-$variant.yml | sponge $lazygit_config_dir/config.yml
 
 	# Dunst
 	killall dunst &>/dev/null
