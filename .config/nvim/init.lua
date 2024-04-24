@@ -139,8 +139,7 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
 				print(string.format("starting ortfols for %s", vim.inspect(event)))
 				vim.lsp.start {
 						name = "ortfo",
-						-- cmd = { "tee", "/home/uwun/projects/ortfo/languageserver/nvim-client.log" },
-						cmd = {"ortfols"},
+						cmd = {"ortfodb", "-c", "/home/uwun/projects/portfolio/ortfodb.yaml", "lsp"},
 						root_dir = vim.fs.dirname(
 								vim.fs.find({'ortfodb.yaml'}, { upward = true })[1]
 						),
