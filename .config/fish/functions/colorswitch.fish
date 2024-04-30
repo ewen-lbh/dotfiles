@@ -3,7 +3,20 @@ function edit-json
 end
 
 function colorswitch
-	if test $argv[1] = "dark"
+set theme   $argv[1]
+if test $argv[1] = "auto"
+		if test (sunwait poll (echo $LOCATION_LATITUDE)N (echo $LOCATION_LONGITUDE)E angle 3) = DAY
+				set theme light
+		else
+				set theme dark
+		end
+		if test $theme = (cat ~/.config/colorscheme)
+				echo "Already on $theme theme"
+				return
+		end
+		echo "Auto-switched to $theme theme"
+end
+	if test $theme = "dark"
 		set variant mocha
 		set Variant Mocha
 		set DarkOrLight Dark
@@ -23,7 +36,7 @@ function colorswitch
 	gsettings set org.gnome.desktop.interface gtk-theme $adwaita
 
 	# Others
-	echo $argv[1] > ~/.config/colorscheme
+	echo $theme > ~/.config/colorscheme
 
 	# Waybar's custom logo
 	set waybar_config "$HOME/.config/waybar"

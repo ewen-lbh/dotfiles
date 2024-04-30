@@ -163,7 +163,8 @@
     "markdown": true,
     "scminput": false,
     "yaml": true,
-    "ocaml": false
+    "ocaml": false,
+    "cpp": false
   },
   "editor.acceptSuggestionOnCommitCharacter": false,
   "[html]": {
@@ -242,7 +243,6 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
-  "files.autoSave": "afterDelay",
   "ocaml.server.extendedHover": true,
   "[graphql]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -270,12 +270,12 @@
   "[snippets]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Snazzy Light",
+  "workbench.colorTheme": "Moonlight Italic",
   "git.openRepositoryInParentFolders": "always",
   "[sql]": {
     "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
   },
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
@@ -290,5 +290,10 @@
   "files.autoSave": "afterDelay",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "workbench.editor.languageDetection": false,
-  "ortfo.globalConfigPath": "/home/uwun/projects/portfolio/ortfodb.yaml"
+  "ortfo.globalConfigPath": "/home/uwun/projects/portfolio/ortfodb.yaml",
+  "debug.onTaskErrors": "debugAnyway",
+  "cmake.showOptionsMovedNotification": false,
+  "[handlebars]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }

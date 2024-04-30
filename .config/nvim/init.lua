@@ -57,6 +57,26 @@ require("lazy").setup({
 	  end
     },
 	-- "hrsh7th/cmp-buffer",
+	{
+			"nvim-treesitter/nvim-treesitter",
+			build = ":TSUpdate",
+			config = function ()
+				local configs = require("nvim-treesitter.configs")
+				configs.setup {
+						ensure_installed = { "lua", "html", "hyprlang" },
+						sync_install = true,
+						highlight = { enable = true },
+						indent = { enable = true },
+				}
+			end
+	},
+	{
+			"tree-sitter-grammars/tree-sitter-hyprlang",
+			dependencies = { "nvim-treesitter/nvim-treesitter" },
+			config = function ()
+				vim.filetype.add({ pattern = { [".*/hypr/.*%.conf"] = "hyprlang", ["*.hl"] = "hyprlang", ["hypr*.conf"] = "hyprlang" }})
+			end
+	},
 	"hrsh7th/cmp-path",
 	"hrsh7th/cmp-nvim-lsp",
 	{ "neovim/nvim-lspconfig",
@@ -147,6 +167,19 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
 		end
 })
 
+-- Hyprlang LSP
+vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
+		pattern = {"*.hl", "hypr*.conf"},
+		callback = function(event)
+				print(string.format("starting hyprls for %s", vim.inspect(event)))
+				vim.lsp.start {
+						name = "hyprlang",
+						cmd = {"/home/uwun/projects/hyprls/hyprlang-lsp"},
+						root_dir = vim.fn.getcwd(),
+				}
+		end
+})
+
 -- LSP completions
 vim.opt.completeopt = {"menu", "menuone", "noselect"}
 
@@ -167,6 +200,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- Jump to declaration
     bufmap('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+
+    -- Lists all symbols in the document
+    bufmap('n', 'gO', '<cmd>lua vim.lsp.buf.document_symbol()<cr>')
 
     -- Lists all the implementations for the symbol under the cursor
     bufmap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
