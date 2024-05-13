@@ -1,4 +1,9 @@
 function mkproj -a name language license
+		if test (count $argv) -lt 2
+				echo "Usage: mkproj name language [license]"
+				echo "Supported languages: typescript node, rust, go, python"
+				return
+		end
 		set name $argv[1]
 		set lang $argv[2]
 		set license $argv[3]
@@ -12,7 +17,8 @@ function mkproj -a name language license
 				case typescript node
 						bun init
 				case rust
-						cargo new . --name $name
+						cargo init 
+						printf 'export RUST_BACKTRACE := "1"\n\nbuild:\n\tcargo build\n\nrun:\n\tcargo run\n' > Justfile
 				case go
 						go mod init github.com/ewen-lbh/$name
 						echo 'package main' > main.go

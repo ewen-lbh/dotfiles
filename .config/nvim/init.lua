@@ -24,6 +24,7 @@ require("lazy").setup({
 					  replace_keycodes = false
 			  })
 			  vim.g.copilot_no_tab_map = true
+		      vim.g.copilot_filetypes = { markdown = false } 
 	  end
     },
 	"L3MON4D3/LuaSnip",
@@ -117,6 +118,7 @@ require("lazy").setup({
 				"mdx_analyzer",
 				"gopls",
 				"templ",
+				-- "hyprls",
 		}
 		for _, lsp in ipairs(servers) do
 			conf[lsp].setup({ capabilities = caps })
@@ -174,7 +176,7 @@ vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
 				print(string.format("starting hyprls for %s", vim.inspect(event)))
 				vim.lsp.start {
 						name = "hyprlang",
-						cmd = {"/home/uwun/projects/hyprls/hyprlang-lsp"},
+						cmd = {"hyprls"},
 						root_dir = vim.fn.getcwd(),
 				}
 		end

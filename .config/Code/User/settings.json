@@ -270,12 +270,12 @@
   "[snippets]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Moonlight Italic",
+  "workbench.colorTheme": "Snazzy Light",
   "git.openRepositoryInParentFolders": "always",
   "[sql]": {
     "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
   },
-  "workbench.iconTheme": "catppuccin-mocha",
+  "workbench.iconTheme": "catppuccin-latte",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
@@ -295,5 +295,10 @@
   "cmake.showOptionsMovedNotification": false,
   "[handlebars]": {
     "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.activityBar.location": "hidden",
+  "workbench.editor.showTabs": "none",
+  "emmet.includeLanguages": {
+    "jinja-html": "html"
   }
 }

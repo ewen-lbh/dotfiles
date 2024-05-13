@@ -5,7 +5,7 @@ end
 function colorswitch
 set theme   $argv[1]
 if test $argv[1] = "auto"
-		if test (sunwait poll (echo $LOCATION_LATITUDE)N (echo $LOCATION_LONGITUDE)E angle 3) = DAY
+		if test (sunwait poll (echo $LOCATION_LATITUDE)N (echo $LOCATION_LONGITUDE)E angle 0) = DAY
 				set theme light
 		else
 				set theme dark
