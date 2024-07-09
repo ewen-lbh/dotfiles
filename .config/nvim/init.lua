@@ -17,16 +17,21 @@ require("lazy").setup({
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 	"wakatime/vim-wakatime",
 	"joerdav/templ.vim",
-	{ "github/copilot.vim", 
+	{ "github/copilot.vim",
       config = function()
 			  vim.keymap.set('i', '<C-Space>', 'copilot#Accept("<CR>")', {
 					  expr = true,
 					  replace_keycodes = false
 			  })
 			  vim.g.copilot_no_tab_map = true
-		      vim.g.copilot_filetypes = { markdown = false } 
+		      vim.g.copilot_filetypes = { markdown = false, latex = false, tex = false }
 	  end
     },
+    "SirVer/ultisnips",
+    { "lervag/vimtex",
+		config = function ()
+			
+		end },
 	"L3MON4D3/LuaSnip",
 	{ "hrsh7th/nvim-cmp",
 	  dependencies = { "L3MON4D3/LuaSnip", "github/copilot.vim" },
@@ -47,7 +52,7 @@ require("lazy").setup({
 				},
 				mapping = {
 						['<CR>'] = cmp.mapping.confirm({ select = true }),
-						['<Tab>'] = cmp.mapping.confirm({ select = true }),
+						-- ['<Tab>'] = cmp.mapping.confirm({ select = true }),
 						['<Up>'] = cmp.mapping.select_prev_item(select_opts),
 						['<Down>'] = cmp.mapping.select_next_item(select_opts),
 						['<C-u>'] = cmp.mapping.scroll_docs(-4),
@@ -144,6 +149,14 @@ vim.opt.signcolumn = "number"
 vim.opt.ts = 4
 vim.opt.relativenumber = true
 vim.opt.number = true
+
+-- Default to LaTeX
+vim.g.tex_flavor = "latex"
+
+-- UltiSnips
+vim.g.UltiSnipsExpandTrigger = "<tab>"
+vim.g.UltiSnipsJumpForwardTrigger = "<tab>"
+vim.g.UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 -- Copilot filtypes
 vim.g.copilot_filetypes = {

@@ -23,6 +23,7 @@ gui:
     searchingActiveBorderColor:
       - '#f9e2af'
 git:
+  overrideGpg: true
   paging:
     colorArg: always
     externalDiffCommand: difft

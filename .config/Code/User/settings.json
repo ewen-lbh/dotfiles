@@ -1,10 +1,9 @@
 {
-  "editor.fontWeight": "600",
+  "editor.fontWeight": "800",
   "telemetry.enableTelemetry": false,
-  "editor.fontFamily": "Victor Mono, Fira Code, Cartograph CF, Liga Dank Mono, Dank Mono, Twitter Color Emoji, Ubuntu Mono",
+  "editor.fontFamily": "Jetbrains Mono, Cartograph CF, Dank Mono, Victor Mono, Fira Code, Liga Dank Mono, Twitter Color Emoji, Ubuntu Mono",
   "editor.minimap.enabled": false,
   "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
-  "window.autoDetectColorScheme": true,
   "workbench.preferredLightColorTheme": "Snazzy Light",
   "workbench.preferredDarkColorTheme": "Moonlight Italic",
   "i18n-ally.displayLanguage": "fr",
@@ -150,7 +149,6 @@
   "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
   "typescript.inlayHints.variableTypes.enabled": true,
   "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-  "editor.fontSize": 13,
   "debug.console.fontSize": 13,
   "redhat.telemetry.enabled": false,
   "editor.inlineSuggest.enabled": true,
@@ -270,12 +268,12 @@
   "[snippets]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "Snazzy Light",
+  "workbench.colorTheme": "Moonlight Italic",
   "git.openRepositoryInParentFolders": "always",
   "[sql]": {
     "editor.defaultFormatter": "adpyke.vscode-sql-formatter"
   },
-  "workbench.iconTheme": "catppuccin-latte",
+  "workbench.iconTheme": "catppuccin-mocha",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
@@ -287,7 +285,6 @@
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
   },
-  "files.autoSave": "afterDelay",
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "workbench.editor.languageDetection": false,
   "ortfo.globalConfigPath": "/home/uwun/projects/portfolio/ortfodb.yaml",
@@ -300,5 +297,12 @@
   "workbench.editor.showTabs": "none",
   "emmet.includeLanguages": {
     "jinja-html": "html"
-  }
+  },
+  "prisma.showPrismaDataPlatformNotification": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "[mjml]": {
+    "editor.defaultFormatter": "mjmlio.vscode-mjml"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.autoSave": "afterDelay"
 }
