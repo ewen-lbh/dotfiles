@@ -30,3 +30,5 @@ links:
   .config/waybar/net7-white.png: ~/.config/waybar/net7-white.png
   .config/spicetify/Extensions: ~/.config/spicetify/Extensions
   .config/starship.toml: ~/.config/starship.toml
+  .config/zed/keymap.json: ~/.config/zed/keymap.json
+  .config/zed/settings.json: ~/.config/zed/settings.json

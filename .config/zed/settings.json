@@ -1,0 +1,20 @@
+{
+  "theme":{
+    "light": "One Light",
+    "dark": "One Dark Pro",
+    "mode": "dark"
+  },
+  "vim_mode": true,
+  "ui_font_size": 14,
+  "buffer_font_family": "Dank Mono",
+  "buffer_font_size": 14,
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 300
+    }
+  },
+  "terminal": {
+    "font_size": 13,
+    "font_family": "Victor Mono"
+  }
+}

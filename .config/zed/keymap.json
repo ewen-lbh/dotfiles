@@ -1,0 +1,15 @@
+[
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": ["workspace::SendKeystrokes", "escape"],
+      "k j": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode != insert",
+    "bindings": {
+      "ù": "workspace::OpenTerminal"
+    }
+  }
+]

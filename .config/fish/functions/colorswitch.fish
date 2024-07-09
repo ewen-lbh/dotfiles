@@ -81,6 +81,10 @@ end
 	edit-json $vscode_settings \
 		".\"workbench.iconTheme\" = \"catppuccin-$variant\""  
 
+	# Zed
+	set zed_config "$HOME/.config/zed/settings.json"
+	edit-json $zed_config ".theme.mode = \"$darkOrLight\""
+
 	# (Better)Discord
 	set betterdiscord_themes_config "$HOME/.config/BetterDiscord/data/stable/themes.json"
 	edit-json $betterdiscord_themes_config \
