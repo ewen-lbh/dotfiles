@@ -86,9 +86,9 @@ end
 	edit-json $zed_config ".theme.mode = \"$darkOrLight\""
 
 	# (Better)Discord
-	set betterdiscord_themes_config "$HOME/.config/BetterDiscord/data/stable/themes.json"
-	edit-json $betterdiscord_themes_config \
-		"map_values(false) | .\"Catppuccin $Variant\" = true" 
-	betterdiscordctl &>/dev/null reinstall
-	discord &>/dev/null & disown
+	# set betterdiscord_themes_config "$HOME/.config/BetterDiscord/data/stable/themes.json"
+	# edit-json $betterdiscord_themes_config \
+	# 	"map_values(false) | .\"Catppuccin $Variant\" = true" 
+	# betterdiscordctl &>/dev/null reinstall
+	# discord &>/dev/null & disown
 end

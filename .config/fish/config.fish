@@ -4,6 +4,11 @@ end
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+
+#  toulouse:	43° 36′ 16″ nord, 1° 26′ 38″ est
+set -Ux LOCATION_LATITUDE 43.604444444
+set -Ux LOCATION_LONGITUDE 1.443888889
+
 function dbg
 end
 

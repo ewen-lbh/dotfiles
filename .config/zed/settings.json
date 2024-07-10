@@ -1,12 +1,13 @@
 {
   "theme": {
-    "light": "One Light",
-    "dark": "One Dark Pro",
-    "mode": "dark"
+    "light": "Nanowise Light",
+    "dark": "Gleam Dark",
+    "mode": "light"
   },
   "vim_mode": true,
   "ui_font_size": 14,
-  "buffer_font_family": "Dank Mono",
+  "buffer_font_family": "Fira Code",
+  "buffer_font_weight": 700,
   "buffer_font_size": 14,
   "autosave": {
     "after_delay": {
@@ -15,6 +16,7 @@
   },
   "terminal": {
     "font_size": 13,
-    "font_family": "Victor Mono"
+    "font_family": "Fira Code",
+    "font_weight": 600
   }
 }
