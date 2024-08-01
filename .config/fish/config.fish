@@ -59,3 +59,6 @@ ortfodb completion fish | source
 abbr cha chachacha
 abbr +x chmod +x
 abbr ncdu gdu
+abbr kap kubectl apply -f
+abbr fze 'nvim (fzf)'
+abbr kubeseal kubeseal -o yaml
