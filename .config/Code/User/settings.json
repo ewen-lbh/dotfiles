@@ -108,7 +108,6 @@
   "stylusSupremacy.sortProperties": "grouped",
   "markdown-toc.depthTo": 5,
   "markdown.extension.toc.levels": "2..6",
-  "search.quickOpen.includeSymbols": true,
   "githubIssues.useBranchForIssues": "prompt",
   "files.associations": {
     "*.txt": "plaintext"
@@ -304,5 +303,6 @@
     "editor.defaultFormatter": "mjmlio.vscode-mjml"
   },
   "security.workspace.trust.untrustedFiles": "open",
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000
 }
