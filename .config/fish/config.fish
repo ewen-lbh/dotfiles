@@ -53,6 +53,8 @@ set -gx LD_LIBRARY_PATH "$LD_LIBRARY_PATH:~/.local/lib/mojo"
 dbg kubebuilder
 source (kubebuilder completion fish | psub)
 
+alias kubectl="kubecolor"
+
 dbg ortfodb
 ortfodb completion fish | source
 

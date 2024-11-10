@@ -35,3 +35,28 @@ customCommands:
     command: gitmoji -c
     context: global
     subprocess: true
+  - key: G
+    command: close-issue
+    context: files
+    subprocess: true
+  - key: '<c-p>'
+    context: files
+    prompts:
+      - type: input
+        title: What's the MR title?
+        key: MRTitle
+        suggestions:
+          command: 'git log --oneline --pretty=format:"%s"'
+    subprocess: true
+    command: GL_HOST=git.inpt.fr glab mr create --fill --title "{{ .Form.MRTitle }}"
+  - key: '<c-p>'
+    context: localBranches
+    prompts:
+      - type: input
+        title: What's the MR title?
+        key: MRTitle
+        suggestions:
+          command: 'git log --oneline --pretty=format:"%s" "{{.SelectedLocalBranch}}"'
+    subprocess: true
+    command: GL_HOST=git.inpt.fr glab mr create --fill --title "{{ .Form.MRTitle }}"
+      --target-branch "{{ .SelectedLocalBranch }}"

@@ -21,5 +21,5 @@ gem update
 # Fish
 fisher update
 # Hyprland plugins
-hyprpm update
+hyprpm update --no-shallow
 end
