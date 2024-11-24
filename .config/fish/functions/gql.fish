@@ -10,8 +10,8 @@ function gql --description $doc
 	end
 	set header ""
 	if test (count $argv) = 3
-		https --ignore-stdin -F --json "$argv[1]" query="$argv[2]" Authorization:"Bearer $argv[3]" | jq .data
+		https --ignore-stdin -F --json "$argv[1]" query="$argv[2]" Authorization:"Bearer $argv[3]" 
 	else
-		https --ignore-stdin -F --json "$argv[1]" query="$argv[2]" | jq .data
+		https --ignore-stdin -F --json "$argv[1]" query="$argv[2]" 
 	end
 end
